@@ -8,6 +8,8 @@ export default {
   argTypes: {
     icon: {
       description: "아이콘 이름",
+      options: Object.keys(svg),
+      control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Icons>;
