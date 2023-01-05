@@ -18,7 +18,7 @@ const Template: Story<IconsProps> = (args) => {
   return <Icons {...args} icon={args.icon} />;
 };
 
-export const FooterLogo = Template.bind({});
-FooterLogo.args = {
-  icon: "footer_logo",
+export const Default = Template.bind({});
+Default.args = {
+  icon: "profile",
 };
