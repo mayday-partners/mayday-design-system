@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
+import React from "react";
 import { ButtonHTMLAttributes } from "react";
 import palette from "../styles/palette";
 

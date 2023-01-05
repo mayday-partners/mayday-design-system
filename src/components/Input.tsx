@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { DatePicker } from "antd";
 import generatePicker from "antd/es/date-picker/generatePicker";
 import { Dayjs } from "dayjs";
+import React from "react";
 import { InputHTMLAttributes, KeyboardEvent } from "react";
 import palette from "../styles/palette";
 import Icons from "./icons";

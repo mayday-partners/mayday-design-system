@@ -1,4 +1,5 @@
 import { SerializedStyles } from "@emotion/react";
+import React from "react";
 import { ButtonHTMLAttributes } from "react";
 export type ButtonPropsType = {
     /** 버튼요소 */

@@ -2,6 +2,7 @@ import palette from "../styles/palette";
 import { Divider, Space } from "antd";
 import Icons from "./icons";
 import styled from "@emotion/styled";
+import React from "react";
 
 export default function Footer() {
   return (
