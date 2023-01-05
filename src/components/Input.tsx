@@ -3,7 +3,7 @@ import { DatePicker } from "antd";
 import generatePicker from "antd/es/date-picker/generatePicker";
 import { Dayjs } from "dayjs";
 import { InputHTMLAttributes, KeyboardEvent } from "react";
-import palette from "../../styles/palette";
+import palette from "../styles/palette";
 import Icons from "./icons";
 
 export type InputType = {

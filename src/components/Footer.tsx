@@ -1,4 +1,4 @@
-import palette from "../../styles/palette";
+import palette from "../styles/palette";
 import { Divider, Space } from "antd";
 import Icons from "./icons";
 import styled from "@emotion/styled";

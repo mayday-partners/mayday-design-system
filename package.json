@@ -1,7 +1,7 @@
 {
-  "name": "@maydaydevteam/mds",
+  "name": "@maydaydevteam/yeeeyes-design",
   "description": "MAYDAY DESIGN SYSTEM",
-  "version": "0.1.5",
+  "version": "0.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -44,7 +44,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/stories -d dist --copy-files"
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -93,5 +93,6 @@
   "bugs": {
     "url": "https://github.com/mayday-partners/mayday-design-system/issues"
   },
-  "homepage": "https://github.com/mayday-partners/mayday-design-system#readme"
+  "homepage": "https://github.com/mayday-partners/mayday-design-system#readme",
+  "types": "./dist/index.d.ts"
 }

@@ -1,7 +1,7 @@
 import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 import { ButtonHTMLAttributes } from "react";
-import palette from "../../styles/palette";
+import palette from "../styles/palette";
 
 export type TextButtonType = {
   children: string;
