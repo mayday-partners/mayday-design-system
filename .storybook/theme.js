@@ -1,6 +1,7 @@
-import { create } from "@storybook/theming";
+import { create } from '@storybook/theming';
 
 export default create({
-  brandImage: "../public/mayday.png",
-  brandTitle: "MAYDAY",
+    base: 'light',
+    brandImage: './mayday.png',
+    brandTitle: 'MAYDAY',
 });
