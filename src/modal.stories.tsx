@@ -1,4 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
+import { Button } from 'antd';
 import Modal, { ModalType } from './Modal';
 
 export default {
@@ -19,6 +20,7 @@ Default.args = {
     type: 'web',
     buttonType: 'two',
     open: true,
+    padding: 16,
     onOk: () => alert('ok'),
     onCancel: () => alert('cancel'),
 };

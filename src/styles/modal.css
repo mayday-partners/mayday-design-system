@@ -2,6 +2,7 @@
 .ant-modal-content {
     padding: 0px !important;
     margin: 0 auto;
+    width: fit-content;
 }
 .ant-modal-footer {
     display: none;
@@ -10,8 +11,6 @@
 /* web */
 .web-modal .ant-modal-content {
     border-radius: 12px;
-    width: 544px;
-    padding: 32px !important;
 }
 
 .modal-footer {
@@ -27,6 +26,4 @@
 /* mobile */
 .mobile-modal .ant-modal-content {
     border-radius: 2px;
-    width: 328px;
-    padding: 32px 16px 16px !important;
 }
