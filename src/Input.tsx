@@ -1,3 +1,4 @@
+import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
 import {
   DatePicker,
@@ -8,16 +9,14 @@ import {
   InputProps,
   Checkbox,
 } from "antd";
-import generatePicker from "antd/es/date-picker/generatePicker";
 import { Dayjs } from "dayjs";
-import React, { ReactNode, useState } from "react";
-import { InputHTMLAttributes, KeyboardEvent } from "react";
-import palette from "./styles/palette";
 import {
   CalendarOutlined,
   SearchOutlined,
   DownOutlined,
 } from "@ant-design/icons";
+
+import palette from "./styles/palette";
 
 export type InputType = {
   type?: "default" | "option" | "search" | "date" | "dropbox";
@@ -32,6 +31,8 @@ export type InputType = {
  * @param {"default" | "option" | "search" | "date" | "dropbox"} type INPUT 타입
  * @param onChange onChange 함수
  * @param onPressEnter enter 액션
+ * @param dropdownItems type=dropdown 인 경우, dropdown item
+ * @param label type=option 인 경우, 옵션 이름
  * @returns
  */
 export const Input = ({
@@ -42,8 +43,6 @@ export const Input = ({
   label,
   ...props
 }: InputType) => {
-  // const [dropdownItem, setDropdownItem] = useState(dropdownItems);
-
   const onKeyDown = (event: KeyboardEvent) => {
     // lodash 수정
     if (
