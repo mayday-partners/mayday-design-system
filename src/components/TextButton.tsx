@@ -8,11 +8,6 @@ export type TextButtonType = {
   size?: "small" | "large";
   primaryColor?: "black" | "blue" | "gray";
   underline: boolean;
-  icon?: React.FunctionComponentElement<
-    React.SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
 } & ButtonHTMLAttributes<HTMLButtonElement> & {
     css?: SerializedStyles;
   };
@@ -30,7 +25,6 @@ export const TextButton = ({
   size,
   primaryColor,
   underline,
-  icon,
   ...props
 }: TextButtonType) => {
   return (
@@ -39,7 +33,6 @@ export const TextButton = ({
         {...props}
         className={`${size} ${primaryColor} ${underline ? "underline" : ""}`}
       >
-        {icon}
         {children}
       </button>
     </TextButtonDiv>

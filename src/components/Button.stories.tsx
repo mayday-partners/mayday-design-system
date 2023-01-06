@@ -1,6 +1,5 @@
 import { Button, ButtonPropsType } from "./Button";
 import { ComponentMeta, Story } from "@storybook/react";
-import Icons from "./icons";
 
 export default {
   title: "Common/Button",
@@ -31,5 +30,4 @@ Default.args = {
   type: "solid",
   children: "BUTTON",
   disabled: false,
-  // icon: <Icons icon="profile" />,
 };

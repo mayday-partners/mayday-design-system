@@ -7,11 +7,6 @@ import palette from "../styles/palette";
 export type ButtonPropsType = {
   /** 버튼요소 */
   children: JSX.Element | string;
-  icon?: React.FunctionComponentElement<
-    React.SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
   size?: "small" | "medium" | "large";
   type?: "default" | "solid" | "secondary" | "selected";
   // htmlType: Pick<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>; // ??
@@ -32,7 +27,6 @@ export type ButtonPropsType = {
  */
 export const Button = ({
   children,
-  icon,
   size,
   type,
   htmlType,
@@ -48,10 +42,7 @@ export const Button = ({
         className={`${size} ${type} ${props.disabled ? "disabled" : ""}`}
         type={htmlType}
       >
-        <>
-          {icon}
-          {children}
-        </>
+        <>{children}</>
       </button>
     </ButtonDiv>
   );

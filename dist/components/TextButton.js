@@ -24,7 +24,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { jsxs as _jsxs, jsx as _jsx } from "@emotion/react/jsx-runtime";
+import { jsx as _jsx } from "@emotion/react/jsx-runtime";
 import styled from "@emotion/styled";
 import palette from "../styles/palette";
 /**
@@ -37,8 +37,8 @@ import palette from "../styles/palette";
  * @returns
  */
 export var TextButton = function (_a) {
-    var children = _a.children, size = _a.size, primaryColor = _a.primaryColor, underline = _a.underline, icon = _a.icon, props = __rest(_a, ["children", "size", "primaryColor", "underline", "icon"]);
-    return (_jsx(TextButtonDiv, { children: _jsxs("button", __assign({}, props, { className: "".concat(size, " ").concat(primaryColor, " ").concat(underline ? "underline" : "") }, { children: [icon, children] })) }));
+    var children = _a.children, size = _a.size, primaryColor = _a.primaryColor, underline = _a.underline, props = __rest(_a, ["children", "size", "primaryColor", "underline"]);
+    return (_jsx(TextButtonDiv, { children: _jsx("button", __assign({}, props, { className: "".concat(size, " ").concat(primaryColor, " ").concat(underline ? "underline" : "") }, { children: children })) }));
 };
 var TextButtonDiv = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  button {\n    display: flex;\n    align-items: center;\n    border: none;\n    padding: 0;\n    background-color: #ffffff;\n    cursor: pointer;\n  }\n  .small {\n    height: 20px;\n\n    font-weight: 500;\n    font-size: 13;\n    line-height: 16px;\n  }\n  .large {\n    font-size: 15px;\n    line-height: 19px;\n  }\n\n  .black {\n    color: ", ";\n  }\n  .gray {\n    color: ", ";\n  }\n  .blue {\n    color: ", ";\n  }\n\n  .underline {\n    text-decoration: underline;\n  }\n"], ["\n  button {\n    display: flex;\n    align-items: center;\n    border: none;\n    padding: 0;\n    background-color: #ffffff;\n    cursor: pointer;\n  }\n  .small {\n    height: 20px;\n\n    font-weight: 500;\n    font-size: 13;\n    line-height: 16px;\n  }\n  .large {\n    font-size: 15px;\n    line-height: 19px;\n  }\n\n  .black {\n    color: ", ";\n  }\n  .gray {\n    color: ", ";\n  }\n  .blue {\n    color: ", ";\n  }\n\n  .underline {\n    text-decoration: underline;\n  }\n"])), palette.gray[800], palette.gray[600], palette.blue[700]);
 var templateObject_1;

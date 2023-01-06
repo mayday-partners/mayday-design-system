@@ -1,5 +1,4 @@
 import { Story } from "@storybook/react";
-import Icons from "./icons";
 import { TextButton, TextButtonType } from "./TextButton";
 
 export default {
@@ -15,5 +14,4 @@ Default.args = {
   primaryColor: "gray",
   children: "text button",
   underline: true,
-  //   icon: <Icons icon="chevron_left" />,
 };

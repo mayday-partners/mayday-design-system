@@ -19,6 +19,6 @@
     "outDir": "./dist",
     "declaration": true
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.ts", "./src/**/*.svg"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

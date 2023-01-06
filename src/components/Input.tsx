@@ -5,7 +5,6 @@ import { Dayjs } from "dayjs";
 import React from "react";
 import { InputHTMLAttributes, KeyboardEvent } from "react";
 import palette from "../styles/palette";
-import Icons from "./icons";
 
 export type InputType = {
   type: "default" | "option" | "search" | "date" | "dropbox";
@@ -38,7 +37,6 @@ export const Input = ({
       <DatePickerDiv>
         <DatePicker
           placeholder="0000/00/00"
-          suffixIcon={<Icons icon="calendar" />}
           onChange={(event) => setValue(event ?? "")}
         />
       </DatePickerDiv>
@@ -46,7 +44,6 @@ export const Input = ({
   } else
     return (
       <InputDiv className={props.disabled ? "disabled" : ""}>
-        {type === "search" ? <Icons icon="search" /> : <></>}
         <input
           {...props}
           onKeyDown={onKeyDown}

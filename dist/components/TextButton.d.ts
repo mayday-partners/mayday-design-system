@@ -5,9 +5,6 @@ export type TextButtonType = {
     size?: "small" | "large";
     primaryColor?: "black" | "blue" | "gray";
     underline: boolean;
-    icon?: React.FunctionComponentElement<React.SVGProps<SVGSVGElement> & {
-        title?: string | undefined;
-    }>;
 } & ButtonHTMLAttributes<HTMLButtonElement> & {
     css?: SerializedStyles;
 };
@@ -20,4 +17,4 @@ export type TextButtonType = {
  * @param icon 아이콘 컴포넌트
  * @returns
  */
-export declare const TextButton: ({ children, size, primaryColor, underline, icon, ...props }: TextButtonType) => import("@emotion/react/jsx-runtime").JSX.Element;
+export declare const TextButton: ({ children, size, primaryColor, underline, ...props }: TextButtonType) => import("@emotion/react/jsx-runtime").JSX.Element;

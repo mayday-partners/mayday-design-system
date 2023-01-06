@@ -22,5 +22,4 @@ Default.args = {
     primaryColor: "gray",
     children: "text button",
     underline: true,
-    //   icon: <Icons icon="chevron_left" />,
 };

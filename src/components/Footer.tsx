@@ -1,6 +1,5 @@
 import palette from "../styles/palette";
 import { Divider, Space } from "antd";
-import Icons from "./icons";
 import styled from "@emotion/styled";
 import React from "react";
 
@@ -9,8 +8,6 @@ export default function Footer() {
     <FooterStyle>
       <div className="main-container">
         <div className="logo-wrapper">
-          <Icons icon="footer_logo" />
-
           <Space size={40}>
             <a href="">회사소개서</a>
             <a href="">이용약관</a>

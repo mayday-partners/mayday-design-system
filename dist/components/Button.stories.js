@@ -38,5 +38,4 @@ Default.args = {
     type: "solid",
     children: "BUTTON",
     disabled: false,
-    // icon: <Icons icon="profile" />,
 };
