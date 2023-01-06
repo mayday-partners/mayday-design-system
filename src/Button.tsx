@@ -1,7 +1,7 @@
-import { css, SerializedStyles } from "@emotion/react";
+import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
-import { ButtonHTMLAttributes } from "react";
+import { Button as AntButton, ButtonProps } from "antd";
+
 import palette from "./styles/palette";
 
 export type ButtonPropsType = {
@@ -11,14 +11,13 @@ export type ButtonPropsType = {
   type?: "default" | "solid" | "secondary" | "selected";
   // htmlType: Pick<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>; // ??
   htmlType?: "submit" | "reset" | "button";
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "type"> & {
+} & Omit<ButtonProps, "size" | "type"> & {
     css?: SerializedStyles;
   };
 
 /**
  * 버튼 컴포넌트
  * @param children 버튼에 들어갈 요소
- * @param icon 아이콘 컴포넌트
  * @param {'small' | 'medium' | 'large'} [size='medium'] 버튼 크기
  * @param solid 버튼 스타일
  * @param primaryColor 버튼 색상
@@ -37,13 +36,13 @@ export const Button = ({
       className={props.className} // props 로 넘겨주는 css 는 className 으로 넘어옴!
       disabled={props.disabled}
     >
-      <button
+      <AntButton
         {...props}
         className={`${size} ${type} ${props.disabled ? "disabled" : ""}`}
-        type={htmlType}
+        htmlType={htmlType}
       >
-        <>{children}</>
-      </button>
+        {children}
+      </AntButton>
     </ButtonDiv>
   );
 };
@@ -51,6 +50,7 @@ export const Button = ({
 const ButtonDiv = styled.div<ButtonPropsType>`
   display: inline-block;
   width: auto;
+
   button {
     width: 100%;
     display: flex;
@@ -102,6 +102,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
   }
   .medium {
     border-radius: 4px;
+    width: 232px;
     height: 40px;
 
     &.solid {
@@ -135,6 +136,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     }
   }
   .large {
+    width: 400px;
     height: 56px;
 
     &.solid {
