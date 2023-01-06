@@ -1,18 +1,32 @@
 import styled from "@emotion/styled";
-import { DatePicker } from "antd";
+import {
+  DatePicker,
+  Dropdown,
+  MenuProps,
+  Space,
+  Input as AntInput,
+  InputProps,
+  Checkbox,
+} from "antd";
 import generatePicker from "antd/es/date-picker/generatePicker";
 import { Dayjs } from "dayjs";
-import React from "react";
+import React, { ReactNode, useState } from "react";
 import { InputHTMLAttributes, KeyboardEvent } from "react";
 import palette from "./styles/palette";
+import {
+  CalendarOutlined,
+  SearchOutlined,
+  DownOutlined,
+} from "@ant-design/icons";
 
 export type InputType = {
   type?: "default" | "option" | "search" | "date" | "dropbox";
   onChange: (value: string | Dayjs) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
-  // disabled?: boolean;
-  // TODO 아이콘 컴포넌트 프로젝트 단위로 수정할 수 있게 props 로 받기
-} & InputHTMLAttributes<HTMLInputElement>;
+  dropdownItems?: MenuProps;
+  label?: string;
+} & InputProps;
+
 /**
  * INPUT 컴포넌트
  * @param {"default" | "option" | "search" | "date" | "dropbox"} type INPUT 타입
@@ -24,9 +38,12 @@ export const Input = ({
   type = "default",
   onPressEnter,
   onChange,
-  //   disabled,
+  dropdownItems,
+  label,
   ...props
 }: InputType) => {
+  // const [dropdownItem, setDropdownItem] = useState(dropdownItems);
+
   const onKeyDown = (event: KeyboardEvent) => {
     // lodash 수정
     if (
@@ -45,15 +62,41 @@ export const Input = ({
         <DatePicker
           placeholder="0000/00/00"
           onChange={(event) => onChange(event ?? "")}
+          // TODO figma 아이콘과 다름
+          suffixIcon={<CalendarOutlined />}
         />
       </DatePickerDiv>
+    );
+  } else if (type === "option") {
+    return (
+      <InputDiv>
+        <Checkbox onChange={(event) => onChange(event.target.value)}>
+          {label}
+        </Checkbox>
+      </InputDiv>
+    );
+  } else if (type === "dropbox") {
+    return (
+      <DropdownDiv>
+        <Dropdown menu={dropdownItems} trigger={["click"]}>
+          <Space>
+            <AntInput
+              {...props}
+              onPressEnter={onKeyDown}
+              onChange={(event) => onChange(event.target.value)}
+            />
+            <DownOutlined />
+          </Space>
+        </Dropdown>
+      </DropdownDiv>
     );
   } else
     return (
       <InputDiv className={props.disabled ? "disabled" : ""}>
-        <input
+        {type === "search" && <SearchOutlined />}
+        <AntInput
           {...props}
-          onKeyDown={onKeyDown}
+          onPressEnter={onKeyDown}
           onChange={(event) => onChange(event.target.value)}
         />
       </InputDiv>
@@ -68,7 +111,6 @@ const InputDiv = styled.div`
   border: 1px solid ${palette.gray[300]};
   border-radius: 2px;
   padding: 0 0 0 16px;
-  cursor: text;
 
   &:focus-within {
     // 자식요소 포커스 인식
@@ -80,6 +122,8 @@ const InputDiv = styled.div`
 
     &:focus {
       outline: none;
+      border: none;
+      box-shadow: none;
     }
     &::placeholder {
       font-size: 15px;
@@ -96,6 +140,17 @@ const InputDiv = styled.div`
       color: ${palette.gray[600]};
       cursor: not-allowed;
     }
+  }
+
+  .ant-checkbox-wrapper {
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    color: ${palette.gray[800]};
+  }
+  .ant-input-disabled {
+    background-color: inherit;
   }
 `;
 const DatePickerDiv = styled.div`
@@ -129,10 +184,39 @@ const DatePickerDiv = styled.div`
     border-color: ${palette.gray[600]};
 
     .ant-picker-input input {
-      color: ${palette.gray[800]};
+      color: ${palette.gray[800]} !important;
     }
   }
   .ant-picker-clear {
     right: 20px;
+  }
+  .ant-picker-suffix {
+    color: ${palette.gray[800]} !important;
+  }
+`;
+const DropdownDiv = styled.div`
+  display: flex;
+  width: fit-content;
+  height: 40px;
+  border: 1px solid ${palette.gray[300]};
+  border-radius: 2px;
+  align-items: center;
+  padding: 0 8px 0 16px;
+
+  .ant-input {
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    &::placeholder {
+      color: ${palette.gray[400]};
+    }
+
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
   }
 `;
