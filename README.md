@@ -11,4 +11,5 @@
 2. `npm version <major | minor | patch>` 로 버전 업 (버전이 동일한 경우 publish 가 불가능합니다.)
 3. `npm publish --access public` 으로 배포
 
-## [npm package info] (https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design)
+## npm package info
+[보러가기](https://www.npmjs.com/package/@maydaydevteam/yeeeyes-design)
