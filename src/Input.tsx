@@ -4,7 +4,7 @@ import generatePicker from "antd/es/date-picker/generatePicker";
 import { Dayjs } from "dayjs";
 import React from "react";
 import { InputHTMLAttributes, KeyboardEvent } from "react";
-import palette from "../styles/palette";
+import palette from "./styles/palette";
 
 export type InputType = {
   type: "default" | "option" | "search" | "date" | "dropbox";

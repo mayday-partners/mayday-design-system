@@ -1,4 +1,6 @@
-export { Button } from "./components/Button";
-export { Input } from "./components/Input";
-export { TextButton } from "./components/TextButton";
-export * as Footer from "./components/Footer";
+import { Button } from "./Button";
+import { Input } from "./Input";
+import { TextButton } from "./TextButton";
+import * as Footer from "./Footer";
+
+export { Button, Input, TextButton, Footer };
