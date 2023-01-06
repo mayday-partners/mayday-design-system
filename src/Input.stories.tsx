@@ -1,5 +1,6 @@
-import { ComponentMeta, Story } from "@storybook/react";
+import { Story } from "@storybook/react";
 import { MenuProps } from "antd";
+
 import { Input, InputType } from "./Input";
 
 export default {
