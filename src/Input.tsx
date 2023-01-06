@@ -7,16 +7,23 @@ import { InputHTMLAttributes, KeyboardEvent } from "react";
 import palette from "./styles/palette";
 
 export type InputType = {
-  type: "default" | "option" | "search" | "date" | "dropbox";
-  setValue: (value: string | Dayjs) => void;
+  type?: "default" | "option" | "search" | "date" | "dropbox";
+  onChange: (value: string | Dayjs) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
-  disabled?: boolean;
+  // disabled?: boolean;
+  // TODO 아이콘 컴포넌트 프로젝트 단위로 수정할 수 있게 props 로 받기
 } & InputHTMLAttributes<HTMLInputElement>;
-
+/**
+ * INPUT 컴포넌트
+ * @param {"default" | "option" | "search" | "date" | "dropbox"} type INPUT 타입
+ * @param onChange onChange 함수
+ * @param onPressEnter enter 액션
+ * @returns
+ */
 export const Input = ({
-  type,
+  type = "default",
   onPressEnter,
-  setValue,
+  onChange,
   //   disabled,
   ...props
 }: InputType) => {
@@ -37,7 +44,7 @@ export const Input = ({
       <DatePickerDiv>
         <DatePicker
           placeholder="0000/00/00"
-          onChange={(event) => setValue(event ?? "")}
+          onChange={(event) => onChange(event ?? "")}
         />
       </DatePickerDiv>
     );
@@ -47,7 +54,7 @@ export const Input = ({
         <input
           {...props}
           onKeyDown={onKeyDown}
-          onChange={(event) => setValue(event.target.value)}
+          onChange={(event) => onChange(event.target.value)}
         />
       </InputDiv>
     );
