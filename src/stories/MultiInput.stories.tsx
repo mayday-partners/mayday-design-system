@@ -23,7 +23,7 @@ TwoItem.args = {
         gap: "16px",
       }}
     >
-      <div>
+      <div style={{ marginBottom: "24px" }}>
         <Label type="body1" bold="regular" color={palette.gray[600]}>
           항목 제목
         </Label>
