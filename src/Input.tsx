@@ -10,12 +10,14 @@ import {
   Input as AntInput,
   InputProps,
   Checkbox,
+  TimePicker,
 } from "antd";
 import { Dayjs } from "dayjs";
 import {
   CalendarOutlined,
   SearchOutlined,
   DownOutlined,
+  ClockCircleOutlined,
 } from "@ant-design/icons";
 
 import palette from "./styles/palette";
@@ -23,7 +25,14 @@ import React from "react";
 import { SerializedStyles } from "@emotion/react";
 
 export type InputType = {
-  type?: "default" | "option" | "search" | "date" | "dropbox";
+  type?:
+    | "default"
+    | "option"
+    | "search"
+    | "date"
+    | "datetime"
+    | "time"
+    | "dropbox";
   onChange: (value: string | Dayjs | number) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   dropdownItems?: MenuProps;
@@ -64,10 +73,32 @@ export const Input = ({
     return (
       <DatePickerDiv className={props.className} css={css}>
         <DatePicker
-          placeholder="0000/00/00"
+          placeholder="연도/월/일"
           onChange={(event) => onChange(event ?? "")}
           // TODO figma 아이콘과 다름
           suffixIcon={<CalendarOutlined />}
+        />
+      </DatePickerDiv>
+    );
+  } else if (type === "datetime") {
+    return (
+      <DatePickerDiv className={props.className} css={css}>
+        <DatePicker
+          showTime
+          placeholder="연도/월/일 00:00"
+          onChange={(event) => onChange(event ?? "")}
+          // TODO figma 아이콘과 다름
+          suffixIcon={<CalendarOutlined />}
+        />
+      </DatePickerDiv>
+    );
+  } else if (type === "time") {
+    return (
+      <DatePickerDiv className={props.className} css={css}>
+        <TimePicker
+          placeholder="00:00"
+          onChange={(event) => onChange(event ?? "")}
+          suffixIcon={<ClockCircleOutlined />}
         />
       </DatePickerDiv>
     );
