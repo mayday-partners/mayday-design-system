@@ -5,5 +5,15 @@ import * as Footer from "./Footer";
 import { Checkbox } from "./Checkbox";
 import Modal from "./Modal";
 import Label from "./Label";
+import MultiInput from "./MultiInput";
 
-export { Button, Input, TextButton, Footer, Checkbox, Modal, Label };
+export {
+  Button,
+  Input,
+  TextButton,
+  Footer,
+  Checkbox,
+  Modal,
+  Label,
+  MultiInput,
+};
