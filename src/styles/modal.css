@@ -1,0 +1,29 @@
+/* common */
+.ant-modal-content {
+    padding: 0px !important;
+    margin: 0 auto;
+    width: fit-content;
+}
+.ant-modal-footer {
+    display: none;
+}
+
+/* web */
+.web-modal .ant-modal-content {
+    border-radius: 12px;
+}
+
+.modal-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.ant-modal-content button {
+    width: 100%;
+}
+
+/* mobile */
+.mobile-modal .ant-modal-content {
+    border-radius: 2px;
+}

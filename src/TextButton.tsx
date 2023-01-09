@@ -1,14 +1,14 @@
 import { SerializedStyles } from "@emotion/react";
+import { Button, ButtonProps } from "antd";
 import styled from "@emotion/styled";
-import { ButtonHTMLAttributes } from "react";
+
 import palette from "./styles/palette";
 
 export type TextButtonType = {
   children: string | JSX.Element; // svg 파일이 npm을 통해 publish 되지않음. 각 프로젝트 단위에서 아이콘 사용할 수 있도록
-  size?: "small" | "large";
   primaryColor?: "black" | "blue" | "gray";
   underline?: boolean;
-} & ButtonHTMLAttributes<HTMLButtonElement> & {
+} & ButtonProps & {
     css?: SerializedStyles;
   };
 /**
@@ -17,24 +17,24 @@ export type TextButtonType = {
  * @param {'small' |  'large'} [size='small'] 버튼 크기
  * @param {'black' | 'blue' | 'gray'} primaryColor 버튼 색상
  * @param underline 텍스트 언더라인 유무
- * @param icon 아이콘 컴포넌트
  * @returns
  */
 export const TextButton = ({
   children,
-  size,
   primaryColor,
   underline,
   ...props
 }: TextButtonType) => {
   return (
-    <TextButtonDiv>
-      <button
+    <TextButtonDiv className={props.className}>
+      <Button
         {...props}
-        className={`${size} ${primaryColor} ${underline ? "underline" : ""}`}
+        className={`${props.size} ${primaryColor} ${
+          underline ? "underline" : ""
+        }`}
       >
         {children}
-      </button>
+      </Button>
     </TextButtonDiv>
   );
 };
@@ -46,6 +46,7 @@ const TextButtonDiv = styled.div`
     border: none;
     padding: 0;
     background-color: #ffffff;
+    box-shadow: none;
     cursor: pointer;
   }
   .small {
