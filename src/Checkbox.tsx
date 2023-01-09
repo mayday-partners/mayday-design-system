@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 import {
@@ -21,10 +22,10 @@ export type CheckboxType = {
  * @param itemList 박스 안에 들어갈 요소 리스트. {key, label, isDisable}
  * @returns
  */
-export const Checkbox = ({ type, itemList, ...props }: CheckboxType) => {
+export const Checkbox = ({ type, itemList, css, ...props }: CheckboxType) => {
   if (type === "radio") {
     return (
-      <BoxDiv className={props.className}>
+      <BoxDiv css={css}>
         <Radio.Group onChange={props.onChange as (e: RadioChangeEvent) => void}>
           {itemList.map((i) => {
             return (

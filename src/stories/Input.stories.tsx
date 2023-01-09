@@ -1,5 +1,6 @@
 import { Story } from "@storybook/react";
 import { MenuProps } from "antd";
+import React from "react";
 
 import { Input, InputType } from "../Input";
 

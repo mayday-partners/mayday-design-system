@@ -1,4 +1,5 @@
 import { Story } from "@storybook/react";
+import React from "react";
 
 import { TextButton, TextButtonType } from "../TextButton";
 

@@ -1,6 +1,7 @@
 import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Button as AntButton, ButtonProps } from "antd";
+import React from "react";
 
 import palette from "./styles/palette";
 
