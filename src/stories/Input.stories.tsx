@@ -1,7 +1,7 @@
 import { Story } from "@storybook/react";
 import { MenuProps } from "antd";
 
-import { Input, InputType } from "./Input";
+import { Input, InputType } from "../Input";
 
 export default {
   title: "Common/Input",
