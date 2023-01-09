@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
 import {
@@ -17,14 +19,16 @@ import {
 } from "@ant-design/icons";
 
 import palette from "./styles/palette";
+import React from "react";
+import { SerializedStyles } from "@emotion/react";
 
 export type InputType = {
   type?: "default" | "option" | "search" | "date" | "dropbox";
-  onChange: (value: string | Dayjs) => void;
+  onChange: (value: string | Dayjs | number) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   dropdownItems?: MenuProps;
   label?: string;
-} & InputProps;
+} & InputProps & { css?: SerializedStyles };
 
 /**
  * INPUT 컴포넌트
@@ -32,7 +36,7 @@ export type InputType = {
  * @param onChange onChange 함수
  * @param onPressEnter enter 액션
  * @param dropdownItems type=dropdown 인 경우, dropdown item
- * @param label type=option 인 경우, 옵션 이름
+ * @param label type=option 인 경우 옵션 이름
  * @returns
  */
 export const Input = ({
@@ -41,6 +45,7 @@ export const Input = ({
   onChange,
   dropdownItems,
   label,
+  css,
   ...props
 }: InputType) => {
   const onKeyDown = (event: KeyboardEvent) => {
@@ -57,7 +62,7 @@ export const Input = ({
   if (type === "date") {
     // TODO dayjs config
     return (
-      <DatePickerDiv>
+      <DatePickerDiv className={props.className} css={css}>
         <DatePicker
           placeholder="0000/00/00"
           onChange={(event) => onChange(event ?? "")}
@@ -68,7 +73,7 @@ export const Input = ({
     );
   } else if (type === "option") {
     return (
-      <InputDiv>
+      <InputDiv className={props.className} css={css}>
         <Checkbox onChange={(event) => onChange(event.target.value)}>
           {label}
         </Checkbox>
@@ -76,7 +81,7 @@ export const Input = ({
     );
   } else if (type === "dropbox") {
     return (
-      <DropdownDiv>
+      <DropdownDiv className={props.className} css={css}>
         <Dropdown menu={dropdownItems} trigger={["click"]}>
           <Space>
             <AntInput
@@ -91,7 +96,7 @@ export const Input = ({
     );
   } else
     return (
-      <InputDiv className={props.disabled ? "disabled" : ""}>
+      <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
         {type === "search" && <SearchOutlined />}
         <AntInput
           {...props}
@@ -102,9 +107,10 @@ export const Input = ({
     );
 };
 
-const InputDiv = styled.div`
+export const InputDiv = styled.div`
   display: flex;
   align-items: center;
+
   width: 232px;
   height: 40px;
   border: 1px solid ${palette.gray[300]};
@@ -116,7 +122,8 @@ const InputDiv = styled.div`
     border-color: ${palette.gray[600]};
   }
 
-  input {
+  input,
+  .ant-input-affix-wrapper {
     border: none;
 
     &:focus {
@@ -130,6 +137,11 @@ const InputDiv = styled.div`
       line-height: 19px;
       color: ${palette.gray[400]};
     }
+  }
+  .ant-input-affix-wrapper-focused {
+    outline: none;
+    border: none;
+    box-shadow: none;
   }
   &.disabled {
     background-color: ${palette.gray[100]};
@@ -150,6 +162,12 @@ const InputDiv = styled.div`
   }
   .ant-input-disabled {
     background-color: inherit;
+  }
+
+  .ant-input-show-count-suffix {
+    position: relative;
+    top: 38px;
+    left: 10px;
   }
 `;
 const DatePickerDiv = styled.div`

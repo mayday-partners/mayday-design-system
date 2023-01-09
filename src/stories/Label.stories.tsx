@@ -1,4 +1,5 @@
 import { Story } from "@storybook/react";
+import React from "react";
 import Label, { LabelType } from "../Label";
 
 export default {
@@ -14,6 +15,7 @@ Default.args = {
   type: "title1",
   bold: "regular",
   isRequired: false,
+  color: "black",
 };
 export const Required = Template.bind({});
 Required.args = {

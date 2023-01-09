@@ -4,5 +4,6 @@ import { TextButton } from "./TextButton";
 import * as Footer from "./Footer";
 import { Checkbox } from "./Checkbox";
 import Modal from "./Modal";
+import Label from "./Label";
 
-export { Button, Input, TextButton, Footer, Checkbox, Modal };
+export { Button, Input, TextButton, Footer, Checkbox, Modal, Label };

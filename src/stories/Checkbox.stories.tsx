@@ -1,6 +1,7 @@
 import { Story } from "@storybook/react";
 import { RadioChangeEvent } from "antd";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
+import React from "react";
 import { Checkbox, CheckboxType } from "../Checkbox";
 
 export default {
