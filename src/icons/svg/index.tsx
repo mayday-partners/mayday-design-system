@@ -11,6 +11,12 @@ import { ReactComponent as lock } from "./lock.svg";
 import { ReactComponent as vercel } from "./vercel.svg";
 import { ReactComponent as star } from "./star.svg";
 import { ReactComponent as circle } from "./circle.svg";
+import { ReactComponent as addPhoto } from "./add_photo.svg";
+import { ReactComponent as trash } from "./20_delete.svg";
+import { ReactComponent as upload } from "./20_upload.svg";
+import { ReactComponent as folder } from "./20_folder.svg";
+import { ReactComponent as file } from "./20_file.svg";
+import { ReactComponent as cancel } from "./20_cancel.svg";
 // sns
 // import facebook from './sns/facebook.svg';
 // import google from './sns/google.svg';
@@ -29,6 +35,12 @@ export {
   heart,
   empty_heart,
   lock,
+  addPhoto,
+  trash,
+  upload,
+  folder,
+  file,
+  cancel,
   //   facebook,
   //   google,
 };

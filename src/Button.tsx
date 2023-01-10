@@ -88,6 +88,10 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     &.disabled {
       border-color: ${palette.gray.gray3};
       color: ${palette.gray.gray3};
+
+      &:hover {
+        background-color: #ffffff;
+      }
     }
     &.selected {
       border-color: ${palette.red.red6};

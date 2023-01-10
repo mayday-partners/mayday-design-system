@@ -17,3 +17,24 @@ ImageCrop.args = {
   noCrop: true,
   hasDelete: true,
 };
+export const Image = Template.bind({});
+Image.args = {
+  name: "Image",
+  type: "image",
+  noCrop: false,
+  hasDelete: true,
+};
+export const SingleFile = Template.bind({});
+SingleFile.args = {
+  name: "File",
+  type: "single",
+  noCrop: true,
+  hasDelete: true,
+};
+export const MultiFile = Template.bind({});
+MultiFile.args = {
+  name: "File",
+  type: "multi",
+  noCrop: true,
+  hasDelete: true,
+};
