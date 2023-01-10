@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import palette from "./styles/palette";
 import { Alert as AntAlert } from "antd";
+import { css, SerializedStyles } from "@emotion/react";
 
 export type AlertType = {
   message: string;
@@ -9,6 +10,8 @@ export type AlertType = {
   showIcon?: boolean;
   closable?: boolean;
   description?: string;
+} & {
+  css?: SerializedStyles;
 };
 
 /**
@@ -35,6 +38,9 @@ export default function Alert({
       message={message}
       type={type}
       className={`${type} `}
+      css={alertStyles}
     ></AntAlert>
   );
 }
+
+const alertStyles = css``;
