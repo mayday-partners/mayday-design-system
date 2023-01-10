@@ -17,6 +17,7 @@ import { ReactComponent as upload } from "./20_upload.svg";
 import { ReactComponent as folder } from "./20_folder.svg";
 import { ReactComponent as file } from "./20_file.svg";
 import { ReactComponent as cancel } from "./20_cancel.svg";
+import { ReactComponent as change } from "./16_change.svg";
 // sns
 // import facebook from './sns/facebook.svg';
 // import google from './sns/google.svg';
@@ -41,6 +42,7 @@ export {
   folder,
   file,
   cancel,
+  change,
   //   facebook,
   //   google,
 };
