@@ -41,4 +41,12 @@ export default {
     babel(),
     commonjs(),
   ],
+  external: ["react", "react-dom"],
+  module: {
+    rules: [
+      {
+        exclude: ["/node_modules/"],
+      },
+    ],
+  },
 };
