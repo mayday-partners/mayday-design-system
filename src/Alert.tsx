@@ -46,10 +46,10 @@ export default function Alert({
 
 const AlertDiv = styled.div`
   .ant-alert-info {
-    background-color: ${palette.gray[200]} !important;
-    border: 1px solid ${palette.gray[300]} !important;
+    background-color: ${palette.gray.gray2} !important;
+    border: 1px solid ${palette.gray.gray3} !important;
   }
   .ant-alert-info .ant-alert-icon {
-    color: ${palette.gray[500]} !important;
+    color: ${palette.gray.gray5} !important;
   }
 `;
