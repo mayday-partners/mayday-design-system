@@ -128,7 +128,6 @@ export default function Upload({
         >
           <ImgCrop
             modalClassName="image-upload-modal"
-            shape="round"
             rotate
             aspect={width / height}
             modalOk="적용하기"
@@ -247,14 +246,14 @@ export default function Upload({
                         svg {
                           width: 48px;
                           height: 48px;
-                          color: ${palette.gray[400]};
+                          color: ${palette.gray.gray4};
                         }
                       `}
                     />
                     <Label
                       bold="semibold"
                       type="body2"
-                      color={palette.gray[600]}
+                      color={palette.gray.gray6}
                     >
                       {description as string}
                     </Label>

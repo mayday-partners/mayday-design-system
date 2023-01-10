@@ -9,7 +9,7 @@ import MultiInput from "./MultiInput";
 import SelectBox from "./SelectBox";
 import Upload from "./Upload";
 import Icons from "./icons";
-import palette from "./styles/palette";
+import * as palette from "./styles/palette";
 
 export {
   Footer,
@@ -21,7 +21,7 @@ export {
   Label,
   MultiInput,
   SelectBox,
-  // Upload,
+  Upload,
   Icons,
   palette,
 };

@@ -55,7 +55,7 @@ const MultiInputDiv = styled.div`
   justify-content: space-between;
 
   padding: 24px;
-  border: 1px solid ${palette.gray[200]};
+  border: 1px solid ${palette.gray.gray2};
   border-radius: 8px;
   align-items: center;
 

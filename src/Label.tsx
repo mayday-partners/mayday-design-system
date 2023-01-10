@@ -104,7 +104,7 @@ const LabelP = styled.p`
   &.required {
     &::after {
       content: " *";
-      color: ${palette.red[600]};
+      color: ${palette.red.red6};
     }
   }
 `;

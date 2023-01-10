@@ -94,7 +94,7 @@ const FooterStyle = styled.footer`
     display: flex;
   }
   .ant-divider {
-    border-color: ${palette.gray[600]};
+    border-color: ${palette.gray.gray6]};
     height: 8px;
   }
 `;
