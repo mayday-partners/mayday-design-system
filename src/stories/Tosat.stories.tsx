@@ -14,4 +14,5 @@ export const Default = Template.bind({});
 Default.args = {
   content: "안녕하세요.",
   type: "success",
+  top: 96,
 };

@@ -11,6 +11,7 @@ export type MessagePropsType = {
   content: JSX.Element | string;
   type?: "success" | "error" | "warning";
   icon?: SVGElement;
+  top: number;
 } & {
   css?: SerializedStyles;
 };
@@ -19,9 +20,10 @@ export default function Toast({
   content,
   type,
   icon,
+  top,
   ...props
 }: MessagePropsType) {
-  const [messageApi, contextHolder] = message.useMessage();
+  const [messageApi, contextHolder] = message.useMessage({ top: top });
 
   messageApi.open({
     type: type,
