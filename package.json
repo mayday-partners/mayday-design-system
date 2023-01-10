@@ -8,6 +8,9 @@
     "url": "git+https://github.com/mayday-partners/mayday-design-system.git"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "private": false,
   "babel": {
     "presets": [
