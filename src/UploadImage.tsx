@@ -13,7 +13,7 @@ import { Button } from "./Button";
 
 type FileType = File | null | string | undefined;
 
-export type UploadType = {
+export type UploadImageType = {
   type: "image" | "image-crop";
   width?: number;
   height?: number;
@@ -44,7 +44,7 @@ export type UploadType = {
  * @param handleDelete
  * @returns
  */
-export default function Upload({
+export default function UploadImage({
   type,
   css,
   width = 320,
@@ -59,7 +59,7 @@ export default function Upload({
   hasDelete = false,
   handleDelete,
   ...props
-}: UploadType) {
+}: UploadImageType) {
   const beforeUpload = (file: RcFile) => {
     console.log("file", file);
     const isFileType = acceptedFileType

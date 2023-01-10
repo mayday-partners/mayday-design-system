@@ -1,14 +1,14 @@
 import { Story } from "@storybook/react";
 import React from "react";
 import Upload from "../UploadImage";
-import { UploadType } from "../UploadImage";
+import { UploadImageType } from "../UploadImage";
 
 export default {
   title: "Common/UploadImage",
   component: Upload,
 };
 
-const Template: Story<UploadType> = (args) => <Upload {...args} />;
+const Template: Story<UploadImageType> = (args) => <Upload {...args} />;
 
 export const ImageCrop = Template.bind({});
 ImageCrop.args = {
