@@ -1,12 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
+import React from "react";
 import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
 import {
   DatePicker,
-  Dropdown,
-  MenuProps,
-  Space,
   Input as AntInput,
   InputProps,
   Checkbox,
@@ -16,13 +14,12 @@ import { Dayjs } from "dayjs";
 import {
   CalendarOutlined,
   SearchOutlined,
-  DownOutlined,
   ClockCircleOutlined,
 } from "@ant-design/icons";
 
 import palette from "./styles/palette";
-import React from "react";
 import { SerializedStyles } from "@emotion/react";
+import Label from "./Label";
 
 export type InputType = {
   type?:
@@ -35,24 +32,24 @@ export type InputType = {
     | "dropbox";
   onChange: (value: string | Dayjs | number) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
-  dropdownItems?: MenuProps;
+  option?: string;
   label?: string;
 } & InputProps & { css?: SerializedStyles };
 
 /**
  * INPUT 컴포넌트
- * @param {"default" | "option" | "search" | "date" | "dropbox"} type INPUT 타입
+ * @param {"default" | "option" | "search" | "date"} type INPUT 타입
  * @param onChange onChange 함수
  * @param onPressEnter enter 액션
- * @param dropdownItems type=dropdown 인 경우, dropdown item
- * @param label type=option 인 경우 옵션 이름
+ * @param option type=option 인 경우 옵션 이름
+ * @param label box 위에 라벨이 있는 경우
  * @returns
  */
 export const Input = ({
   type = "default",
   onPressEnter,
   onChange,
-  dropdownItems,
+  option,
   label,
   css,
   ...props
@@ -72,6 +69,11 @@ export const Input = ({
     // TODO dayjs config
     return (
       <DatePickerDiv className={props.className} css={css}>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray[600]}>
+            {label}
+          </Label>
+        )}
         <DatePicker
           placeholder="연도/월/일"
           onChange={(event) => onChange(event ?? "")}
@@ -83,6 +85,11 @@ export const Input = ({
   } else if (type === "datetime") {
     return (
       <DatePickerDiv className={props.className} css={css}>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray[600]}>
+            {label}
+          </Label>
+        )}
         <DatePicker
           showTime
           placeholder="연도/월/일 00:00"
@@ -95,6 +102,11 @@ export const Input = ({
   } else if (type === "time") {
     return (
       <DatePickerDiv className={props.className} css={css}>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray[600]}>
+            {label}
+          </Label>
+        )}
         <TimePicker
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
@@ -104,37 +116,36 @@ export const Input = ({
     );
   } else if (type === "option") {
     return (
-      <InputDiv className={props.className} css={css}>
-        <Checkbox onChange={(event) => onChange(event.target.value)}>
-          {label}
-        </Checkbox>
-      </InputDiv>
-    );
-  } else if (type === "dropbox") {
-    return (
-      <DropdownDiv className={props.className} css={css}>
-        <Dropdown menu={dropdownItems} trigger={["click"]}>
-          <Space>
-            <AntInput
-              {...props}
-              onPressEnter={onKeyDown}
-              onChange={(event) => onChange(event.target.value)}
-            />
-            <DownOutlined />
-          </Space>
-        </Dropdown>
-      </DropdownDiv>
+      <>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray[600]}>
+            {label}
+          </Label>
+        )}
+        <InputDiv className={props.className} css={css}>
+          <Checkbox onChange={(event) => onChange(event.target.value)}>
+            {option}
+          </Checkbox>
+        </InputDiv>
+      </>
     );
   } else
     return (
-      <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
-        {type === "search" && <SearchOutlined />}
-        <AntInput
-          {...props}
-          onPressEnter={onKeyDown}
-          onChange={(event) => onChange(event.target.value)}
-        />
-      </InputDiv>
+      <>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray[600]}>
+            {label}
+          </Label>
+        )}
+        <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
+          {type === "search" && <SearchOutlined />}
+          <AntInput
+            {...props}
+            onPressEnter={onKeyDown}
+            onChange={(event) => onChange(event.target.value)}
+          />
+        </InputDiv>
+      </>
     );
 };
 
@@ -152,7 +163,7 @@ export const InputDiv = styled.div`
     // 자식요소 포커스 인식
     border-color: ${palette.gray[600]};
   }
-
+  /* 공통 */
   input,
   .ant-input-affix-wrapper {
     border: none;
@@ -183,18 +194,17 @@ export const InputDiv = styled.div`
       cursor: not-allowed;
     }
   }
-
+  .ant-input-disabled {
+    background-color: inherit;
+  }
+  /* 옵션 컴포넌트 */
   .ant-checkbox-wrapper {
-    align-items: center;
     font-size: 15px;
     font-weight: 500;
     line-height: 19px;
     color: ${palette.gray[800]};
   }
-  .ant-input-disabled {
-    background-color: inherit;
-  }
-
+  /* 글자수 카운트 위치 수정 */
   .ant-input-show-count-suffix {
     position: relative;
     top: 38px;
@@ -202,6 +212,9 @@ export const InputDiv = styled.div`
   }
 `;
 const DatePickerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+
   .ant-picker {
     width: 232px;
     height: 40px;
@@ -240,31 +253,5 @@ const DatePickerDiv = styled.div`
   }
   .ant-picker-suffix {
     color: ${palette.gray[800]} !important;
-  }
-`;
-const DropdownDiv = styled.div`
-  display: flex;
-  width: fit-content;
-  height: 40px;
-  border: 1px solid ${palette.gray[300]};
-  border-radius: 2px;
-  align-items: center;
-  padding: 0 8px 0 16px;
-
-  .ant-input {
-    border: none;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 19px;
-
-    &::placeholder {
-      color: ${palette.gray[400]};
-    }
-
-    &:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-    }
   }
 `;
