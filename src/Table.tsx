@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/react";
-
+import { Table as AntTable } from "antd";
 import palette from "./styles/palette";
 import { ColumnsType } from "antd/es/table";
 
@@ -25,9 +25,9 @@ interface DataType {
   personnel?: string;
 }
 
-const arr = ["이름"];
-export type LabelType = {
+export type TableType = {
   columns: ColumnsType<DataType>;
+  data: DataType[];
 } & { css?: SerializedStyles };
 
 /**
@@ -37,8 +37,8 @@ export type LabelType = {
  * @param isRequired 필수 표시
  * @returns
  */
-export default function Label({ css, ...props }: LabelType) {
-  return <LabelP {...props} css={css}></LabelP>;
+export default function Table({ css, ...props }: TableType) {
+  return <AntTable {...props} css={css}></AntTable>;
 }
 
 const LabelP = styled.p`
