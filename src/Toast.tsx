@@ -15,7 +15,13 @@ export type MessagePropsType = {
 } & {
   css?: SerializedStyles;
 };
-
+/**
+ * TOAST 컴포넌트
+ * @param {"success" | "error" | "warning"} type toast 타입
+ * @param {number} top toast top position
+ * @param {JSX.Element | string} content toast text
+ * @returns
+ */
 export default function Toast({
   content,
   type,
