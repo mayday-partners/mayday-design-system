@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/react";
 
 import palette from "./styles/palette";
 
 export type LabelType = {
-  children: string;
+  children: string | ReactElement;
   type:
     | "head1"
     | "head2"
