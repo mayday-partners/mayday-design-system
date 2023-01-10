@@ -7,7 +7,7 @@ import Modal from "./Modal";
 import Label from "./Label";
 import MultiInput from "./MultiInput";
 import SelectBox from "./SelectBox";
-import Upload from "./Upload";
+// import Upload from "./Upload";
 import Icons from "./icons";
 import * as palette from "./styles/palette";
 
@@ -21,7 +21,7 @@ export {
   Label,
   MultiInput,
   SelectBox,
-  Upload,
+  // Upload,
   Icons,
   palette,
 };
