@@ -1,9 +1,10 @@
-import { SerializedStyles } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
+import { background } from "@storybook/theming";
 import { message, MessageArgsProps } from "antd";
 import Message from "antd/es/message";
 import React from "react";
-
+import "./styles/Toast.css";
 import palette from "./styles/palette";
 
 export type MessagePropsType = {
@@ -12,8 +13,6 @@ export type MessagePropsType = {
   type?: "success" | "error" | "warning";
   icon?: SVGElement;
   top: number;
-} & {
-  css?: SerializedStyles;
 };
 /**
  * TOAST 컴포넌트
@@ -40,35 +39,3 @@ export default function Toast({
 
   return <>{contextHolder}</>;
 }
-
-const MessageDiv = styled.div<MessageArgsProps>`
-  .success-toast,
-  .error-toast,
-  .warn-toast {
-    .ant-message-notice-content {
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 2px;
-      padding: 8px 24px;
-      color: #ffffff;
-      .ant-message-custom-content {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-    }
-  }
-  .success-toast .ant-message-notice-content {
-    background: ${palette.blue[300]} !important;
-  }
-  .error-toast .ant-message-notice-content {
-    background: ${palette.red[300]} !important;
-  }
-  .warn-toast .ant-message-notice-content {
-    background: #fff !important;
-    color: ${palette.gray[1000]} !important;
-  }
-  .ant-divider {
-    border-color: ${palette.gray[300]};
-    margin: 16px 0px;
-  }
-`;
