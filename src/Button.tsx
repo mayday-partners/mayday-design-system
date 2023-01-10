@@ -79,25 +79,29 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     line-height: 19px;
 
     background-color: #ffffff;
-    color: ${palette.gray[800]};
-    border: 1px solid ${palette.gray[300]};
+    color: ${palette.gray.gray8};
+    border: 1px solid ${palette.gray.gray3};
 
     &:hover {
-      background-color: ${palette.gray[100]};
+      background-color: ${palette.gray.gray1};
     }
     &.disabled {
-      border-color: ${palette.gray[300]};
-      color: ${palette.gray[300]};
+      border-color: ${palette.gray.gray3};
+      color: ${palette.gray.gray3};
+
+      &:hover {
+        background-color: #ffffff;
+      }
     }
     &.selected {
-      border-color: ${palette.red[600]};
+      border-color: ${palette.red.red6};
 
       &:hover {
         background-color: #ffffff;
       }
       &.disabled {
-        border-color: ${palette.gray[300]};
-        color: ${palette.gray[300]};
+        border-color: ${palette.gray.gray3};
+        color: ${palette.gray.gray3};
       }
     }
   }
@@ -107,32 +111,32 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     height: 40px;
 
     &.solid {
-      background-color: ${palette.red[600]};
+      background-color: ${palette.red.red6};
       color: white;
 
       &.disabled {
-        background-color: ${palette.gray[300]};
+        background-color: ${palette.gray.gray3};
         border: none;
         color: #ffffff;
       }
     }
     &.default {
       background-color: #ffffff;
-      border: 1px solid ${palette.red[600]};
+      border: 1px solid ${palette.red.red6};
 
       &.disabled {
         background-color: #ffffff;
-        color: ${palette.gray[300]};
+        color: ${palette.gray.gray3};
       }
     }
     &.secondary {
       background-color: #ffffff;
-      border: 1px solid ${palette.gray[300]};
+      border: 1px solid ${palette.gray.gray3};
       font-weight: 500;
 
       &.disabled {
         background-color: #ffffff;
-        color: ${palette.gray[300]};
+        color: ${palette.gray.gray3};
       }
     }
   }
@@ -141,27 +145,27 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     height: 56px;
 
     &.solid {
-      background-color: ${palette.red[600]};
+      background-color: ${palette.red.red6};
       color: white;
 
       &.disabled {
-        background-color: ${palette.gray[300]};
+        background-color: ${palette.gray.gray3};
         border: none;
         color: #ffffff;
       }
     }
     &.default {
       background-color: #ffffff;
-      color: ${palette.gray[800]};
-      border: 1px solid ${palette.gray[300]};
+      color: ${palette.gray.gray8};
+      border: 1px solid ${palette.gray.gray3};
 
       &:hover {
-        background-color: ${palette.gray[100]};
-        border: 1px solid ${palette.red[600]};
+        background-color: ${palette.gray.gray1};
+        border: 1px solid ${palette.red.red6};
       }
       &.disabled {
         background-color: #ffffff;
-        color: ${palette.gray[300]};
+        color: ${palette.gray.gray3};
       }
     }
   }

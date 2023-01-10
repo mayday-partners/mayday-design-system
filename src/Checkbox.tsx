@@ -70,16 +70,16 @@ const BoxDiv = styled.div`
       font-weight: 500;
       font-size: 15px;
       line-height: 19px;
-      color: ${palette.gray[800]};
+      color: ${palette.gray.gray6};
 
       .ant-radio .ant-radio-inner,
       .ant-checkbox .ant-checkbox-inner {
-        border-color: ${palette.gray[300]};
+        border-color: ${palette.gray.gray3};
       }
       .ant-radio-checked .ant-radio-inner,
       .ant-checkbox-checked .ant-checkbox-inner {
-        border-color: ${palette.blue[600]};
-        background-color: ${palette.blue[600]};
+        border-color: ${palette.blue.blue6};
+        background-color: ${palette.blue.blue6};
       }
     }
   }

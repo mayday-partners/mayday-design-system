@@ -8,7 +8,7 @@ import { SerializedStyles } from "@emotion/utils";
 import palette from "./styles/palette";
 import Label from "./Label";
 
-export type SelectBoxProps = {
+export type SelectBoxType = {
   items: { value: string; label: string }[];
   label?: string | ReactElement;
 } & { css?: SerializedStyles } & SelectProps;
@@ -26,11 +26,11 @@ export default function SelectBox({
   css,
   label,
   ...props
-}: SelectBoxProps) {
+}: SelectBoxType) {
   return (
     <>
       {label && (
-        <Label type="body1" bold="medium" color={palette.gray[600]}>
+        <Label type="body1" bold="medium" color={palette.gray.gray6}>
           {label}
         </Label>
       )}
@@ -44,7 +44,7 @@ export default function SelectBox({
 const SelectDiv = styled.div`
   display: flex;
   height: 40px;
-  border: 1px solid ${palette.gray[300]};
+  border: 1px solid ${palette.gray.gray3};
   border-radius: 2px;
   align-items: center;
 
@@ -60,7 +60,7 @@ const SelectDiv = styled.div`
       line-height: 19px;
     }
     &::placeholder {
-      color: ${palette.gray[400]};
+      color: ${palette.gray.gray4};
     }
   }
 `;

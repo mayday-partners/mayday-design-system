@@ -70,7 +70,7 @@ export const Input = ({
     return (
       <DatePickerDiv className={props.className} css={css}>
         {label && (
-          <Label type="body1" bold="medium" color={palette.gray[600]}>
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
             {label}
           </Label>
         )}
@@ -86,7 +86,7 @@ export const Input = ({
     return (
       <DatePickerDiv className={props.className} css={css}>
         {label && (
-          <Label type="body1" bold="medium" color={palette.gray[600]}>
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
             {label}
           </Label>
         )}
@@ -103,7 +103,7 @@ export const Input = ({
     return (
       <DatePickerDiv className={props.className} css={css}>
         {label && (
-          <Label type="body1" bold="medium" color={palette.gray[600]}>
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
             {label}
           </Label>
         )}
@@ -118,7 +118,7 @@ export const Input = ({
     return (
       <>
         {label && (
-          <Label type="body1" bold="medium" color={palette.gray[600]}>
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
             {label}
           </Label>
         )}
@@ -133,7 +133,7 @@ export const Input = ({
     return (
       <>
         {label && (
-          <Label type="body1" bold="medium" color={palette.gray[600]}>
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
             {label}
           </Label>
         )}
@@ -155,13 +155,13 @@ export const InputDiv = styled.div`
 
   width: 232px;
   height: 40px;
-  border: 1px solid ${palette.gray[300]};
+  border: 1px solid ${palette.gray.gray3};
   border-radius: 2px;
   padding: 0 0 0 16px;
 
   &:focus-within {
     // 자식요소 포커스 인식
-    border-color: ${palette.gray[600]};
+    border-color: ${palette.gray.gray6};
   }
   /* 공통 */
   input,
@@ -177,7 +177,7 @@ export const InputDiv = styled.div`
       font-size: 15px;
       font-weight: 500;
       line-height: 19px;
-      color: ${palette.gray[400]};
+      color: ${palette.gray.gray4};
     }
   }
   .ant-input-affix-wrapper-focused {
@@ -186,11 +186,11 @@ export const InputDiv = styled.div`
     box-shadow: none;
   }
   &.disabled {
-    background-color: ${palette.gray[100]};
-    border-color: ${palette.gray[300]};
+    background-color: ${palette.gray.gray1};
+    border-color: ${palette.gray.gray3};
 
     input {
-      color: ${palette.gray[600]};
+      color: ${palette.gray.gray6};
       cursor: not-allowed;
     }
   }
@@ -202,7 +202,7 @@ export const InputDiv = styled.div`
     font-size: 15px;
     font-weight: 500;
     line-height: 19px;
-    color: ${palette.gray[800]};
+    color: ${palette.gray.gray8};
   }
   /* 글자수 카운트 위치 수정 */
   .ant-input-show-count-suffix {
@@ -219,10 +219,10 @@ const DatePickerDiv = styled.div`
     width: 232px;
     height: 40px;
     border-radius: 2px;
-    border-color: ${palette.gray[300]};
+    border-color: ${palette.gray.gray3};
 
     &:hover {
-      border-color: ${palette.gray[300]};
+      border-color: ${palette.gray.gray3};
     }
 
     .ant-picker-input {
@@ -232,26 +232,26 @@ const DatePickerDiv = styled.div`
         line-height: 19px;
 
         &::placeholder {
-          color: ${palette.gray[400]};
+          color: ${palette.gray.gray4};
         }
       }
     }
     .ant-picker-suffix {
-      color: ${palette.gray[600]};
+      color: ${palette.gray.gray6};
     }
   }
   .ant-picker-focused {
     box-shadow: none;
-    border-color: ${palette.gray[600]};
+    border-color: ${palette.gray.gray6};
 
     .ant-picker-input input {
-      color: ${palette.gray[800]} !important;
+      color: ${palette.gray.gray8} !important;
     }
   }
   .ant-picker-clear {
     right: 20px;
   }
   .ant-picker-suffix {
-    color: ${palette.gray[800]} !important;
+    color: ${palette.gray.gray8} !important;
   }
 `;

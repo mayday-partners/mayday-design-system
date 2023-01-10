@@ -24,7 +24,7 @@ TwoItem.args = {
       }}
     >
       <div style={{ marginBottom: "24px" }}>
-        <Label type="body1" bold="regular" color={palette.gray[600]}>
+        <Label type="body1" bold="regular" color={palette.gray.gray6}>
           항목 제목
         </Label>
         <Input
@@ -36,7 +36,7 @@ TwoItem.args = {
         />
       </div>
       <div>
-        <Label type="body1" bold="regular" color={palette.gray[600]}>
+        <Label type="body1" bold="regular" color={palette.gray.gray6}>
           항목 상세설명
         </Label>
         <Input

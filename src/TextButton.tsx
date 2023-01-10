@@ -1,3 +1,4 @@
+import React from "react";
 import { SerializedStyles } from "@emotion/react";
 import { Button, ButtonProps } from "antd";
 import styled from "@emotion/styled";
@@ -62,13 +63,13 @@ const TextButtonDiv = styled.div`
   }
 
   .black {
-    color: ${palette.gray[800]};
+    color: ${palette.gray.gray8};
   }
   .gray {
-    color: ${palette.gray[600]};
+    color: ${palette.gray.gray6};
   }
   .blue {
-    color: ${palette.blue[700]};
+    color: ${palette.blue.blue7};
   }
 
   .underline {
