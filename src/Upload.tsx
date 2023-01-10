@@ -104,6 +104,13 @@ export default function Upload({
 }: UploadType) {
   const [preview, setPreview] = useState("");
 
+  //   SINGLE FILE
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  //   MULTI FILE
+  const fileRefMulti = useRef<HTMLInputElement>(null);
+  const [currentFiles, setCurrentFiles] = useState<File[]>([]);
+
   //   const buttonText = image ? "변경하기" : "업로드하기";
 
   useEffect(() => {
@@ -140,7 +147,7 @@ export default function Upload({
   };
 
   //   SINGLE FILE
-  const fileRef = useRef<HTMLInputElement>(null);
+  //   const fileRef = useRef<HTMLInputElement>(null);
 
   const eventPass = () => fileRef.current && fileRef.current.click();
 
@@ -172,8 +179,8 @@ export default function Upload({
   const onDeleteSingle = () => setValue(new File([], ""));
 
   //   MULTI FILE
-  const fileRefMulti = useRef<HTMLInputElement>(null);
-  const [currentFiles, setCurrentFiles] = useState<File[]>([]);
+  //   const fileRefMulti = useRef<HTMLInputElement>(null);
+  //   const [currentFiles, setCurrentFiles] = useState<File[]>([]);
 
   // console.log('currentFiles', currentFiles);
   useEffect(() => {
