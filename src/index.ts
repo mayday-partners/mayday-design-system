@@ -6,6 +6,7 @@ import { Checkbox } from "./Checkbox";
 import Modal from "./Modal";
 import Label from "./Label";
 import MultiInput from "./MultiInput";
+import Icons from "./Icons";
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Modal,
   Label,
   MultiInput,
+  Icons,
 };

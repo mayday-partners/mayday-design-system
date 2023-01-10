@@ -5,7 +5,8 @@ import postcss from "rollup-plugin-postcss";
 // import { uglify } from "rollup-plugin-uglify";
 // import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-
+import svgr from "@svgr/rollup";
+import url from "@rollup/plugin-url";
 export default {
   input: "./src/index.ts",
   output: [
@@ -22,7 +23,10 @@ export default {
       extensions: [".css"],
     }),
     // uglify(),
-    // babel(),
-    commonjs(),
+    commonjs({
+      include: "node_modules/**",
+    }),
+    babel({ extensions, include: ["src/**/*"], runtimeHelpers: true }),
+    svgr(),
   ],
 };
