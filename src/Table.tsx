@@ -46,7 +46,7 @@ export default function Table({
       pagination={pagination}
       css={styles}
       onChange={(e) => {
-        onChange(e);
+        onChange && onChange(e);
       }}
       {...props}
     ></AntTable>
