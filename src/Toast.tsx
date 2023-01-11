@@ -21,6 +21,11 @@ export type MessagePropsType = {
  * @param {JSX.Element | string} content toast text
  * @returns
  */
+
+const openToast = (e: any) => {
+  message.open(e);
+};
+
 export default function Toast({
   content,
   type,
@@ -28,14 +33,15 @@ export default function Toast({
   top,
   ...props
 }: MessagePropsType) {
-  const [messageApi, contextHolder] = message.useMessage({ top: top });
-
-  messageApi.open({
-    type: type,
-    className: `${type}-toast`,
-    content,
-    ...props,
-  });
-
-  return <>{contextHolder}</>;
+  return (
+    <>
+      {openToast({
+        type: type,
+        className: `${type}-toast`,
+        content,
+        ...props,
+        top: top,
+      })}
+    </>
+  );
 }
