@@ -25,6 +25,7 @@
     "@emotion/styled": "^11.10.5",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-image": "^3.0.1",
+    "@rollup/plugin-url": "^8.0.1",
     "@storybook/addons": "^6.5.15",
     "@storybook/theming": "^6.5.15",
     "@svgr/rollup": "^6.5.1",
