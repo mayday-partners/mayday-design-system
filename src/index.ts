@@ -11,6 +11,8 @@ import Icons from "./icons";
 import UploadImage from "./UploadImage";
 import UploadFile from "./UploadFile";
 import palette from "./styles/palette";
+import Toast from "./Toast";
+import Alert from "./Alert";
 
 export {
   Footer,
@@ -26,4 +28,6 @@ export {
   palette,
   UploadFile,
   UploadImage,
+  Toast,
+  Alert,
 };
