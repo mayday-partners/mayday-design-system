@@ -84,7 +84,10 @@ const ButtonDiv = styled.div<ButtonPropsType>`
 
     &:hover {
       background-color: ${palette.gray.gray1};
+      color: ${palette.gray.gray8};
+      border-color: ${palette.gray.gray3};
     }
+
     &.disabled {
       border-color: ${palette.gray.gray3};
       color: ${palette.gray.gray3};
@@ -98,6 +101,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
 
       &:hover {
         background-color: #ffffff;
+        color: ${palette.gray.gray8};
       }
       &.disabled {
         border-color: ${palette.gray.gray3};
@@ -111,6 +115,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     height: 40px;
 
     &.solid {
+      border: none;
       background-color: ${palette.red.red6};
       color: white;
 
@@ -119,14 +124,22 @@ const ButtonDiv = styled.div<ButtonPropsType>`
         border: none;
         color: #ffffff;
       }
+
+      &:hover {
+        border: none;
+      }
     }
     &.default {
       background-color: #ffffff;
       border: 1px solid ${palette.red.red6};
+      color: ${palette.gray.gray8};
 
       &.disabled {
         background-color: #ffffff;
         color: ${palette.gray.gray3};
+      }
+      &:hover {
+        color: ${palette.gray.gray8};
       }
     }
     &.secondary {
@@ -137,6 +150,9 @@ const ButtonDiv = styled.div<ButtonPropsType>`
       &.disabled {
         background-color: #ffffff;
         color: ${palette.gray.gray3};
+      }
+      &:hover {
+        color: ${palette.gray.gray8};
       }
     }
   }
