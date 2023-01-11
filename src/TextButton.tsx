@@ -64,12 +64,24 @@ const TextButtonDiv = styled.div`
 
   .black {
     color: ${palette.gray.gray8};
+
+    &:hover {
+      color: ${palette.gray.gray8};
+    }
   }
   .gray {
     color: ${palette.gray.gray6};
+
+    &:hover {
+      color: ${palette.gray.gray6};
+    }
   }
   .blue {
     color: ${palette.blue.blue7};
+
+    &:hover {
+      color: ${palette.blue.blue7};
+    }
   }
 
   .underline {
