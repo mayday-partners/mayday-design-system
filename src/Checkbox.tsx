@@ -88,10 +88,16 @@ const BoxDiv = styled.div`
       .ant-checkbox .ant-checkbox-inner {
         border-color: ${palette.gray.gray3};
       }
-      .ant-radio-checked .ant-radio-inner,
       .ant-checkbox-checked .ant-checkbox-inner {
         border-color: ${palette.blue.blue6};
         background-color: ${palette.blue.blue6};
+      }
+      .ant-radio-checked .ant-radio-inner {
+        border-color: ${palette.blue.blue6};
+        background-color: #fff;
+        &::after {
+          background-color: ${palette.blue.blue6};
+        }
       }
     }
 

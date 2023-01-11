@@ -185,4 +185,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
       }
     }
   }
+  .solid {
+    border: none;
+  }
 `;

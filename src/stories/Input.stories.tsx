@@ -17,6 +17,8 @@ Default.args = {
   onChange: (value) => console.log(value),
   disabled: false,
   label: "라벨",
+  showCount: true,
+  maxLength: 20,
 };
 export const Date = Template.bind({});
 Date.args = {

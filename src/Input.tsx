@@ -209,6 +209,7 @@ export const InputDiv = styled.div`
     position: relative;
     top: 38px;
     left: 10px;
+    font-size: 13px;
   }
 `;
 const DatePickerDiv = styled.div`
