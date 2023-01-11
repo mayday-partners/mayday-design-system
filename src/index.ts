@@ -8,9 +8,11 @@ import Label from "./Label";
 import MultiInput from "./MultiInput";
 import SelectBox from "./SelectBox";
 import Icons from "./icons";
-import * as palette from "./styles/palette";
 import UploadImage from "./UploadImage";
 import UploadFile from "./UploadFile";
+import palette from "./styles/palette";
+import Toast from "./Toast";
+import Alert from "./Alert";
 
 export {
   Footer,
@@ -26,4 +28,6 @@ export {
   palette,
   UploadFile,
   UploadImage,
+  Toast,
+  Alert,
 };

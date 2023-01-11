@@ -1,4 +1,4 @@
-type RedType = {
+export type RedType = {
   red1: "#FFEEE9";
   red2: "#FFDCD2";
   red3: "#FFBBA8";
@@ -24,7 +24,7 @@ const red: RedType = {
   red10: "#AA2D0C",
 };
 
-type OrangeType = {
+export type OrangeType = {
   orange1: "#FFF7E1";
   orange2: "#FFEBBA";
   orange3: "#FCD77F";
@@ -50,7 +50,7 @@ const orange: OrangeType = {
   orange10: "#E16A12",
 };
 
-type BlueType = {
+export type BlueType = {
   blue1: "#DDF5FF";
   blue2: "#AEE8FF";
   blue3: "#78D6FE";
@@ -76,7 +76,7 @@ const blue: BlueType = {
   blue10: "#125497",
 };
 
-type GrayType = {
+export type GrayType = {
   gray1: "#FAFAFA";
   gray2: "#EAEAEA";
   gray3: "#C8C8C8";
@@ -102,7 +102,7 @@ const gray: GrayType = {
   gray10: "#000000",
 };
 
-type CoolGrayType = {
+export type CoolGrayType = {
   coolGray1: "#F7FAFD";
   coolGray2: "#EBF2F6";
   coolGray3: "#D4DDE4";
@@ -128,4 +128,6 @@ const coolGray: CoolGrayType = {
   coolGray10: "#1F2E3C",
 };
 
-export default { red, orange, blue, gray, coolGray };
+const palette = { red, orange, blue, gray, coolGray };
+
+export default palette;
