@@ -1,5 +1,5 @@
 import React from "react";
-import { SerializedStyles } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import { Button, ButtonProps } from "antd";
 import styled from "@emotion/styled";
 
@@ -24,10 +24,11 @@ export const TextButton = ({
   children,
   primaryColor,
   underline,
+  css,
   ...props
 }: TextButtonType) => {
   return (
-    <TextButtonDiv className={props.className}>
+    <TextButtonDiv css={css}>
       <Button
         {...props}
         className={`${props.size} ${primaryColor} ${

@@ -28,7 +28,7 @@ export default function SelectBox({
   ...props
 }: SelectBoxType) {
   return (
-    <>
+    <div css={css}>
       {label && (
         <Label type="body1" bold="medium" color={palette.gray.gray6}>
           {label}
@@ -37,7 +37,7 @@ export default function SelectBox({
       <SelectDiv css={css}>
         <Select {...props} options={items} />
       </SelectDiv>
-    </>
+    </div>
   );
 }
 

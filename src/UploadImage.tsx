@@ -92,7 +92,7 @@ export default function UploadImage({
 
   if (type === "image") {
     return (
-      <div>
+      <div css={css}>
         <UploadImageDiv
           css={emotionCss`
             .ant-upload {
@@ -179,7 +179,7 @@ export default function UploadImage({
     );
   } else {
     return (
-      <div>
+      <div css={css}>
         <UploadCropImageDiv
           css={emotionCss`
             .ant-upload {

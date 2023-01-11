@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 import { RadioChangeEvent } from "antd";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
@@ -21,6 +22,12 @@ Radio.args = {
     { key: "4", label: "number 4", isDisable: true },
   ],
   onChange: (event: RadioChangeEvent) => console.log(event.target.value),
+  direction: "horiz",
+  css: css`
+    .ant-radio-group {
+      gap: 24px;
+    }
+  `,
 };
 export const Check = Template.bind({});
 Check.args = {
