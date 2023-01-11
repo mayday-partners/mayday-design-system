@@ -27,7 +27,7 @@ interface DataType {
 export type TableType = {
   columns: ColumnsType<DataType>;
   data: DataType[];
-  pagination?: boolean;
+  pagination?: any;
   onChange?: (value: any) => void;
 } & { css?: SerializedStyles };
 
@@ -45,7 +45,9 @@ export default function Table({
       dataSource={data}
       pagination={pagination}
       css={styles}
-      onChange={(event) => onChange(event ?? "")}
+      onChange={(e) => {
+        onChange(e);
+      }}
       {...props}
     ></AntTable>
   );
