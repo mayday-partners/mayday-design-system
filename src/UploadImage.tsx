@@ -116,7 +116,7 @@ export default function UploadImage({
                 <img src={preview} />
               ) : (
                 <div>
-                  <Icons icon="addPhoto" color={palette.gray.gray4} />
+                  <Icons icon="add_photo" color={palette.gray.gray4} />
                   <Label
                     bold="semibold"
                     type="body2"
@@ -208,7 +208,7 @@ export default function UploadImage({
                   <img src={preview} />
                 ) : (
                   <div>
-                    <Icons icon="addPhoto" color={palette.gray.gray4} />
+                    <Icons icon="add_photo" color={palette.gray.gray4} />
                     <Label
                       bold="semibold"
                       type="body2"
