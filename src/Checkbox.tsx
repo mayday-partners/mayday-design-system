@@ -13,6 +13,7 @@ import palette from "./styles/palette";
 export type CheckboxType = {
   itemList: { key: string; label: string; isDisable: boolean }[];
   type: "checkbox" | "radio";
+  direction?: "horiz" | "vert";
 } & (CheckboxGroupProps | RadioGroupProps) & {
     css?: SerializedStyles;
   };
@@ -20,13 +21,24 @@ export type CheckboxType = {
  * 체크박스 컴포넌트
  * @param {'checkbox' | 'radio'} type 박스 타입
  * @param itemList 박스 안에 들어갈 요소 리스트. {key, label, isDisable}
+ * @param direction 방향
  * @returns
  */
-export const Checkbox = ({ type, itemList, css, ...props }: CheckboxType) => {
+export const Checkbox = ({
+  type,
+  itemList,
+  css,
+  direction = "horiz",
+  ...props
+}: CheckboxType) => {
   if (type === "radio") {
     return (
       <BoxDiv css={css}>
-        <Radio.Group onChange={props.onChange as (e: RadioChangeEvent) => void}>
+        <Radio.Group
+          {...props}
+          onChange={props.onChange as (e: RadioChangeEvent) => void}
+          className={`${direction}`}
+        >
           {itemList.map((i) => {
             return (
               <Radio value={i.key} disabled={i.isDisable} key={i.key}>
@@ -39,11 +51,12 @@ export const Checkbox = ({ type, itemList, css, ...props }: CheckboxType) => {
     );
   } else {
     return (
-      <BoxDiv className={props.className}>
+      <BoxDiv css={css}>
         <AntCheckbox.Group
           onChange={
             props.onChange as (checkedValue: CheckboxValueType[]) => void
           }
+          className={`${direction}`}
         >
           {itemList.map((i) => {
             return (
@@ -63,7 +76,6 @@ const BoxDiv = styled.div`
   .ant-checkbox-group {
     display: flex;
     flex-direction: column;
-    gap: 24.5px;
 
     .ant-radio-wrapper,
     .ant-checkbox-wrapper {
@@ -81,6 +93,10 @@ const BoxDiv = styled.div`
         border-color: ${palette.blue.blue6};
         background-color: ${palette.blue.blue6};
       }
+    }
+
+    &.horiz {
+      flex-direction: row;
     }
   }
   .ant-checkbox-wrapper {

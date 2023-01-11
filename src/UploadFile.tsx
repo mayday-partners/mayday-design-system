@@ -157,7 +157,7 @@ export default function UploadFile({
     );
   } else {
     return (
-      <div>
+      <div css={css}>
         <section className="ds-flex jc-sb mb-16">
           <Button
             icon={<Icons icon="upload" />}
