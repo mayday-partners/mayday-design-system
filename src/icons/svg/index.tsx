@@ -79,6 +79,7 @@ import { ReactComponent as menu_focus } from "./menu_focus.svg";
 import { ReactComponent as more_horiz } from "./more_horiz.svg";
 import { ReactComponent as more_vert } from "./more_vert.svg";
 import { ReactComponent as profile } from "./profile.svg";
+import { ReactComponent as profile_48 } from "./48_profile.svg";
 import { ReactComponent as question_focus_off } from "./question_focus_off.svg";
 import { ReactComponent as question_focus_on } from "./question_focus_on.svg";
 import { ReactComponent as question_mark } from "./question_mark.svg";
@@ -200,6 +201,7 @@ export {
   more_horiz,
   more_vert,
   profile,
+  profile_48,
   question_focus_off,
   question_focus_on,
   question_mark,
