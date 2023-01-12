@@ -37,7 +37,7 @@ export default function SelectBox({
           {label}
         </Label>
       )}
-      <SelectDiv css={css}>
+      <SelectDiv>
         <Select
           {...props}
           suffixIcon={
