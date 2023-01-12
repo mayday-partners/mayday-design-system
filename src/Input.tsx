@@ -152,9 +152,10 @@ export const Input = ({
 export const InputDiv = styled.div`
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 
-  width: 214px;
-  height: 38px;
+  width: 232px;
+  height: 40px;
   border: 1px solid ${palette.gray.gray3};
   border-radius: 2px;
   padding: 0 0 0 16px;
