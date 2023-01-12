@@ -13,6 +13,7 @@ import UploadFile from "./UploadFile";
 import palette from "./styles/palette";
 import Toast from "./Toast";
 import Alert from "./Alert";
+import Table from "./Table";
 
 export {
   Footer,
@@ -30,4 +31,5 @@ export {
   UploadImage,
   Toast,
   Alert,
+  Table,
 };
