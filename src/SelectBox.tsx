@@ -37,6 +37,7 @@ export default function SelectBox({
         p {
           marginBottom: 8px;
         }
+        width: fit-content;
       `}
     >
       {label && (
