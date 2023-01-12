@@ -50,6 +50,7 @@ export const Button = ({
 
 const ButtonDiv = styled.div<ButtonPropsType>`
   display: inline-block;
+  box-sizing: border-box;
   width: auto;
 
   button {

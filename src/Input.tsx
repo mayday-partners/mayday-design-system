@@ -108,6 +108,7 @@ export const Input = ({
           </Label>
         )}
         <TimePicker
+          format={"HH:mm"}
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
           suffixIcon={<ClockCircleOutlined />}

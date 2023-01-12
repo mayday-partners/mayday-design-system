@@ -78,6 +78,7 @@ export default function SelectBox({
 
 const SelectDiv = styled.div`
   display: flex;
+  box-sizing: border-box;
   height: 40px;
   border: 1px solid ${palette.gray.gray3};
   border-radius: 2px;
