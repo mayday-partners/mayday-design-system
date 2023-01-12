@@ -1,16 +1,18 @@
 /** @jsxImportSource @emotion/react */
 
-import React, { ReactElement } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import { Select, SelectProps } from "antd";
 import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/utils";
 
 import palette from "./styles/palette";
 import Label from "./Label";
+import Icons from "./icons";
 
 export type SelectBoxType = {
   items: { value: string; label: string }[];
   label?: string | ReactElement;
+  additionalUnit?: string | ReactElement;
 } & { css?: SerializedStyles } & SelectProps;
 
 /**
@@ -25,6 +27,7 @@ export default function SelectBox({
   items,
   css,
   label,
+  additionalUnit,
   ...props
 }: SelectBoxType) {
   return (
@@ -35,7 +38,32 @@ export default function SelectBox({
         </Label>
       )}
       <SelectDiv css={css}>
-        <Select {...props} options={items} />
+        <Select
+          {...props}
+          suffixIcon={
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              {additionalUnit && (
+                <Label type="body1" bold="medium" color={palette.red.red5}>
+                  {additionalUnit}
+                </Label>
+              )}
+              {<Icons icon="chevron_down" />}
+            </div>
+          }
+          onDropdownVisibleChange={(value) => {}}
+        >
+          {items.map((i) => (
+            <Select.Option value={i.value} defaultValue={0}>
+              {i.label}
+            </Select.Option>
+          ))}
+        </Select>
       </SelectDiv>
     </div>
   );

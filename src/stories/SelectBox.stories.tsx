@@ -40,4 +40,36 @@ Default.args = {
     console.log(value);
   },
   label: "",
+  css: css`
+    width: 400px;
+  `,
+};
+export const Additional = Template.bind({});
+Additional.args = {
+  placeholder: "0",
+  items: [
+    {
+      value: "1",
+      label: "1st menu item",
+    },
+    {
+      value: "2",
+      label: "2st menu item",
+    },
+    {
+      value: "3",
+      label: "3st menu item",
+    },
+    {
+      value: "4",
+      label: "4st menu item",
+    },
+  ],
+  onChange: (v) => {
+    console.log(v);
+  },
+  additionalUnit: "개",
+  css: css`
+    width: 200px;
+  `,
 };
