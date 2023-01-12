@@ -4,6 +4,7 @@ import React, { ReactElement, ReactNode } from "react";
 import { Select, SelectProps } from "antd";
 import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/utils";
+import { css as emotionCss } from "@emotion/react";
 
 import palette from "./styles/palette";
 import Label from "./Label";
@@ -31,7 +32,13 @@ export default function SelectBox({
   ...props
 }: SelectBoxType) {
   return (
-    <div>
+    <div
+      css={emotionCss`
+        p {
+          marginBottom: 8px;
+        }
+      `}
+    >
       {label && (
         <Label type="body1" bold="medium" color={palette.gray.gray6}>
           {label}

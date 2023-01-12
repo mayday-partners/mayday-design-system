@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import React from "react";
+import React, { ReactElement } from "react";
 import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
 import {
@@ -33,7 +33,7 @@ export type InputType = {
   onChange: (value: string | Dayjs | number) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   option?: string;
-  label?: string;
+  label?: string | ReactElement;
 } & InputProps & { css?: SerializedStyles };
 
 /**
@@ -153,8 +153,8 @@ export const InputDiv = styled.div`
   display: flex;
   align-items: center;
 
-  width: 232px;
-  height: 40px;
+  width: 214px;
+  height: 38px;
   border: 1px solid ${palette.gray.gray3};
   border-radius: 2px;
   padding: 0 0 0 16px;
