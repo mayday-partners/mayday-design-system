@@ -116,7 +116,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     height: 40px;
 
     &.solid {
-      border: none;
+      border: none !important;
       background-color: ${palette.red.red6};
       color: white;
 
@@ -162,6 +162,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     height: 56px !important;
 
     &.solid {
+      border: none !important;
       background-color: ${palette.red.red6};
       color: white;
 
