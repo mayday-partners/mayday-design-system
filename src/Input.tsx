@@ -132,21 +132,23 @@ export const Input = ({
       </>
     );
   } else if (type === "file") {
-    <>
-      {label && (
-        <Label type="body1" bold="medium" color={palette.gray.gray6}>
-          {label}
-        </Label>
-      )}
-      <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
-        <AntInput
-          {...props}
-          type="file"
-          onPressEnter={onKeyDown}
-          onChange={(event) => onChange(event.target.value)}
-        />
-      </InputDiv>
-    </>;
+    return (
+      <>
+        {label && (
+          <Label type="body1" bold="medium" color={palette.gray.gray6}>
+            {label}
+          </Label>
+        )}
+        <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
+          <AntInput
+            {...props}
+            type="file"
+            onPressEnter={onKeyDown}
+            onChange={(event) => onChange(event.target.value)}
+          />
+        </InputDiv>
+      </>
+    );
   } else
     return (
       <>
