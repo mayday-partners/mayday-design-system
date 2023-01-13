@@ -109,6 +109,7 @@ import { ReactComponent as empty_heart } from "./empty_heart.svg";
 import { ReactComponent as vercel } from "./vercel.svg";
 import { ReactComponent as circle } from "./circle.svg";
 import { ReactComponent as add_photo } from "./add_photo.svg";
+import { ReactComponent as gg_unsplash } from "./gg_unsplash.svg";
 
 export {
   circle,
@@ -221,4 +222,5 @@ export {
   no_speaker,
   no_image,
   history,
+  gg_unsplash,
 };
