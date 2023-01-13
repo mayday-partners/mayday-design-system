@@ -29,8 +29,9 @@ export type InputType = {
     | "date"
     | "datetime"
     | "time"
-    | "dropbox";
-  onChange: (value: string | Dayjs | number) => void;
+    | "dropbox"
+    | "file";
+  onChange: (value: string | Dayjs | number | File) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   option?: string;
   label?: string | ReactElement;
@@ -38,7 +39,7 @@ export type InputType = {
 
 /**
  * INPUT 컴포넌트
- * @param {"default" | "option" | "search" | "date"} type INPUT 타입
+ * @param {"default" | "option" | "search" | "date" | 'file'} type INPUT 타입
  * @param onChange onChange 함수
  * @param onPressEnter enter 액션
  * @param option type=option 인 경우 옵션 이름
@@ -130,6 +131,22 @@ export const Input = ({
         </InputDiv>
       </>
     );
+  } else if (type === "file") {
+    <>
+      {label && (
+        <Label type="body1" bold="medium" color={palette.gray.gray6}>
+          {label}
+        </Label>
+      )}
+      <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
+        <AntInput
+          {...props}
+          type="file"
+          onPressEnter={onKeyDown}
+          onChange={(event) => onChange(event.target.value)}
+        />
+      </InputDiv>
+    </>;
   } else
     return (
       <>

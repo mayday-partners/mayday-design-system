@@ -73,7 +73,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
   }
   .small {
     border-radius: 4px;
-    height: 32px;
+    height: 32px !important;
 
     font-weight: 500;
     font-size: 15px;
@@ -159,7 +159,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
   }
   .large {
     width: 400px;
-    height: 56px;
+    height: 56px !important;
 
     &.solid {
       background-color: ${palette.red.red6};

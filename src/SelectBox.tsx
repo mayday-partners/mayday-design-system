@@ -100,4 +100,9 @@ const SelectDiv = styled.div`
       color: ${palette.gray.gray4};
     }
   }
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder {
+    display: flex !important;
+    align-items: center !important;
+  }
 `;
