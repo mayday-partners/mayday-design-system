@@ -38,3 +38,14 @@ Option.args = {
   onChange: (value) => console.log(value),
   label: "option",
 };
+export const Time = Template.bind({});
+Time.args = {
+  type: "time",
+  onChange: (value) => console.log(value),
+  disabledTime: () => {
+    return {
+      disabledHours: () => [0, 1, 2, 3, 4, 5, 6, 7],
+      disabledMinutes: () => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    };
+  },
+};

@@ -95,9 +95,13 @@ const SelectDiv = styled.div`
       font-weight: 500;
       font-size: 15px;
       line-height: 19px;
-    }
-    &::placeholder {
-      color: ${palette.gray.gray4};
+
+      .ant-select-selection-placeholder {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+        color: ${palette.gray.gray4};
+      }
     }
   }
   .ant-select-selection-item,

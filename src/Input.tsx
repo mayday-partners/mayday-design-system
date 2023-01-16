@@ -9,6 +9,8 @@ import {
   InputProps,
   Checkbox,
   TimePicker,
+  TimePickerProps,
+  DatePickerProps,
 } from "antd";
 import { Dayjs } from "dayjs";
 import {
@@ -20,6 +22,7 @@ import {
 import palette from "./styles/palette";
 import { SerializedStyles } from "@emotion/react";
 import Label from "./Label";
+import Icons from "./icons";
 
 export type InputType = {
   type?:
@@ -35,7 +38,8 @@ export type InputType = {
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   option?: string;
   label?: string | ReactElement;
-} & InputProps & { css?: SerializedStyles };
+} & InputProps & { css?: SerializedStyles } & TimePickerProps &
+  DatePickerProps;
 
 /**
  * INPUT 컴포넌트
@@ -76,10 +80,10 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
+          {...props}
           placeholder="연도/월/일"
           onChange={(event) => onChange(event ?? "")}
-          // TODO figma 아이콘과 다름
-          suffixIcon={<CalendarOutlined />}
+          suffixIcon={<Icons icon="calendar" />}
         />
       </DatePickerDiv>
     );
@@ -92,11 +96,10 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
-          showTime
+          {...props}
           placeholder="연도/월/일 00:00"
           onChange={(event) => onChange(event ?? "")}
-          // TODO figma 아이콘과 다름
-          suffixIcon={<CalendarOutlined />}
+          suffixIcon={<Icons icon="calendar" />}
         />
       </DatePickerDiv>
     );
@@ -109,10 +112,11 @@ export const Input = ({
           </Label>
         )}
         <TimePicker
+          {...props}
           format={"HH:mm"}
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
-          suffixIcon={<ClockCircleOutlined />}
+          suffixIcon={<Icons icon="clock" />}
         />
       </DatePickerDiv>
     );
@@ -158,7 +162,7 @@ export const Input = ({
           </Label>
         )}
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
-          {type === "search" && <SearchOutlined />}
+          {type === "search" && <Icons icon="search" />}
           <AntInput
             {...props}
             onPressEnter={onKeyDown}
