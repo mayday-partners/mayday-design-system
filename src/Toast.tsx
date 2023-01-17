@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { background } from "@storybook/theming";
 import { message, MessageArgsProps } from "antd";
 import Message from "antd/es/message";
-import React from "react";
+import React, { ReactNode } from "react";
 import "./styles/Toast.css";
 import palette from "./styles/palette";
 
@@ -11,7 +11,7 @@ export type MessagePropsType = {
   /** 버튼요소 */
   content: JSX.Element | string;
   type?: "success" | "error" | "warning";
-  icon?: SVGElement;
+  icon?: ReactNode;
   top: number;
 };
 /**
@@ -39,8 +39,9 @@ export default function Toast({
         type: type,
         className: `${type}-toast`,
         content,
-        ...props,
         top: top,
+        icon,
+        ...props,
       })}
     </>
   );
