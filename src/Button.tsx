@@ -138,6 +138,9 @@ const ButtonDiv = styled.div<ButtonPropsType>`
       &.disabled {
         background-color: #ffffff;
         color: ${palette.gray.gray3};
+        border-color: ${palette.gray.gray3};
+        pointer-events: none;
+        cursor: not-allowed;
       }
       &:hover {
         color: ${palette.gray.gray8};
