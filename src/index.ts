@@ -14,8 +14,10 @@ import palette from "./styles/palette";
 import Toast from "./Toast";
 import Alert from "./Alert";
 import Table from "./Table";
+import Tab from "./Tab";
 
 export {
+  Tab,
   Footer,
   Button,
   Input,
