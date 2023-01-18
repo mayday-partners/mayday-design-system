@@ -4,7 +4,6 @@ import React, { ReactElement } from "react";
 import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
 import {
-  DatePicker,
   Input as AntInput,
   InputProps,
   Checkbox,
@@ -23,6 +22,11 @@ import palette from "./styles/palette";
 import { SerializedStyles } from "@emotion/react";
 import Label from "./Label";
 import Icons from "./icons";
+
+import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
+import generatePicker from "antd/es/date-picker/generatePicker";
+
+const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 
 export type InputType = {
   type?:
