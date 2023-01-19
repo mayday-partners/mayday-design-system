@@ -53,6 +53,7 @@ export const Checkbox = ({
     return (
       <BoxDiv css={css}>
         <AntCheckbox.Group
+          {...props}
           onChange={
             props.onChange as (checkedValue: CheckboxValueType[]) => void
           }

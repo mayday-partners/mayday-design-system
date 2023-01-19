@@ -38,5 +38,6 @@ Check.args = {
     { key: "3", label: "number 3", isDisable: false },
     { key: "4", label: "number 4", isDisable: true },
   ],
+  defaultValue: ["1"],
   onChange: (event: CheckboxValueType[]) => console.log(event),
 };
