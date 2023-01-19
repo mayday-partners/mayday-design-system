@@ -70,6 +70,10 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     line-height: 20px;
 
     cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+
+    &:focus-visible {
+      outline: none !important;
+    }
   }
   .small {
     border-radius: 4px;
