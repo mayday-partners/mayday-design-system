@@ -67,7 +67,7 @@ export default function SelectBox({
           onDropdownVisibleChange={(value) => {}}
         >
           {items.map((i) => (
-            <Select.Option value={i.value} defaultValue={0}>
+            <Select.Option value={i.value} defaultValue={0} key={i.value}>
               {i.label}
             </Select.Option>
           ))}

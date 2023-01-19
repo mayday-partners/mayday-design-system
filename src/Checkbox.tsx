@@ -61,7 +61,7 @@ export const Checkbox = ({
         >
           {itemList.map((i) => {
             return (
-              <AntCheckbox value={i.key} disabled={i.isDisable}>
+              <AntCheckbox value={i.key} disabled={i.isDisable} key={i.key}>
                 {i.label}
               </AntCheckbox>
             );
