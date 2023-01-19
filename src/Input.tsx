@@ -43,7 +43,7 @@ export type InputType = {
   option?: string;
   label?: string | ReactElement;
 } & InputProps & { css?: SerializedStyles } & TimePickerProps &
-  DatePickerProps;
+  DatePickerProps & { value: any };
 
 /**
  * INPUT 컴포넌트
