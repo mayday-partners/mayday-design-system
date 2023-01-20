@@ -170,7 +170,7 @@ export const Input = ({
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           {type === "search" && <Icons icon="search" />}
           <AntInput
-            {...props}
+            {...(props as InputProps)}
             style={{ height: "30px" }}
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
