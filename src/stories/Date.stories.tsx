@@ -34,5 +34,5 @@ DateTime.args = {
   onChange: (value) => console.log(value),
   label: "시작 일자와 시간을 선택하세요.",
   format: "YYYY/MM/DD HH:mm",
-  showTime: true,
+  //   showTime: true,
 };
