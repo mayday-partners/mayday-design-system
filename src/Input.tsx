@@ -39,7 +39,7 @@ type BaseType = {
     | "time"
     | "dropbox"
     | "file";
-  onChange: (value: string | Dayjs | number | File) => void;
+  onChange: (value: any) => void;
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   option?: string;
   label?: string | ReactElement;
@@ -49,7 +49,7 @@ type BaseType = {
 
 export type InputType =
   | (BaseType & Omit<InputProps, "value">)
-  | (BaseType & Omit<PickerProps<Dayjs>, "value">);
+  | (BaseType & Omit<PickerProps<Dayjs>, "value" & "picker">);
 
 /**
  * INPUT 컴포넌트
@@ -68,7 +68,7 @@ export const Input = ({
   label,
   css,
   ...props
-}: InputType) => {
+}: Partial<InputType>) => {
   const onKeyDown = (event: KeyboardEvent) => {
     // lodash 수정
     if (
@@ -95,7 +95,7 @@ export const Input = ({
         <DatePicker
           {...(props as any)}
           placeholder="연도/월/일"
-          onChange={(event) => onChange(event ?? "")}
+          onChange={(event) => onChange && onChange(event ?? "")}
           suffixIcon={<Icons icon="calendar" />}
         />
       </DatePickerDiv>
@@ -113,7 +113,7 @@ export const Input = ({
           format={"YYYY/MM/DD HH:mm"}
           {...datetimeProps} // ANCHOR showTime 타입에러
           placeholder="연도/월/일 00:00"
-          onChange={(event) => onChange(event ?? "")}
+          onChange={(event) => onChange && onChange(event ?? "")}
           suffixIcon={<Icons icon="calendar" />}
         />
       </DatePickerDiv>
@@ -130,7 +130,7 @@ export const Input = ({
           {...(props as any)}
           format={"HH:mm"}
           placeholder="00:00"
-          onChange={(event) => onChange(event ?? "")}
+          onChange={(event) => onChange && onChange(event ?? "")}
           suffixIcon={<Icons icon="clock" />}
         />
       </DatePickerDiv>
@@ -144,7 +144,9 @@ export const Input = ({
           </Label>
         )}
         <InputDiv className={props.className} css={css}>
-          <Checkbox onChange={(event) => onChange(event.target.value)}>
+          <Checkbox
+            onChange={(event) => onChange && onChange(event.target.value)}
+          >
             {option}
           </Checkbox>
         </InputDiv>
@@ -163,7 +165,7 @@ export const Input = ({
             {...(props as InputProps)}
             type="file"
             onPressEnter={onKeyDown}
-            onChange={(event) => onChange(event.target.value)}
+            onChange={(event) => onChange && onChange(event.target.value)}
           />
         </InputDiv>
       </>
@@ -182,7 +184,7 @@ export const Input = ({
             {...(props as InputProps)}
             style={{ height: "30px" }}
             onPressEnter={onKeyDown}
-            onChange={(event) => onChange(event.target.value)}
+            onChange={(event) => onChange && onChange(event.target.value)}
           />
         </InputDiv>
       </>
