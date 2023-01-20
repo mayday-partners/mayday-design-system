@@ -84,7 +84,7 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
-          {...props}
+          {...(props as any)}
           placeholder="연도/월/일"
           onChange={(event) => onChange(event ?? "")}
           suffixIcon={<Icons icon="calendar" />}
@@ -118,7 +118,7 @@ export const Input = ({
           </Label>
         )}
         <TimePicker
-          {...props}
+          {...(props as any)}
           format={"HH:mm"}
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
@@ -151,7 +151,7 @@ export const Input = ({
         )}
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           <AntInput
-            {...props}
+            {...(props as InputProps)}
             type="file"
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
