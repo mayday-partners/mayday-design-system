@@ -24,11 +24,12 @@ import Label from "./Label";
 import Icons from "./icons";
 
 import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
-import generatePicker from "antd/es/date-picker/generatePicker";
+import generatePicker, {
+  PickerProps,
+} from "antd/es/date-picker/generatePicker";
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
-
-export type InputType = {
+type BaseType = {
   type?:
     | "default"
     | "option"
@@ -42,8 +43,13 @@ export type InputType = {
   onPressEnter?: _.DebouncedFunc<() => void> | (() => void);
   option?: string;
   label?: string | ReactElement;
-} & InputProps & { css?: SerializedStyles } & TimePickerProps &
-  DatePickerProps & { value: any };
+  css?: SerializedStyles;
+  value?: any;
+};
+
+export type InputType =
+  | (BaseType & Omit<InputProps, "value">)
+  | (BaseType & Omit<PickerProps<Dayjs>, "value">);
 
 /**
  * INPUT 컴포넌트
@@ -103,7 +109,7 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
-          {...props}
+          {...(props as any)}
           format={"YYYY/MM/DD HH:mm"}
           {...datetimeProps} // ANCHOR showTime 타입에러
           placeholder="연도/월/일 00:00"
@@ -120,8 +126,8 @@ export const Input = ({
             {label}
           </Label>
         )}
-        <TimePicker
-          {...props}
+        <DatePicker.TimePicker
+          {...(props as any)}
           format={"HH:mm"}
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
@@ -154,7 +160,7 @@ export const Input = ({
         )}
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           <AntInput
-            {...props}
+            {...(props as InputProps)}
             type="file"
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
@@ -173,7 +179,7 @@ export const Input = ({
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           {type === "search" && <Icons icon="search" />}
           <AntInput
-            {...props}
+            {...(props as InputProps)}
             style={{ height: "30px" }}
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
