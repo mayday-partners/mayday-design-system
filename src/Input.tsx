@@ -169,6 +169,7 @@ export const Input = ({
           {type === "search" && <Icons icon="search" />}
           <AntInput
             {...props}
+            style={{ height: "30px" }}
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
           />
