@@ -73,6 +73,9 @@ export const Input = ({
       onPressEnter();
     }
   };
+  const datetimeProps = {
+    showTime: true,
+  };
 
   if (type === "date") {
     // TODO dayjs config
@@ -100,9 +103,9 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
-          {...(props as any)}
+          {...props}
           format={"YYYY/MM/DD HH:mm"}
-          showTime={true} // ANCHOR showTime 타입에러
+          {...datetimeProps} // ANCHOR showTime 타입에러
           placeholder="연도/월/일 00:00"
           onChange={(event) => onChange(event ?? "")}
           suffixIcon={<Icons icon="calendar" />}
@@ -118,7 +121,7 @@ export const Input = ({
           </Label>
         )}
         <TimePicker
-          {...(props as any)}
+          {...props}
           format={"HH:mm"}
           placeholder="00:00"
           onChange={(event) => onChange(event ?? "")}
@@ -151,7 +154,7 @@ export const Input = ({
         )}
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           <AntInput
-            {...(props as InputProps)}
+            {...props}
             type="file"
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
@@ -170,7 +173,7 @@ export const Input = ({
         <InputDiv className={`${props.disabled ? "disabled" : ""}`} css={css}>
           {type === "search" && <Icons icon="search" />}
           <AntInput
-            {...(props as InputProps)}
+            {...props}
             style={{ height: "30px" }}
             onPressEnter={onKeyDown}
             onChange={(event) => onChange(event.target.value)}
