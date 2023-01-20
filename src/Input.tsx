@@ -47,9 +47,10 @@ type BaseType = {
   value?: any;
 };
 
-export type InputType =
-  | (BaseType & Omit<InputProps, "value">)
-  | (BaseType & Omit<PickerProps<Dayjs>, "value" & "picker">);
+export type InputType = BaseType &
+  Omit<InputProps, "value"> &
+  Omit<DatePickerProps, "picker" & "value"> &
+  Omit<TimePickerProps, "picker" & "value">;
 
 /**
  * INPUT 컴포넌트
