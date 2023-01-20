@@ -100,9 +100,9 @@ export const Input = ({
           </Label>
         )}
         <DatePicker
-          {...props}
+          {...(props as any)}
           format={"YYYY/MM/DD HH:mm"}
-          showTime={true} // ANCHOR
+          showTime={true} // ANCHOR showTime 타입에러
           placeholder="연도/월/일 00:00"
           onChange={(event) => onChange(event ?? "")}
           suffixIcon={<Icons icon="calendar" />}
