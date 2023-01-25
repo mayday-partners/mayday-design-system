@@ -1,0 +1,36 @@
+.radio .ant-radio-group,
+.checkbox .ant-checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio .ant-radio-wrapper,
+.checkbox .ant-checkbox-wrapper {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #707070;
+}
+
+.checkbox .horiz,
+.radio .horiz {
+  flex-direction: row;
+}
+.radio .ant-radio .ant-radio-inner,
+.checkbox .ant-checkbox .ant-checkbox-inner {
+  border-color: #c8c8c8;
+}
+.checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  border-color: #1fa9fa;
+  background-color: #1fa9fa;
+}
+.radio .ant-radio-checked .ant-radio-inner {
+  border-color: #1fa9fa;
+  background-color: #fff;
+}
+.radio .ant-radio-checked .ant-radio-inner::after {
+  background-color: #1fa9fa;
+}
+.checkbox .ant-checkbox-wrapper {
+  margin: 0;
+}
