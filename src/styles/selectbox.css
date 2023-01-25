@@ -1,0 +1,40 @@
+.selectbox-container {
+  width: fit-content;
+}
+.selectbox-container p {
+  margin-bottom: 8px;
+}
+
+.selectbox-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  align-items: center;
+}
+.selectbox-wrapper .ant-select {
+  width: 100%;
+}
+.selectbox-wrapper .ant-select .ant-select-selector {
+  border: none;
+  box-shadow: none !important;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+}
+.selectbox-wrapper
+  .ant-select
+  .ant-select-selector
+  .ant-select-selection-placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #a8a8a8;
+}
+.selectbox-wrapper .ant-select-selection-item,
+.selectbox-wrapper .ant-select-selection-placeholder {
+  display: flex !important;
+  align-items: center !important;
+}

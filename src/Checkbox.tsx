@@ -27,7 +27,7 @@ export const Checkbox = ({
   ...props
 }: CheckboxType) => {
   return (
-    <div className="checkbox" css={css}>
+    <div className="checkbox-container" css={css}>
       <AntCheckbox.Group
         {...props}
         onChange={props.onChange as (checkedValue: CheckboxValueType[]) => void}

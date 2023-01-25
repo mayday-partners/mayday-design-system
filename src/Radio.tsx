@@ -24,7 +24,7 @@ export const Radio = ({
   ...props
 }: RadioType) => {
   return (
-    <div className="radio" css={css}>
+    <div className="radio-container" css={css}>
       <AntRadio.Group
         {...props}
         onChange={props.onChange as (e: RadioChangeEvent) => void}
