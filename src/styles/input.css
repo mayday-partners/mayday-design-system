@@ -1,0 +1,98 @@
+/* DATE, DATETIME, TIME */
+.input-date {
+  display: flex;
+  flex-direction: column;
+}
+.input-date .ant-picker {
+  width: 232px;
+  height: 40px;
+  border-radius: 2px;
+  border-color: #c8c8c8;
+}
+.input-date .ant-picker:hover {
+  border-color: #c8c8c8;
+}
+.input-date .ant-picker-input input {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+}
+.input-date .ant-picker-input input::placeholder {
+  color: #a8a8a8;
+}
+.input-date .ant-picker-suffix {
+  color: #707070;
+}
+.input-date .ant-picker-focused {
+  box-shadow: none;
+  border-color: #707070;
+}
+.input-date .ant-picker-focused .ant-picker-input input {
+  color: #383838 !important;
+}
+.input-date .ant-picker-clear {
+  right: 20px;
+}
+.input-date .ant-picker-suffix {
+  color: #383838 !important;
+}
+
+/* TEXT */
+.input-text {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  width: 232px;
+  height: 40px;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  padding: 0 0 0 16px;
+}
+.input-text:focus-within {
+  border-color: #707070;
+}
+.input-text .ant-input {
+  border: none;
+}
+.input-text .ant-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+/* .input-text .ant-input:focus::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #a8a8a8;
+} */
+.input-text .ant-input-affix-wrapper-focused {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.input-text .ant-input-affix-wrapper-focused .disabled {
+  background-color: #fafafa;
+  border-color: #c8c8c8;
+}
+.input-text .ant-input-affix-wrapper-focused .disabled input {
+  color: #707070;
+  cursor: not-allowed;
+}
+.input-text .ant-input-disabled {
+  background-color: inherit;
+}
+/* 옵션 컴포넌트 */
+/* .input-text .ant-checkbox-wrapper {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #383838;
+} */
+/* 글자수 카운트 위치 수정 */
+.input-text .ant-input-show-count-suffix {
+  position: relative;
+  top: 38px;
+  left: 10px;
+  font-size: 13px;
+}
