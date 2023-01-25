@@ -1,13 +1,16 @@
 {
   "name": "@maydaydevteam/yeeeyes-design",
   "description": "MAYDAY DESIGN SYSTEM",
-  "version": "0.2.1",
+  "version": "1.1.13",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mayday-partners/mayday-design-system.git"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "private": false,
   "babel": {
     "presets": [
@@ -17,11 +20,16 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@babel/cli": "^7.20.7",
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mdx-js/react": "^2.2.1",
     "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-image": "^3.0.1",
+    "@rollup/plugin-url": "^8.0.1",
     "@storybook/addons": "^6.5.15",
     "@storybook/theming": "^6.5.15",
+    "@svgr/rollup": "^6.5.1",
     "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -30,20 +38,29 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
+    "@types/rollup-plugin-url": "^3.0.1",
     "antd": "^5.1.2",
+    "antd-img-crop": "^4.5.2",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.7",
+    "formik": "^2.2.9",
     "postcss": "^8.4.20",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-url": "^3.0.1",
     "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rollup -c",
+    "build": "rm -rf ./dist && rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",

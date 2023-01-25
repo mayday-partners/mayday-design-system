@@ -1,9 +1,12 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
+import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
+import { SerializedStyles } from "@emotion/react";
+
 import palette from "./styles/palette";
 
 export type LabelType = {
-  children: string;
+  children: string | ReactElement;
   type:
     | "head1"
     | "head2"
@@ -16,7 +19,7 @@ export type LabelType = {
     | "body3";
   bold?: "regular" | "medium" | "semibold" | "bold";
   isRequired?: boolean;
-} & React.HTMLAttributes<HTMLParagraphElement>;
+} & React.HTMLAttributes<HTMLParagraphElement> & { css?: SerializedStyles };
 
 /**
  * LABEL 컴포넌트
@@ -30,12 +33,14 @@ export default function Label({
   type,
   bold = "regular",
   isRequired,
+  css,
   ...props
 }: LabelType) {
   return (
     <LabelP
       {...props}
       className={`${type} ${bold} ${isRequired ? "required" : ""}`}
+      css={css}
     >
       {children}
     </LabelP>
@@ -43,6 +48,9 @@ export default function Label({
 }
 
 const LabelP = styled.p`
+  color: ${(props) => props.color};
+  margin: 0;
+
   &.head1 {
     font-size: 32px;
     line-height: 40px;
@@ -96,7 +104,7 @@ const LabelP = styled.p`
   &.required {
     &::after {
       content: " *";
-      color: ${palette.red[600]};
+      color: ${palette.red.red6};
     }
   }
 `;

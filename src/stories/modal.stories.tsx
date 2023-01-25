@@ -1,5 +1,6 @@
 import { ComponentMeta, Story } from "@storybook/react";
 import { Button } from "antd";
+import React from "react";
 import Modal, { ModalType } from "../Modal";
 
 export default {

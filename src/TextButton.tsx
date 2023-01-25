@@ -1,4 +1,5 @@
-import { SerializedStyles } from "@emotion/react";
+import React from "react";
+import { css, SerializedStyles } from "@emotion/react";
 import { Button, ButtonProps } from "antd";
 import styled from "@emotion/styled";
 
@@ -23,10 +24,11 @@ export const TextButton = ({
   children,
   primaryColor,
   underline,
+  css,
   ...props
 }: TextButtonType) => {
   return (
-    <TextButtonDiv className={props.className}>
+    <TextButtonDiv css={css}>
       <Button
         {...props}
         className={`${props.size} ${primaryColor} ${
@@ -62,13 +64,25 @@ const TextButtonDiv = styled.div`
   }
 
   .black {
-    color: ${palette.gray[800]};
+    color: ${palette.gray.gray8};
+
+    &:hover {
+      color: ${palette.gray.gray8};
+    }
   }
   .gray {
-    color: ${palette.gray[600]};
+    color: ${palette.gray.gray6};
+
+    &:hover {
+      color: ${palette.gray.gray6};
+    }
   }
   .blue {
-    color: ${palette.blue[700]};
+    color: ${palette.blue.blue7};
+
+    &:hover {
+      color: ${palette.blue.blue7};
+    }
   }
 
   .underline {
