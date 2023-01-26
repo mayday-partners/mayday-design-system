@@ -29,12 +29,12 @@ export type RadioType = {
  * @param itemList 선택할 요소 {key: '', label: '', isDisable: false}
  * @returns
  */
-export const Radio = ({
+export default function NormalRadio({
   direction = "horiz",
   css,
   itemList,
   ...props
-}: RadioType) => {
+}: RadioType) {
   return (
     <div className="radio-container" css={css}>
       <AntRadio.Group
@@ -52,4 +52,4 @@ export const Radio = ({
       </AntRadio.Group>
     </div>
   );
-};
+}

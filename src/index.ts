@@ -1,12 +1,17 @@
 import * as Footer from "./components/Footer";
 import { Button } from "./components/Button";
-import { Input } from "./components/Input";
+// import NormalInput from "./components/Input";
+import Input from "./Compound/CcpInput";
 import { TextButton } from "./components/TextButton";
-import { Checkbox } from "./components/Checkbox";
+// import NormalCheckbox from "./components/Checkbox";
+import Checkbox from "./Compound/CcpCheckbox";
+// import NormalRadio from "./components/Radio";
+import Radio from "./Compound/CcpRadio";
 import Modal from "./components/Modal";
 import Label from "./components/Label";
 import MultiInput from "./components/MultiInput";
-import SelectBox from "./components/SelectBox";
+// import NormalSelectBox from "./components/SelectBox";
+import Selectbox from "./Compound/CcpSelectbox";
 import Icons from "./icons";
 import UploadImage from "./components/UploadImage";
 import UploadFile from "./components/UploadFile";
@@ -23,10 +28,11 @@ export {
   Input,
   TextButton,
   Checkbox,
+  Radio,
   Modal,
   Label,
   MultiInput,
-  SelectBox,
+  Selectbox,
   Icons,
   palette,
   UploadFile,

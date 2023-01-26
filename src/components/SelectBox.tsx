@@ -35,7 +35,7 @@ export type SelectBoxType = {
  * @param 그 외 select props (value, onChange ...)
  * @returns
  */
-export default function SelectBox({
+export default function NormalSelectBox({
   items,
   css,
   label,

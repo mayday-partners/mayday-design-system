@@ -19,19 +19,18 @@ import palette from "../styles/palette";
 
 import "../styles/selectbox.css";
 
-export type SelectBoxType = {
-  items: { value: string; label: string | ReactNode }[];
+export type CompoundSelectBoxType = {
   label?: string | ReactElement;
   additionalUnit?: string | ReactElement;
 } & { css?: SerializedStyles } & SelectProps;
 
-function CompoundSelectbox({
+function Selectbox({
   children,
   label,
-  css,
   additionalUnit,
+  css,
   ...props
-}: SelectBoxType) {
+}: CompoundSelectBoxType) {
   return (
     <div className="selectbox-container" css={css}>
       {label && typeof label === "string" ? (
@@ -68,7 +67,7 @@ function CompoundSelectbox({
   );
 }
 
-CompoundSelectbox.Option = function SelectOption({
+Selectbox.Option = function SelectOption({
   value,
   children,
   ...props
@@ -80,4 +79,4 @@ CompoundSelectbox.Option = function SelectOption({
   );
 };
 
-export default CompoundSelectbox;
+export default Selectbox;

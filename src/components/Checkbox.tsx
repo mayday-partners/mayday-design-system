@@ -28,13 +28,12 @@ export type CheckboxType = {
  * @param {horiz | vert} direction 방향
  * @returns
  */
-export const Checkbox = ({
-  // type,
+export default function NormalCheckbox({
   itemList,
   css,
   direction = "horiz",
   ...props
-}: CheckboxType) => {
+}: CheckboxType) {
   return (
     <div className="checkbox-container" css={css}>
       <AntCheckbox.Group
@@ -52,4 +51,4 @@ export const Checkbox = ({
       </AntCheckbox.Group>
     </div>
   );
-};
+}

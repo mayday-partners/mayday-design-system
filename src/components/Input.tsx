@@ -63,7 +63,7 @@ export type InputType = BaseType &
  * @param label box 위에 라벨이 있는 경우
  * @returns
  */
-export const Input = ({
+export default function NormalInput({
   type = "default",
   onPressEnter,
   onChange,
@@ -71,7 +71,7 @@ export const Input = ({
   label,
   css,
   ...props
-}: Partial<InputType>) => {
+}: Partial<InputType>) {
   const onKeyDown = (event: KeyboardEvent) => {
     // lodash 수정
     if (
@@ -192,7 +192,7 @@ export const Input = ({
         </InputDiv>
       </>
     );
-};
+}
 
 export const InputDiv = styled.div`
   display: flex;

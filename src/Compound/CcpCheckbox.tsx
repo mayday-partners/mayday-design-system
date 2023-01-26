@@ -31,7 +31,7 @@ export type CompoundCheckboxType = {
  * @param direction 방향
  * @returns
  */
-function CompoundCheckbox({
+function Checkbox({
   children,
   direction = "horiz",
   css,
@@ -50,8 +50,8 @@ function CompoundCheckbox({
   );
 }
 
-CompoundCheckbox.Option = ({ ...props }: CheckboxOptionType) => {
+Checkbox.Option = ({ ...props }: CheckboxOptionType) => {
   return <AntCheckbox {...props}>{props.label}</AntCheckbox>;
 };
 
-export default CompoundCheckbox;
+export default Checkbox;

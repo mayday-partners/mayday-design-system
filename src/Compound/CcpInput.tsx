@@ -11,7 +11,12 @@
  */
 import { HTMLAttributes, KeyboardEvent, ReactElement } from "react";
 import { Dayjs } from "dayjs";
-import { DatePickerProps, Input, InputProps, TimePickerProps } from "antd";
+import {
+  DatePickerProps,
+  Input as AntInput,
+  InputProps,
+  TimePickerProps,
+} from "antd";
 import { SerializedStyles } from "@emotion/react";
 import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
 import generatePicker from "antd/es/date-picker/generatePicker";
@@ -25,7 +30,7 @@ import "../styles/input.css";
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 
-function CompoundInput({
+function Input({
   children,
   css,
   label,
@@ -58,10 +63,7 @@ type BaseType = {
 };
 type InputDateType = BaseType & Omit<DatePickerProps, "picker" & "value">;
 
-CompoundInput.Date = function InputDate({
-  onChange,
-  ...restProps
-}: InputDateType) {
+Input.Date = function InputDate({ onChange, ...restProps }: InputDateType) {
   return (
     <div className="input-date">
       <DatePicker
@@ -74,7 +76,7 @@ CompoundInput.Date = function InputDate({
   );
 };
 
-CompoundInput.DateTime = function InputDateTime({
+Input.DateTime = function InputDateTime({
   onChange,
   ...restProps
 }: InputDateType) {
@@ -97,10 +99,7 @@ CompoundInput.DateTime = function InputDateTime({
 
 type InputTimeType = BaseType & Omit<TimePickerProps, "picker" & "value">;
 
-CompoundInput.Time = function InputTime({
-  onChange,
-  ...restProps
-}: InputTimeType) {
+Input.Time = function InputTime({ onChange, ...restProps }: InputTimeType) {
   return (
     <div className="input-date">
       <DatePicker.TimePicker
@@ -116,7 +115,7 @@ CompoundInput.Time = function InputTime({
 
 type InputTextType = BaseType & Omit<InputProps, "value">;
 
-CompoundInput.Text = function InputText({
+Input.Text = function InputText({
   onPressEnter,
   onChange,
   ...restProps
@@ -133,9 +132,9 @@ CompoundInput.Text = function InputText({
   };
   return (
     <div className="input-text">
-      <Input {...restProps} onPressEnter={onKeyDown} onChange={onChange} />
+      <AntInput {...restProps} onPressEnter={onKeyDown} onChange={onChange} />
     </div>
   );
 };
 
-export default CompoundInput;
+export default Input;

@@ -10,25 +10,17 @@
  *
  */
 import { SerializedStyles } from "@emotion/react";
-import { Radio as AntRadio, RadioChangeEvent } from "antd";
+import { CheckboxOptionType, Radio as AntRadio, RadioChangeEvent } from "antd";
 import { RadioProps } from "antd/es/radio";
 
 import "../styles/checkbox.css";
 
 export type RadioType = {
-  itemList: { key: string; label: string; isDisable: boolean }[];
-  // type: "checkbox" | "radio";
   direction?: "horiz" | "vert";
 } & RadioProps & {
     css?: SerializedStyles;
   };
-
-export const Radio = ({
-  direction = "horiz",
-  css,
-  itemList,
-  ...props
-}: RadioType) => {
+function Radio({ direction = "horiz", css, children, ...props }: RadioType) {
   return (
     <div className="radio-container" css={css}>
       <AntRadio.Group
@@ -36,14 +28,14 @@ export const Radio = ({
         onChange={props.onChange as (e: RadioChangeEvent) => void}
         className={`${direction}`}
       >
-        {itemList.map((i) => {
-          return (
-            <AntRadio value={i.key} disabled={i.isDisable} key={i.key}>
-              {i.label}
-            </AntRadio>
-          );
-        })}
+        {children}
       </AntRadio.Group>
     </div>
   );
+}
+
+Radio.Option = ({ ...props }: CheckboxOptionType) => {
+  return <AntRadio {...props}>{props.label}</AntRadio>;
 };
+
+export default Radio;
