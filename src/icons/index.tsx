@@ -5,14 +5,10 @@ export type IconsType = keyof typeof svg;
 
 type IconsProps = {
   icon: IconsType;
-  width?: number;
-  height?: number;
 } & React.SVGAttributes<SVGSVGElement>;
 
-export default function Icons({ icon, width, height, ...props }: IconsProps) {
+export default function Icons({ icon, ...props }: IconsProps) {
   return React.createElement(svg[icon], {
-    width,
-    height,
     ...props,
   });
 }
