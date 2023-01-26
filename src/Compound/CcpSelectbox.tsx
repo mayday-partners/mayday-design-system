@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : CcpSelectbox.tsx
+ *
+ * DESCRIPTION : Compound Component Pattern 적용한 select 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01-25
+ *
+ */
 import { SerializedStyles } from "@emotion/react";
 import { Select, SelectProps } from "antd";
 import { OptionProps } from "antd/es/select";

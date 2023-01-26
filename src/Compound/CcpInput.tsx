@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : CcpInput
+ *
+ * DESCRIPTION : Compound Component Pattern 적용한 Input 컴포넌트. Date, DateTime, Time, Text
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01-25
+ *
+ */
 import { HTMLAttributes, KeyboardEvent, ReactElement } from "react";
 import { Dayjs } from "dayjs";
 import { DatePickerProps, Input, InputProps, TimePickerProps } from "antd";
