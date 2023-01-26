@@ -7,7 +7,7 @@ import {
 } from "antd";
 import { RadioProps } from "antd/es/radio";
 
-import "./styles/checkbox.css";
+import "../styles/checkbox.css";
 
 export type RadioType = {
   itemList: { key: string; label: string; isDisable: boolean }[];

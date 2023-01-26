@@ -3,7 +3,8 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 import { RadioChangeEvent } from "antd";
-import { Radio, RadioType } from "../Radio";
+
+import { Radio, RadioType } from "../components/Radio";
 
 export default {
   title: "Common/Radio",

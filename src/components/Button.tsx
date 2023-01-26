@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Button as AntButton, ButtonProps } from "antd";
 import React from "react";
 
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 
 export type ButtonPropsType = {
   /** 버튼요소 */

@@ -2,11 +2,11 @@ import { SerializedStyles } from "@emotion/react";
 import { Select, SelectProps } from "antd";
 import { OptionProps } from "antd/es/select";
 import { ReactElement, ReactNode } from "react";
-import Icons from "./icons";
-import Label from "./Label";
-import palette from "./styles/palette";
+import Icons from "../icons";
+import Label from "../components/Label";
+import palette from "../styles/palette";
 
-import "./styles/selectbox.css";
+import "../styles/selectbox.css";
 
 export type SelectBoxType = {
   items: { value: string; label: string | ReactNode }[];

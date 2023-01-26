@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/utils";
 import React from "react";
 import { Button } from "./Button";
-import Icons from "./icons";
-import palette from "./styles/palette";
+import Icons from "../icons";
+import palette from "../styles/palette";
 
 export type UploadFileType = {
   type: "multi-file" | "single-file";

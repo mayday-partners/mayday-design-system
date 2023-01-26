@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Story } from "@storybook/react";
-import UploadFile from "../UploadFile";
+
+import UploadFile from "../components/UploadFile";
 
 export default {
   title: "Common/UploadFile",

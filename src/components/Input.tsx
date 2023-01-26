@@ -18,10 +18,10 @@ import {
   ClockCircleOutlined,
 } from "@ant-design/icons";
 
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 import { SerializedStyles } from "@emotion/react";
 import Label from "./Label";
-import Icons from "./icons";
+import Icons from "../icons";
 
 import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
 import generatePicker, {

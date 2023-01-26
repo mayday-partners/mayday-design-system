@@ -1,7 +1,7 @@
-import { Story } from "@storybook/react";
 import React from "react";
+import { Story } from "@storybook/react";
 
-import { Input, InputType } from "../Input";
+import { Input, InputType } from "../components/Input";
 
 export default {
   title: "Common/Date",

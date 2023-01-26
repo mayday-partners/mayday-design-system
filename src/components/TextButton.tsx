@@ -3,7 +3,7 @@ import { css, SerializedStyles } from "@emotion/react";
 import { Button, ButtonProps } from "antd";
 import styled from "@emotion/styled";
 
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 
 export type TextButtonType = {
   children: string | JSX.Element; // svg 파일이 npm을 통해 publish 되지않음. 각 프로젝트 단위에서 아이콘 사용할 수 있도록

@@ -1,7 +1,9 @@
-import { Story } from "@storybook/react";
 import React from "react";
+import { Story } from "@storybook/react";
+
+import Tab, { TabType } from "../components/Tab";
+
 import palette from "../styles/palette";
-import Tab, { TabType } from "../Tab";
 
 export default {
   title: "Common/Tab",

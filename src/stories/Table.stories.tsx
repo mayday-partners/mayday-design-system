@@ -1,7 +1,7 @@
-import { Story } from "@storybook/react";
 import React from "react";
+import { Story } from "@storybook/react";
 
-import Table, { TableType } from "../Table";
+import Table, { TableType } from "../components/Table";
 
 export default {
   title: "Common/Table",

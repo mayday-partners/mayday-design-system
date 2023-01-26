@@ -3,7 +3,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
-import { Checkbox, CheckboxType } from "../Checkbox";
+import { Checkbox, CheckboxType } from "../components/Checkbox";
 
 export default {
   title: "Common/Checkbox",

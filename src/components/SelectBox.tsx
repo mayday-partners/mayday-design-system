@@ -6,9 +6,10 @@ import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/utils";
 import { css as emotionCss } from "@emotion/react";
 
-import palette from "./styles/palette";
 import Label from "./Label";
-import Icons from "./icons";
+import Icons from "../icons";
+
+import palette from "../styles/palette";
 
 export type SelectBoxType = {
   items: { value: string; label: string | ReactNode }[];

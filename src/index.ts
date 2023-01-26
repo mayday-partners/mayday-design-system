@@ -1,20 +1,20 @@
-import * as Footer from "./Footer";
-import { Button } from "./Button";
-import { Input } from "./Input";
-import { TextButton } from "./TextButton";
-import { Checkbox } from "./Checkbox";
-import Modal from "./Modal";
-import Label from "./Label";
-import MultiInput from "./MultiInput";
-import SelectBox from "./SelectBox";
+import * as Footer from "./components/Footer";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
+import { TextButton } from "./components/TextButton";
+import { Checkbox } from "./components/Checkbox";
+import Modal from "./components/Modal";
+import Label from "./components/Label";
+import MultiInput from "./components/MultiInput";
+import SelectBox from "./components/SelectBox";
 import Icons from "./icons";
-import UploadImage from "./UploadImage";
-import UploadFile from "./UploadFile";
+import UploadImage from "./components/UploadImage";
+import UploadFile from "./components/UploadFile";
 import palette from "./styles/palette";
-import Toast from "./Toast";
-import Alert from "./Alert";
-import Table from "./Table";
-import Tab from "./Tab";
+import Toast from "./components/Toast";
+import Alert from "./components/Alert";
+import Table from "./components/Table";
+import Tab from "./components/Tab";
 
 export {
   Tab,

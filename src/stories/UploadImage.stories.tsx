@@ -1,7 +1,7 @@
-import { Story } from "@storybook/react";
 import React from "react";
-import Upload from "../UploadImage";
-import { UploadImageType } from "../UploadImage";
+import { Story } from "@storybook/react";
+
+import Upload, { UploadImageType } from "../components/UploadImage";
 
 export default {
   title: "Common/UploadImage",

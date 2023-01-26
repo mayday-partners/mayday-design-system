@@ -1,8 +1,8 @@
-import { Story } from "@storybook/react";
 import React from "react";
-import Icons from "../icons";
+import { Story } from "@storybook/react";
 
-import Toast, { MessagePropsType } from "../Toast";
+import Icons from "../icons";
+import Toast, { MessagePropsType } from "../components/Toast";
 
 export default {
   title: "Common/Toast",

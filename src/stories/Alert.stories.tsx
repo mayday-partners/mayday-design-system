@@ -1,6 +1,6 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import Alert, { AlertType } from "../Alert";
+import Alert, { AlertType } from "../components/Alert";
 
 export default {
   title: "Common/Alert",

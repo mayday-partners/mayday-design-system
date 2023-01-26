@@ -1,7 +1,8 @@
-import palette from "./styles/palette";
+import React from "react";
 import { Divider, Space } from "antd";
 import styled from "@emotion/styled";
-import React from "react";
+
+import palette from "../styles/palette";
 
 export default function Footer() {
   return (

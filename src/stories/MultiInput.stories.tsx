@@ -2,9 +2,9 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 
-import { Input } from "../Input";
-import Label from "../Label";
-import MultiInput, { MultiInputType } from "../MultiInput";
+import { Input } from "../components/Input";
+import Label from "../components/Label";
+import MultiInput, { MultiInputType } from "../components/MultiInput";
 
 import palette from "../styles/palette";
 

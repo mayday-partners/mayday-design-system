@@ -2,7 +2,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import CompoundSelectbox from "../CcpSelectbox";
+import CompoundSelectbox from "../Compound/CcpSelectbox";
 import { css } from "@emotion/react";
 
 export default {

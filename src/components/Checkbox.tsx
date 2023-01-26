@@ -3,18 +3,16 @@ import { SerializedStyles } from "@emotion/react";
 import { Checkbox as AntCheckbox } from "antd";
 import { CheckboxGroupProps, CheckboxValueType } from "antd/es/checkbox/Group";
 
-import "./styles/checkbox.css";
+import "../styles/checkbox.css";
 
 export type CheckboxType = {
   itemList: { key: string; label: string; isDisable: boolean }[];
-  // type: "checkbox" | "radio";
   direction?: "horiz" | "vert";
 } & CheckboxGroupProps & {
     css?: SerializedStyles;
   };
 /**
  * 체크박스 컴포넌트
- * @param {'checkbox' | 'radio'} type 박스 타입
  * @param itemList 박스 안에 들어갈 요소 리스트. {key, label, isDisable}
  * @param direction 방향
  * @returns
@@ -44,42 +42,3 @@ export const Checkbox = ({
     </div>
   );
 };
-
-// const BoxDiv = styled.div`
-//   .ant-radio-group,
-//   .ant-checkbox-group {
-//     display: flex;
-//     flex-direction: column;
-
-//     .ant-radio-wrapper,
-//     .ant-checkbox-wrapper {
-//       font-weight: 500;
-//       font-size: 15px;
-//       line-height: 19px;
-//       color: ${palette.gray.gray6};
-
-//       .ant-radio .ant-radio-inner,
-//       .ant-checkbox .ant-checkbox-inner {
-//         border-color: ${palette.gray.gray3};
-//       }
-//       .ant-checkbox-checked .ant-checkbox-inner {
-//         border-color: ${palette.blue.blue6};
-//         background-color: ${palette.blue.blue6};
-//       }
-//       .ant-radio-checked .ant-radio-inner {
-//         border-color: ${palette.blue.blue6};
-//         background-color: #fff;
-//         &::after {
-//           background-color: ${palette.blue.blue6};
-//         }
-//       }
-//     }
-
-//     &.horiz {
-//       flex-direction: row;
-//     }
-//   }
-//   .ant-checkbox-wrapper {
-//     margin: 0;
-//   }
-// `;

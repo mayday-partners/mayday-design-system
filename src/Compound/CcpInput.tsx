@@ -1,13 +1,16 @@
+import { HTMLAttributes, KeyboardEvent, ReactElement } from "react";
+import { Dayjs } from "dayjs";
+import { DatePickerProps, Input, InputProps, TimePickerProps } from "antd";
+import { SerializedStyles } from "@emotion/react";
 import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
 import generatePicker from "antd/es/date-picker/generatePicker";
-import { Dayjs } from "dayjs";
-import { HTMLAttributes, KeyboardEvent, ReactElement } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { DatePickerProps, Input, InputProps, TimePickerProps } from "antd";
-import Label from "./Label";
-import palette from "./styles/palette";
-import Icons from "./icons";
-import "./styles/input.css";
+
+import Label from "../components/Label";
+import Icons from "../icons";
+
+import palette from "../styles/palette";
+
+import "../styles/input.css";
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 import { Button } from "./Button";
 import { DeleteOutlined, PlusCircleFilled } from "@ant-design/icons";
 import { SerializedStyles } from "@emotion/utils";

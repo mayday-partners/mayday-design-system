@@ -6,8 +6,8 @@ import { RcFile } from "antd/es/upload";
 import { css as emotionCss, SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 
-import palette from "./styles/palette";
-import Icons from "./icons";
+import palette from "../styles/palette";
+import Icons from "../icons";
 import Label from "./Label";
 import { Button } from "./Button";
 

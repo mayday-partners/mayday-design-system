@@ -2,7 +2,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import CompoundInput from "../CcpInput";
+import CompoundInput from "../Compound/CcpInput";
 import { css } from "@emotion/react";
 
 export default {

@@ -1,7 +1,7 @@
 import { ComponentMeta, Story } from "@storybook/react";
 import { Button } from "antd";
 import React from "react";
-import Modal, { ModalType } from "../Modal";
+import Modal, { ModalType } from "../components/Modal";
 
 export default {
   title: "Common/Modal",

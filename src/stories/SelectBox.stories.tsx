@@ -1,7 +1,8 @@
+import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
-import React from "react";
-import SelectBox, { SelectBoxType } from "../SelectBox";
+
+import SelectBox, { SelectBoxType } from "../components/SelectBox";
 
 var value = "";
 

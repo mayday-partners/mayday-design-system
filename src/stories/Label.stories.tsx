@@ -2,8 +2,8 @@ import React from "react";
 import { Story } from "@storybook/react";
 import { Tooltip as AntTooltip } from "antd";
 
-import Label, { LabelType } from "../Label";
-import { InfoCircleFilled } from "@ant-design/icons";
+import Label, { LabelType } from "../components/Label";
+import Icons from "../icons";
 
 export default {
   title: "Common/Label",
@@ -33,7 +33,7 @@ TooltipUse.args = {
     <div style={{ display: "flex", gap: "4px" }}>
       <p style={{ margin: "0" }}>Tooltip</p>
       <AntTooltip title={"test info"}>
-        <InfoCircleFilled />
+        <Icons icon="info" />
       </AntTooltip>
     </div>
   ),

@@ -1,7 +1,7 @@
-import { Story } from "@storybook/react";
 import React from "react";
+import { Story } from "@storybook/react";
 
-import { TextButton, TextButtonType } from "../TextButton";
+import { TextButton, TextButtonType } from "../components/TextButton";
 
 export default {
   title: "Common/TextButton",

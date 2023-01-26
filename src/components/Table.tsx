@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/react";
 import { Table as AntTable } from "antd";
-import palette from "./styles/palette";
 import { ColumnsType } from "antd/es/table";
 
 interface DataType {

@@ -3,7 +3,7 @@ import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
 import { SerializedStyles } from "@emotion/react";
 
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 
 export type LabelType = {
   children: string | ReactElement;

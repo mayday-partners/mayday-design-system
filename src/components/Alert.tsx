@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import palette from "./styles/palette";
+import palette from "../styles/palette";
 import { Alert as AntAlert } from "antd";
 import { SerializedStyles } from "@emotion/react";
 

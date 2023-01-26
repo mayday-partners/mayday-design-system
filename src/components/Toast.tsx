@@ -1,11 +1,7 @@
-import { css, SerializedStyles } from "@emotion/react";
-import styled from "@emotion/styled";
-import { background } from "@storybook/theming";
+import { ReactNode } from "react";
 import { message, MessageArgsProps } from "antd";
-import Message from "antd/es/message";
-import React, { ReactNode } from "react";
-import "./styles/Toast.css";
-import palette from "./styles/palette";
+
+import "../styles/Toast.css";
 
 export type MessagePropsType = {
   /** 버튼요소 */

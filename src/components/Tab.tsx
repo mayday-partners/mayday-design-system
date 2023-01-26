@@ -1,9 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { ReactElement } from "react";
-import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/react";
 import { ConfigProvider, Tabs, TabsProps } from "antd";
-import palette from "./styles/palette";
 import { Dayjs } from "dayjs";
 
 export type TabType = {
