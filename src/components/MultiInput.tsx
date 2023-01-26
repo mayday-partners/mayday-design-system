@@ -11,11 +11,12 @@
  */
 /** @jsxImportSource @emotion/react */
 import React, { ReactElement } from "react";
-import styled from "@emotion/styled";
-import palette from "../styles/palette";
-import { Button } from "./Button";
 import { DeleteOutlined, PlusCircleFilled } from "@ant-design/icons";
 import { SerializedStyles } from "@emotion/utils";
+
+import { Button } from "./Button";
+
+import "../styles/multi.css";
 
 export type MultiInputType = {
   children: ReactElement;
@@ -44,8 +45,8 @@ export default function MultiInput({
   css,
 }: MultiInputType) {
   return (
-    <MultiInputDiv css={css}>
-      <div>{children}</div>
+    <div className="multi-container" css={css}>
+      <div className="multi-input">{children}</div>
       <div className="button-wrapper">
         <Button size="medium" onClick={onDelete} disabled={isDeleteDisabled}>
           <DeleteOutlined />
@@ -57,26 +58,6 @@ export default function MultiInput({
           </>
         </Button>
       </div>
-    </MultiInputDiv>
+    </div>
   );
 }
-
-const MultiInputDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  padding: 24px;
-  border: 1px solid ${palette.gray.gray2};
-  border-radius: 8px;
-  align-items: center;
-
-  .button-wrapper {
-    display: flex;
-    gap: 16px;
-    align-items: end;
-
-    button {
-      width: fit-content;
-    }
-  }
-`;
