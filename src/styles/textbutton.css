@@ -1,0 +1,43 @@
+.textbutton-container button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: none;
+  cursor: pointer;
+}
+.small {
+  height: 20px;
+
+  font-weight: 500;
+  font-size: 13;
+  line-height: 16px;
+}
+.large {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.black {
+  color: #383838;
+}
+.black:hover {
+  color: #383838;
+}
+.gray {
+  color: #707070;
+}
+.gray:hover {
+  color: #707070;
+}
+.blue {
+  color: #1d9de9;
+}
+.blue:hover {
+  color: #1d9de9;
+}
+
+.underline {
+  text-decoration: underline;
+}
