@@ -29,7 +29,7 @@ export type SelectBoxType = {
 
 /**
  * SELECTBOX 컴포넌트
- * @param items select 할 요소 리스트
+ * @param items select 할 요소 리스트 { value: string; label: string | ReactNode }
  * @param label box 위에 라벨이 있는 경우
  * @param css
  * @param 그 외 select props (value, onChange ...)

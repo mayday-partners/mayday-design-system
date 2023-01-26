@@ -24,8 +24,8 @@ export type CheckboxType = {
   };
 /**
  * 체크박스 컴포넌트
- * @param itemList 박스 안에 들어갈 요소 리스트. {key, label, isDisable}
- * @param direction 방향
+ * @param itemList 박스 안에 들어갈 요소 리스트. {key: '', label: '', isDisable: false}
+ * @param {horiz | vert} direction 방향
  * @returns
  */
 export const Checkbox = ({

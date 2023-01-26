@@ -23,6 +23,12 @@ export type RadioType = {
     css?: SerializedStyles;
   };
 
+/**
+ * RADIO 컴포넌트
+ * @param {horiz | vert} direction 방향
+ * @param itemList 선택할 요소 {key: '', label: '', isDisable: false}
+ * @returns
+ */
 export const Radio = ({
   direction = "horiz",
   css,

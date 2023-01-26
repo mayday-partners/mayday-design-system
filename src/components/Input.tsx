@@ -10,7 +10,6 @@
  *
  */
 /** @jsxImportSource @emotion/react */
-
 import React, { ReactElement } from "react";
 import { KeyboardEvent } from "react";
 import styled from "@emotion/styled";
@@ -18,7 +17,6 @@ import {
   Input as AntInput,
   InputProps,
   Checkbox,
-  TimePicker,
   TimePickerProps,
   DatePickerProps,
 } from "antd";
@@ -59,8 +57,8 @@ export type InputType = BaseType &
 /**
  * INPUT 컴포넌트
  * @param {"default" | "option" | "search" | "date" | 'file'} type INPUT 타입
- * @param onChange onChange 함수
  * @param onPressEnter enter 액션
+ * @param onChange onChange 함수
  * @param option type=option 인 경우 옵션 이름
  * @param label box 위에 라벨이 있는 경우
  * @returns
