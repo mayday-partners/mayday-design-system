@@ -11,10 +11,9 @@
  */
 /** @jsxImportSource @emotion/react */
 import React, { ReactElement } from "react";
-import styled from "@emotion/styled";
-import { SerializedStyles } from "@emotion/react";
+import { css as emotion, SerializedStyles } from "@emotion/react";
 
-import palette from "../styles/palette";
+import "../styles/label.css";
 
 export type LabelType = {
   children: string | ReactElement;
@@ -30,7 +29,7 @@ export type LabelType = {
     | "body3";
   bold?: "regular" | "medium" | "semibold" | "bold";
   isRequired?: boolean;
-} & React.HTMLAttributes<HTMLParagraphElement> & { css?: SerializedStyles };
+} & React.HTMLAttributes<HTMLDivElement> & { css?: SerializedStyles };
 
 /**
  * LABEL 컴포넌트
@@ -43,79 +42,22 @@ export default function Label({
   children,
   type,
   bold = "regular",
-  isRequired,
+  isRequired = false,
   css,
   ...props
 }: LabelType) {
   return (
-    <LabelP
+    <div
       {...props}
-      className={`${type} ${bold} ${isRequired ? "required" : ""}`}
-      css={css}
+      className={`label-container ${type} ${bold} ${
+        isRequired ? "required" : ""
+      }`}
+      css={emotion`
+        ${css}
+        color: ${props.color}
+      `}
     >
       {children}
-    </LabelP>
+    </div>
   );
 }
-
-const LabelP = styled.p`
-  color: ${(props) => props.color};
-  margin: 0;
-
-  &.head1 {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  &.head2 {
-    font-size: 28px;
-    line-height: 35px;
-  }
-  &.head3 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  &.title1 {
-    font-size: 20px;
-    line-height: 25px;
-  }
-  &.title2 {
-    font-size: 18px;
-    line-height: 22px;
-  }
-  &.title3 {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  &.body1 {
-    font-size: 15px;
-    line-height: 19px;
-  }
-  &.body2 {
-    font-size: 13px;
-    line-height: 16px;
-  }
-  &.body3 {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  &.regular {
-    font-weight: 400;
-  }
-  &.medium {
-    font-weight: 500;
-  }
-  &.semibold {
-    font-weight: 600;
-  }
-  &.bold {
-    font-weight: 700;
-  }
-
-  &.required {
-    &::after {
-      content: " *";
-      color: ${palette.red.red6};
-    }
-  }
-`;

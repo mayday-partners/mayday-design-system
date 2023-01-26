@@ -18,7 +18,7 @@ Default.args = {
   type: "title1",
   bold: "regular",
   isRequired: false,
-  color: "black",
+  color: "red",
 };
 export const Required = Template.bind({});
 Required.args = {
