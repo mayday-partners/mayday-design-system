@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : TextButton.tsx
+ *
+ * DESCRIPTION : 텍스트 버튼 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 import React from "react";
 import { css, SerializedStyles } from "@emotion/react";
 import { Button, ButtonProps } from "antd";

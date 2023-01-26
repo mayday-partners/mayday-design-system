@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : Button.tsx
+ *
+ * DESCRIPTION : 버튼 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Button as AntButton, ButtonProps } from "antd";

@@ -1,3 +1,15 @@
+/**
+ *
+ * FILE :
+ *
+ * DESCRIPTION :
+ *
+ * AUTHOR :
+ *
+ * DATE :
+ *
+ * COMMENT : (hyeoz) 테이블이 어디서 사용될 지 모르기때문에 데이터 타입은 한정하지 않는 것이 좋을 것 같습니다~
+ */
 /** @jsxImportSource @emotion/react */
 import { css, SerializedStyles } from "@emotion/react";
 import { Table as AntTable } from "antd";

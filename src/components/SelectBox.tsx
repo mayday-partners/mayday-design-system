@@ -1,5 +1,15 @@
+/**
+ *
+ * FILE : SelectBox.tsx
+ *
+ * DESCRIPTION : 셀렉트박스 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
-
 import React, { ReactElement, ReactNode } from "react";
 import { Select, SelectProps } from "antd";
 import styled from "@emotion/styled";

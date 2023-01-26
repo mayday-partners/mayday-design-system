@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : UploadImage.tsx
+ *
+ * DESCRIPTION : 이미지 업로드 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { Upload as AntUpload } from "antd";

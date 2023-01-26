@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE :
+ *
+ * DESCRIPTION :
+ *
+ * AUTHOR :
+ *
+ * DATE :
+ *
+ */
 import React from "react";
 import { Button, ConfigProvider, Modal as AntModal, ModalProps } from "antd";
 import "../styles/modal.css";

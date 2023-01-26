@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : Checkbox.tsx
+ *
+ * DESCRIPTION : 체크박스 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
 import { SerializedStyles } from "@emotion/react";
 import { Checkbox as AntCheckbox } from "antd";

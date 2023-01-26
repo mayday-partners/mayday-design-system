@@ -1,10 +1,16 @@
+/**
+ *
+ * FILE : Radio.tsx
+ *
+ * DESCRIPTION : 라디오 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 import { SerializedStyles } from "@emotion/react";
-import {
-  Radio as AntRadio,
-  Checkbox as AntCheckbox,
-  RadioGroupProps,
-  RadioChangeEvent,
-} from "antd";
+import { Radio as AntRadio, RadioChangeEvent } from "antd";
 import { RadioProps } from "antd/es/radio";
 
 import "../styles/checkbox.css";

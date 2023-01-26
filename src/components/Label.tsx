@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : Label.tsx
+ *
+ * DESCRIPTION : 라벨, 텍스트 컴포넌트.
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
 import React, { ReactElement } from "react";
 import styled from "@emotion/styled";

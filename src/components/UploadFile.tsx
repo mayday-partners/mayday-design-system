@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : UploadFile.tsx
+ *
+ * DESCRIPTION : 파일 업로드 컴포넌트
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
 import { css as emotionCss } from "@emotion/react";
 import styled from "@emotion/styled";

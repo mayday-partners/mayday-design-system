@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : Input.tsx
+ *
+ * DESCRIPTION : 인풋 컴포넌트. default, date, datetime, time, option, file
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 /** @jsxImportSource @emotion/react */
 
 import React, { ReactElement } from "react";
@@ -12,11 +23,6 @@ import {
   DatePickerProps,
 } from "antd";
 import { Dayjs } from "dayjs";
-import {
-  CalendarOutlined,
-  SearchOutlined,
-  ClockCircleOutlined,
-} from "@ant-design/icons";
 
 import palette from "../styles/palette";
 import { SerializedStyles } from "@emotion/react";
@@ -24,9 +30,7 @@ import Label from "./Label";
 import Icons from "../icons";
 
 import dayjsGenerateConfig from "rc-picker/lib/generate/dayjs";
-import generatePicker, {
-  PickerProps,
-} from "antd/es/date-picker/generatePicker";
+import generatePicker from "antd/es/date-picker/generatePicker";
 
 const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
 type BaseType = {

@@ -1,3 +1,14 @@
+/**
+ *
+ * FILE : Footer.tsx
+ *
+ * DESCRIPTION :
+ *
+ * AUTHOR : 이혜원 (hyeoz)
+ *
+ * DATE : 2023-01
+ *
+ */
 import React from "react";
 import { Divider, Space } from "antd";
 import styled from "@emotion/styled";
