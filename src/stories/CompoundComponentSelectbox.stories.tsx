@@ -28,3 +28,20 @@ Default.args = {
     /* background-color: red !important; */
   `,
 };
+export const Additional = Template.bind({});
+Additional.args = {
+  placeholder: "placeholder",
+  children: (
+    <>
+      <CompoundSelectbox.Option value={0}>0</CompoundSelectbox.Option>
+      <CompoundSelectbox.Option value={1}>1</CompoundSelectbox.Option>
+      <CompoundSelectbox.Option value={2}>2</CompoundSelectbox.Option>
+      <CompoundSelectbox.Option value={3}>3</CompoundSelectbox.Option>
+      <CompoundSelectbox.Option value={4}>4</CompoundSelectbox.Option>
+    </>
+  ),
+  additionalUnit: "개",
+  css: css`
+    width: 300px !important;
+  `,
+};
