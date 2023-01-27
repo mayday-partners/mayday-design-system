@@ -111,6 +111,9 @@ import { ReactComponent as circle } from "./circle.svg";
 import { ReactComponent as add_photo } from "./add_photo.svg";
 import { ReactComponent as gg_unsplash } from "./gg_unsplash.svg";
 
+import { ReactComponent as facebook } from "./sns/facebook.svg";
+import { ReactComponent as google } from "./sns/google.svg";
+
 export {
   circle,
   vercel,
@@ -223,4 +226,6 @@ export {
   no_image,
   history,
   gg_unsplash,
+  facebook,
+  google,
 };
