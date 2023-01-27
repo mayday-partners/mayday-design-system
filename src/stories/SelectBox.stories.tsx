@@ -2,17 +2,17 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 
-import SelectBox, { SelectBoxType } from "../components/SelectBox";
+import NormalSelectBox, { SelectBoxType } from "../components/SelectBox";
 
 var value = "";
 
 export default {
   title: "Common/SelectBox",
-  component: SelectBox,
+  component: NormalSelectBox,
   argTypes: {},
 };
 
-const Template: Story<SelectBoxType> = (args) => <SelectBox {...args} />;
+const Template: Story<SelectBoxType> = (args) => <NormalSelectBox {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

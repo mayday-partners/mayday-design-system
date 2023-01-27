@@ -4,14 +4,14 @@ import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 import { RadioChangeEvent } from "antd";
 
-import { Radio, RadioType } from "../components/Radio";
+import NormalRadio, { RadioType } from "../components/Radio";
 
 export default {
   title: "Common/Radio",
-  component: Radio,
+  component: NormalRadio,
 };
 
-const Template: Story<RadioType> = (args) => <Radio {...args} />;
+const Template: Story<RadioType> = (args) => <NormalRadio {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

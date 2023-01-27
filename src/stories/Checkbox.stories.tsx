@@ -3,14 +3,14 @@ import React from "react";
 import { css } from "@emotion/react";
 import { Story } from "@storybook/react";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
-import { Checkbox, CheckboxType } from "../components/Checkbox";
+import NormalCheckbox, { CheckboxType } from "../components/Checkbox";
 
 export default {
   title: "Common/Checkbox",
-  component: Checkbox,
+  component: NormalCheckbox,
 };
 
-const Template: Story<CheckboxType> = (args) => <Checkbox {...args} />;
+const Template: Story<CheckboxType> = (args) => <NormalCheckbox {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
