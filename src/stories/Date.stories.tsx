@@ -1,14 +1,14 @@
 import React from "react";
 import { Story } from "@storybook/react";
 
-import { Input, InputType } from "../components/Input";
+import NormalInput, { InputType } from "../components/Input";
 
 export default {
   title: "Common/Date",
-  component: Input,
+  component: NormalInput,
 };
 
-const Template: Story<InputType> = (args) => <Input {...args} />;
+const Template: Story<InputType> = (args) => <NormalInput {...args} />;
 
 export const Date = Template.bind({});
 Date.args = {
