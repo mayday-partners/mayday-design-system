@@ -40,4 +40,8 @@ Check.args = {
   ],
   defaultValue: ["1"],
   onChange: (event: CheckboxValueType[]) => console.log(event),
+  direction: "vert",
+  css: css`
+    border: 1px solid red;
+  `,
 };
