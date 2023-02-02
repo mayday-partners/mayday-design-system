@@ -112,6 +112,7 @@ import { ReactComponent as add_photo } from "./add_photo.svg";
 import { ReactComponent as gg_unsplash } from "./gg_unsplash.svg";
 import { ReactComponent as mail } from "./mail.svg";
 import { ReactComponent as advertise } from "./advertise.svg";
+import { ReactComponent as comment_white } from "./comment_2.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -232,4 +233,5 @@ export {
   google,
   mail,
   advertise,
+  comment_white,
 };
