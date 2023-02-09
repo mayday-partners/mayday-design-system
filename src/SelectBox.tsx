@@ -64,14 +64,14 @@ export default function SelectBox({
               {<Icons icon="chevron_down" />}
             </div>
           }
-          onDropdownVisibleChange={(value) => {}}
-        >
-          {items.map((i) => (
+          options={items}
+        />
+        {/* {items.map((i) => (
             <Select.Option value={i.value} defaultValue={0} key={i.value}>
               {i.label}
             </Select.Option>
-          ))}
-        </Select>
+          ))} */}
+        {/* </Select> */}
       </SelectDiv>
     </div>
   );
