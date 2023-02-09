@@ -11,7 +11,7 @@ import Label from "./Label";
 import Icons from "./icons";
 
 export type SelectBoxType = {
-  items: { value: string; label: string | ReactNode }[];
+  items: { value: string | number; label: string | ReactNode }[];
   label?: string | ReactElement;
   additionalUnit?: string | ReactElement;
 } & { css?: SerializedStyles } & SelectProps;
