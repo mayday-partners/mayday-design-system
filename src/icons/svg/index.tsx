@@ -114,6 +114,9 @@ import { ReactComponent as mail } from "./mail.svg";
 import { ReactComponent as advertise } from "./advertise.svg";
 import { ReactComponent as comment_white } from "./comment_2.svg";
 import { ReactComponent as money } from "./20_money.svg";
+import { ReactComponent as lobby } from "./lobby_32.svg";
+import { ReactComponent as branding } from "./branding_32.svg";
+import { ReactComponent as network } from "./network_32.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -236,4 +239,7 @@ export {
   advertise,
   comment_white,
   money,
+  lobby,
+  network,
+  branding,
 };
