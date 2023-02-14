@@ -117,6 +117,7 @@ import { ReactComponent as money } from "./20_money.svg";
 import { ReactComponent as lobby } from "./lobby_32.svg";
 import { ReactComponent as branding } from "./branding_32.svg";
 import { ReactComponent as network } from "./network_32.svg";
+import { ReactComponent as notice } from "./notice_32.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -242,4 +243,5 @@ export {
   lobby,
   network,
   branding,
+  notice,
 };
