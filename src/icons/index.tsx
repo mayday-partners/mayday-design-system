@@ -7,8 +7,10 @@ type IconsProps = {
   icon: IconsType;
 } & React.SVGAttributes<SVGSVGElement>;
 
-export default function Icons({ icon, ...props }: IconsProps) {
+function Icons({ icon, ...props }: IconsProps) {
   return React.createElement(svg[icon], {
     ...props,
   });
 }
+
+export default Icons;

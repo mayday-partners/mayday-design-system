@@ -11,7 +11,7 @@ const Template: Story<any> = (args) => <Icons {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  icon: "comment_2",
+  icon: "comment",
   width: 20,
   height: 20,
   color: "red",
