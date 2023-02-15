@@ -120,6 +120,11 @@ import { ReactComponent as network } from "./network_32.svg";
 import { ReactComponent as notice } from "./notice_32.svg";
 import { ReactComponent as bubble } from "./bubble.svg";
 import { ReactComponent as smallStar } from "./smallStar.svg";
+import { ReactComponent as myChat } from "./myChat.svg";
+import { ReactComponent as msgMore } from "./msgMore.svg";
+import { ReactComponent as msgHide } from "./msgHide.svg";
+import { ReactComponent as fixedMsg } from "./fixedMsg.svg";
+import { ReactComponent as option } from "./button_iconoption.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -248,4 +253,9 @@ export {
   notice,
   bubble,
   smallStar,
+  myChat,
+  msgHide,
+  msgMore,
+  fixedMsg,
+  option,
 };
