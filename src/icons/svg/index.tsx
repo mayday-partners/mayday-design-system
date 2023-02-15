@@ -118,6 +118,8 @@ import { ReactComponent as lobby } from "./lobby_32.svg";
 import { ReactComponent as branding } from "./branding_32.svg";
 import { ReactComponent as network } from "./network_32.svg";
 import { ReactComponent as notice } from "./notice_32.svg";
+import { ReactComponent as bubble } from "./bubble.svg";
+import { ReactComponent as smallStar } from "./smallStar.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -244,4 +246,6 @@ export {
   network,
   branding,
   notice,
+  bubble,
+  smallStar,
 };
