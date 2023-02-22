@@ -62,7 +62,7 @@ const ButtonDiv = styled.div<ButtonPropsType>`
     padding: 6px 12px;
     gap: 4px;
     border: 1px solid #d4d4d4;
-    border-radius: 8px;
+    border-radius: 4px;
     transition: 0.3s border;
 
     font-weight: 700;

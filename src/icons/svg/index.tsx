@@ -99,6 +99,7 @@ import { ReactComponent as zoom_out } from "./zoom_out.svg";
 import { ReactComponent as no_speaker } from "./24_no_speaker.svg";
 import { ReactComponent as no_image } from "./no_image.svg";
 import { ReactComponent as history } from "./20_history.svg";
+import { ReactComponent as notdone } from "./20_notdone.svg";
 
 import { ReactComponent as search_bar } from "./search_bar.svg";
 import { ReactComponent as content_bar } from "./content_bar.svg";
@@ -258,4 +259,5 @@ export {
   msgMore,
   fixedMsg,
   option,
+  notdone,
 };
