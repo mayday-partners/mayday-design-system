@@ -130,6 +130,11 @@ import { ReactComponent as option } from "./button_iconoption.svg";
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
 
+import { ReactComponent as book_circle } from "./book_circle.svg";
+import { ReactComponent as profile_circle } from "./profile_circle.svg";
+import { ReactComponent as quiz_circle } from "./quiz_circle.svg";
+import { ReactComponent as star_circle } from "./star_circle.svg";
+
 export {
   circle,
   vercel,
@@ -260,4 +265,8 @@ export {
   fixedMsg,
   option,
   notdone,
+  book_circle,
+  quiz_circle,
+  profile_circle,
+  star_circle,
 };
