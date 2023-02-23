@@ -134,6 +134,7 @@ import { ReactComponent as book_circle } from "./book_circle.svg";
 import { ReactComponent as profile_circle } from "./profile_circle.svg";
 import { ReactComponent as quiz_circle } from "./quiz_circle.svg";
 import { ReactComponent as star_circle } from "./star_circle.svg";
+import { ReactComponent as out_circle } from "./out_circle.svg";
 
 export {
   circle,
@@ -269,4 +270,5 @@ export {
   quiz_circle,
   profile_circle,
   star_circle,
+  out_circle,
 };
