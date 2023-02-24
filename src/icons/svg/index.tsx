@@ -126,6 +126,7 @@ import { ReactComponent as msgMore } from "./msgMore.svg";
 import { ReactComponent as msgHide } from "./msgHide.svg";
 import { ReactComponent as fixedMsg } from "./fixedMsg.svg";
 import { ReactComponent as option } from "./button_iconoption.svg";
+import { ReactComponent as sending } from "./sending.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
@@ -271,4 +272,5 @@ export {
   profile_circle,
   star_circle,
   out_circle,
+  sending,
 };
