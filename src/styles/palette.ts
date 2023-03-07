@@ -4,7 +4,7 @@ export type RedType = {
   red3: "#FFBBA8";
   red4: "#FF9173";
   red5: "#FF724A";
-  red6: "#FB5C30"; // primary
+  red6: "#2952E8"; // primary
   red7: "#EE5128";
   red8: "#D9451B";
   red9: "#BE3A16";
@@ -17,7 +17,7 @@ const red: RedType = {
   red3: "#FFBBA8",
   red4: "#FF9173",
   red5: "#FF724A",
-  red6: "#FB5C30",
+  red6: "#2952E8",
   red7: "#EE5128",
   red8: "#D9451B",
   red9: "#BE3A16",
