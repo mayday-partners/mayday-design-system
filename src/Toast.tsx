@@ -4,7 +4,7 @@ import { background } from "@storybook/theming";
 import { message, MessageArgsProps } from "antd";
 import Message from "antd/es/message";
 import React, { ReactNode } from "react";
-import "./styles/Toast.css";
+// import "./styles/Toast.css";
 import palette from "./styles/palette";
 
 export type MessagePropsType = {
