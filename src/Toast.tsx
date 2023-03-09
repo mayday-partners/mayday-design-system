@@ -32,7 +32,7 @@ export default function Toast({
   icon,
   top,
   ...props
-}: MessagePropsType) {
+}: MessagePropsType & MessageArgsProps) {
   return (
     <>
       {openToast({
