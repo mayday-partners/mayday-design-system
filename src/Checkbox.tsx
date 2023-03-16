@@ -11,7 +11,7 @@ import { CheckboxGroupProps, CheckboxValueType } from "antd/es/checkbox/Group";
 import palette from "./styles/palette";
 
 export type CheckboxType = {
-  itemList: { key: string; label: string; isDisable: boolean }[];
+  itemList: { key: string; label: any; isDisable: boolean }[];
   type: "checkbox" | "radio";
   direction?: "horiz" | "vert";
 } & (CheckboxGroupProps | RadioGroupProps) & {
