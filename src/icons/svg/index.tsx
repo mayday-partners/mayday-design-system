@@ -100,6 +100,7 @@ import { ReactComponent as no_speaker } from "./24_no_speaker.svg";
 import { ReactComponent as no_image } from "./no_image.svg";
 import { ReactComponent as history } from "./20_history.svg";
 import { ReactComponent as notdone } from "./20_notdone.svg";
+import { ReactComponent as qrcode } from "./20_qrcode.svg";
 
 import { ReactComponent as search_bar } from "./search_bar.svg";
 import { ReactComponent as content_bar } from "./content_bar.svg";
@@ -273,4 +274,5 @@ export {
   star_circle,
   out_circle,
   sending,
+  qrcode,
 };
