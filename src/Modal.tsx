@@ -23,8 +23,8 @@ export default function Modal({
   onCancel,
   ...props
 }: ModalType) {
-  // const size = type === "web" ? "large" : "middle";
-  const size = "large";
+  const size = type === "web" ? "large" : "middle";
+  // const size = "large";
   const wrapPadding =
     typeof padding === "number"
       ? padding
