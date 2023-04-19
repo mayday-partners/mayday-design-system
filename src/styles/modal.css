@@ -28,5 +28,11 @@
 
 /* mobile */
 .mobile-modal .ant-modal-content {
-  border-radius: 2px;
+  border-radius: 8px;
+  width: 100%;
+}
+.mobile-modal .modal-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

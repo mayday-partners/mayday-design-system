@@ -6,7 +6,7 @@ export type ModalType = {
   type: "web" | "mobile";
   buttonType: "one" | "two";
   colorPrimary?: string;
-  padding: number | [number, number];
+  padding: number | [number, number] | [number, number, number, number];
   footerElement?: React.ReactElement;
 } & ModalProps;
 
@@ -23,9 +23,14 @@ export default function Modal({
   onCancel,
   ...props
 }: ModalType) {
-  const size = type === "web" ? "large" : "middle";
+  // const size = type === "web" ? "large" : "middle";
+  const size = "large";
   const wrapPadding =
-    typeof padding === "number" ? padding : `${padding[0]}px ${padding[1]}px`;
+    typeof padding === "number"
+      ? padding
+      : padding.length === 2
+      ? `${padding[0]}px ${padding[1]}px`
+      : `${padding[0]}px ${padding[1]}px ${padding[2]}px ${padding[3]}px`;
 
   return (
     <ConfigProvider

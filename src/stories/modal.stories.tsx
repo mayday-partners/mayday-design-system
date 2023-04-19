@@ -18,10 +18,11 @@ const Template: Story<ModalType> = (args) => <Modal {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  type: "web",
+  type: "mobile",
   buttonType: "two",
   open: true,
-  padding: 16,
+  padding: [32, 16, 16, 16],
+  centered: true,
   onOk: () => alert("ok"),
   onCancel: () => alert("cancel"),
 };
