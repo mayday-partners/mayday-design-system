@@ -131,8 +131,8 @@ import { ReactComponent as sending } from "./sending.svg";
 
 import { ReactComponent as facebook } from "./sns/facebook.svg";
 import { ReactComponent as google } from "./sns/google.svg";
-import { ReactComponent as kakao } from "./sns/icon_kakaotalk.svg";
-import { ReactComponent as naver } from "./sns/icon_naver.svg";
+// import { ReactComponent as kakao } from "./sns/icon_kakaotalk.svg";
+// import { ReactComponent as naver } from "./sns/icon_naver.svg";
 
 import { ReactComponent as book_circle } from "./book_circle.svg";
 import { ReactComponent as profile_circle } from "./profile_circle.svg";
@@ -279,7 +279,7 @@ export {
   out_circle,
   sending,
   qrcode,
-  kakao,
-  naver,
+  // kakao,
+  // naver,
   wevent_logo_dark,
 };
