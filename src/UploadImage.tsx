@@ -192,7 +192,7 @@ export default function UploadImage({
         >
           <ImgCrop
             modalClassName="image-upload-modal"
-            rotate
+            // rotate
             aspect={width / height}
             modalOk="적용하기"
             modalCancel="취소"
