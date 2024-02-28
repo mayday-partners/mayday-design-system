@@ -1,0 +1,47 @@
+.upload-wrapper {
+  /* flex items-center gap-4 mobile:gap-[6px] */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
+}
+
+.upload-content {
+  padding: 16px 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  max-height: 40px;
+  max-width: 636px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    max-width: 460px;
+  }
+  @media (max-width: 768px) {
+    width: calc(100% - 87px - 6px);
+  }
+  /* px-4 py-2 border box-border max-h-[40px] !border-[#ddd] max-w-[636px] cursor-pointer flex gap-1 items-center text-[15px] font-medium tablet:max-w-[460px] rounded-[4px] */
+}
+
+.upload-file-size {
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
