@@ -20,6 +20,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.1",
     "@babel/cli": "^7.23.9",
+    "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
@@ -108,6 +109,7 @@
     "@storybook/react-webpack5": "^7.6.17",
     "@storybook/test": "^7.6.17",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "babel-preset-react-app": "^10.0.1",
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

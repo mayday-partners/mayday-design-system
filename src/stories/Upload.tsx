@@ -18,47 +18,60 @@ import "./upload.css";
 // import { uploadFile } from '@src/apis/common';
 /**
  *
- * @param {}
+ * @param value 파일값
+ * @param setValue 파일 상태관리 함수
+ * @param uploadApi 파일 업로드 api 함수. isValueFormData 가 false 인 경우 필수입니다.
+ * @param placeholder
+ * @param accept
+ * @param isValueFormData
+ * @param uploadFolder 파일 업로드 시 폴더 경로
+ * @param multiple 복수 파일 허용 여부
+ * @param inputWidth
+ * @param btnWidth
+ * @param btnBgColor
+ * @param btnTextColor
+ * @param btnText
+ * @param edit
+ * @param maxFileSize
  */
 type UploadFileRowPropsType = {
+  value?: File;
   setValue: (value: string | File | undefined) => void;
-  uploadApi: (body: FormData) => Promise<{ success: boolean; result: string }>;
+  uploadApi?: (body: FormData) => Promise<{ success: boolean; result: string }>;
   placeholder?: string;
   accept?: string;
   isValueFormData?: boolean;
   uploadFolder?: string;
   multiple?: boolean;
-  inputWidth?: number;
+  inputWidth?: number | string;
   btnWidth?: number;
   btnBgColor?: string;
   btnTextColor?: string;
   btnText?: string;
-  value?: File;
   edit?: boolean;
   maxFileSize?: number;
 };
 
 function Upload({
-  placeholder = "파일을 추가해주세요.",
-  accept = "",
+  value,
   setValue,
   uploadApi,
+  placeholder = "파일을 추가해주세요.",
+  accept = "",
   isValueFormData = false,
   uploadFolder,
   multiple = false,
-  inputWidth,
-  btnWidth,
+  inputWidth = 220,
+  btnWidth = 144,
   btnBgColor,
   btnTextColor,
   btnText,
-  value,
   edit = false,
   maxFileSize = 30,
 }: UploadFileRowPropsType) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState<File>(value!);
   const [isLoading, setIsLoading] = useState(false);
-  // const device = useDeviceType();
 
   const eventPass = () => fileRef.current && fileRef.current.click();
 
@@ -98,7 +111,7 @@ function Upload({
 
     if (isValueFormData) {
       setValue(newFile);
-    } else {
+    } else if (!!uploadApi) {
       const body = new FormData();
       body.append("file", newFile);
       body.append("folder", uploadFolder ?? "");
@@ -115,6 +128,12 @@ function Upload({
     setValue("");
   };
 
+  console.log(
+    inputWidth,
+    "???",
+    typeof inputWidth === "number" ? `${inputWidth}px` : inputWidth
+  );
+
   return (
     <div className="upload-wrapper">
       <input
@@ -129,7 +148,9 @@ function Upload({
         className="upload-content"
         onClick={() => onDownload(file as File)}
         css={css`
-          width: ${inputWidth ? `${inputWidth}px` : "100%"};
+          width: ${typeof inputWidth === "number"
+            ? `${inputWidth}px`
+            : inputWidth} !important;
 
           @media (max-width: 768px) {
             ${!edit && "pointer-events: none;"}
@@ -161,11 +182,13 @@ function Upload({
           type="primary"
           css={css`
             border-radius: 4px !important;
-            width: 136px;
+            width: ${btnWidth}px;
             height: 40px !important;
             font-weight: 500 !important;
-            background: ${btnBgColor === "white" ? "#fff" : ""} !important;
-            border: ${btnBgColor === "white"
+            background: ${btnBgColor === "white" || btnBgColor === "#fff"
+              ? "#fff"
+              : btnBgColor} !important;
+            border: ${btnBgColor === "white" || btnBgColor === "#fff"
               ? "1px solid #eaeaea"
               : ""} !important;
             @media ((max-width: 1024px) and (min-width: 769px)) {
@@ -177,7 +200,7 @@ function Upload({
             }
 
             p {
-              color: ${btnBgColor === "white"
+              color: ${btnBgColor === "white" || btnBgColor === "#fff"
                 ? "#222"
                 : !!btnTextColor
                 ? btnTextColor
