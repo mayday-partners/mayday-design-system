@@ -1,6 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import path from "path";
-import { Configuration } from "webpack";
 
 const toPath = (_path) => path.join(process.cwd(), _path);
 

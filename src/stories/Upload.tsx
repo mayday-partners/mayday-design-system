@@ -8,14 +8,15 @@
  *
  * DATE : 2023-08-30
  *
+ * MEMO : hyeoz) 2024-03 수정
  */
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import { css } from "@emotion/react";
+
 import "./upload.css";
 
-// import { uploadFile } from '@src/apis/common';
 /**
  *
  * @param value 파일값
@@ -128,19 +129,15 @@ function Upload({
     setValue("");
   };
 
-  console.log(
-    inputWidth,
-    "???",
-    typeof inputWidth === "number" ? `${inputWidth}px` : inputWidth
-  );
-
   return (
     <div className="upload-wrapper">
       <input
         type="file"
         ref={fileRef}
         onChange={onChange}
-        style={{ display: "none" }}
+        css={css`
+          display: none;
+        `}
         accept={accept}
         multiple={multiple}
       />
@@ -166,7 +163,9 @@ function Upload({
                 size="small"
                 type="text"
                 onClick={onDelete}
-                style={{ marginTop: "2px" }}
+                css={css`
+                  margin-top: 2px;
+                `}
               />
             )}
           </>
@@ -180,24 +179,15 @@ function Upload({
         <Button
           size="large"
           type="primary"
+          className="no-edit-button"
           css={css`
-            border-radius: 4px !important;
             width: ${btnWidth}px;
-            height: 40px !important;
-            font-weight: 500 !important;
             background: ${btnBgColor === "white" || btnBgColor === "#fff"
               ? "#fff"
               : btnBgColor} !important;
             border: ${btnBgColor === "white" || btnBgColor === "#fff"
               ? "1px solid #eaeaea"
               : ""} !important;
-            @media ((max-width: 1024px) and (min-width: 769px)) {
-              border-radius: 4px !important;
-              width: 96px;
-            }
-            @media (max-width: 768px) {
-              width: 87px !important;
-            }
 
             p {
               color: ${btnBgColor === "white" || btnBgColor === "#fff"
@@ -210,12 +200,7 @@ function Upload({
           onClick={eventPass}
           disabled={isLoading}
         >
-          <p
-            style={{
-              marginTop: "2px",
-              lineHeight: "18px",
-            }}
-          >
+          <p className="no-edit-button-text">
             {btnText ? btnText : "찾아보기"}
           </p>
         </Button>
