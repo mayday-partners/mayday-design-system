@@ -1,0 +1,48 @@
+.subtitle1 {
+  /* subtitle1 */
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 150%; /* 42px */
+}
+.subtitle2 {
+  /* subtitle2 */
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%; /* 36px */
+}
+.subtitle3 {
+  /* subtitle3 */
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+.subtitle4 {
+  /* subtitle4 */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+.body1 {
+  /* body1 */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.body2 {
+  /* body2 */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+.caption1 {
+  /* caption1 */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%; /* 21px */
+}
+.caption2 {
+  /* caption2 */
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 120%; /* 15.6px */
+}

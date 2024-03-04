@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
+}
+
+.gray050 {
+  color: #fafafa;
+}
+.gray100 {
+  color: #f4f4f4;
+}
+.gray200 {
+  color: #eeeeee;
+}
+.gray300 {
+  color: #e0e0e0;
+}
+.gray400 {
+  color: #bbbbbb;
+}
+.gray500 {
+  color: #999999;
+}
+.gray600 {
+  color: #777777;
+}
+.gray700 {
+  color: #555555;
+}
+.gray800 {
+  color: #333333;
+}
+.gray900 {
+  color: #1c1c1c;
+}
+
+.bk {
+  color: #000000;
+}
+.wh {
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: Pretendard;
+  font-style: normal;
+}
+.text-primary.light {
+  color: #1c1c1c;
+}
+.text-secondary.light {
+  color: #555555;
+}
+.text-disabled.light {
+  color: #bbbbbb;
+}
+.text-link.light {
+  color: #0057ff;
+}
+.text-error.light {
+  color: #ff0010;
+}
+.text-success.light {
+  color: #00bf6a;
+}
+.text-info.light {
+  color: #ffcb00;
+}
+
+.text-primary.dark {
+  color: #ffffff;
+}
+.text-secondary.dark {
+  color: #f4f4f4;
+}
+.text-disabled.dark {
+  color: #555555;
+}
+.text-link.dark {
+  color: #1e6aff;
+}
+.text-error.dark {
+  color: #ff1569;
+}
+.text-success.dark {
+  color: #00ff47;
+}
+.text-info.dark {
+  color: #ffc700;
+}
+
+.bg-default.light {
+  background-color: #fff;
+}
+.bg-highlight.light {
+  background-color: #f4f4f4;
+}
+.bg-highlight2.light {
+  background-color: #eee;
+}
+.bg-default.dark {
+  background-color: #1c1c1c;
+}
+.bg-highlight.dark {
+  background-color: #262626;
+}
+.bg-highlight2.dark {
+  background-color: #353535;
+}
+
+.line001.light {
+  border-color: #eee;
+}
+.line002.light {
+  border-color: #e0e0e0;
+}
+.line003.light {
+  border-color: #1c1c1c;
+}
+.line001.dark {
+  border-color: #2a2a2a;
+}
+.line002.dark {
+  border-color: #555;
+}
+.line003.dark {
+  border-color: #999;
+}
