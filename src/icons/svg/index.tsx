@@ -64,6 +64,17 @@ import { ReactComponent as round_check_square_fill_24 } from "./round/round_chec
 import { ReactComponent as round_check_square_fill_white_24 } from "./round/round_check_square_fill_white_24.svg";
 import { ReactComponent as round_check_circle_fill_white_24 } from "./round/round_check_circle_fill_white_24.svg";
 
+// ANCHOR ROUND_16
+import { ReactComponent as round_arrow_down_16 } from "./round/round_arrow_down_16.svg";
+import { ReactComponent as round_arrow_top_16 } from "./round/round_arrow_top_16.svg";
+import { ReactComponent as round_arrow_right_16 } from "./round/round_arrow_right_16.svg";
+import { ReactComponent as round_arrow_left_16 } from "./round/round_arrow_left_16.svg";
+import { ReactComponent as round_calendar_16 } from "./round/round_calendar_16.svg";
+import { ReactComponent as round_check_circle_16 } from "./round/round_check_circle_16.svg";
+import { ReactComponent as round_plus_16 } from "./round/round_plus_16.svg";
+import { ReactComponent as round_search_16 } from "./round/round_search_16.svg";
+import { ReactComponent as round_warning_16 } from "./round/round_warning_16.svg";
+
 // ANCHOR ANGULATE_24
 import { ReactComponent as angulate_alert_24 } from "./angulate/angulate_alert_24.svg";
 import { ReactComponent as angulate_arrow_circle_down_24 } from "./angulate/angulate_arrow_circle_down_24.svg";
@@ -116,6 +127,17 @@ import { ReactComponent as angulate_zoom_out_24 } from "./angulate/angulate_zoom
 import { ReactComponent as angulate_check_square_fill_24 } from "./angulate/angulate_check_square_fill_24.svg";
 import { ReactComponent as angulate_check_square_fill_white_24 } from "./angulate/angulate_check_square_fill_white_24.svg";
 import { ReactComponent as angulate_check_circle_fill_white_24 } from "./angulate/angulate_check_circle_fill_white_24.svg";
+
+// ANCHOR ANGULATE_16
+import { ReactComponent as angulate_arrow_down_16 } from "./angulate/angulate_arrow_down_16.svg";
+import { ReactComponent as angulate_arrow_top_16 } from "./angulate/angulate_arrow_top_16.svg";
+import { ReactComponent as angulate_arrow_right_16 } from "./angulate/angulate_arrow_right_16.svg";
+import { ReactComponent as angulate_arrow_left_16 } from "./angulate/angulate_arrow_left_16.svg";
+import { ReactComponent as angulate_calendar_16 } from "./angulate/angulate_calendar_16.svg";
+import { ReactComponent as angulate_check_circle_16 } from "./angulate/angulate_check_circle_16.svg";
+import { ReactComponent as angulate_plus_16 } from "./angulate/angulate_plus_16.svg";
+import { ReactComponent as angulate_search_16 } from "./angulate/angulate_search_16.svg";
+import { ReactComponent as angulate_warning_16 } from "./angulate/angulate_warning_16.svg";
 
 export {
   common_call,
@@ -231,4 +253,22 @@ export {
   angulate_warning_24,
   angulate_zoom_in_24,
   angulate_zoom_out_24,
+  round_arrow_down_16,
+  round_arrow_left_16,
+  round_arrow_right_16,
+  round_arrow_top_16,
+  round_calendar_16,
+  round_check_circle_16,
+  round_plus_16,
+  round_search_16,
+  round_warning_16,
+  angulate_arrow_down_16,
+  angulate_arrow_left_16,
+  angulate_arrow_right_16,
+  angulate_arrow_top_16,
+  angulate_calendar_16,
+  angulate_check_circle_16,
+  angulate_plus_16,
+  angulate_search_16,
+  angulate_warning_16,
 };
