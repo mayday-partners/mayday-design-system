@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff")
+    format("woff");
+  font-style: normal;
+}
+
+:root {
+  --GrayScale-gray050: #fafafa;
+  --GrayScale-gray100: #f4f4f4;
+  --GrayScale-gray200: #eeeeee;
+  --GrayScale-gray300: #e0e0e0;
+  --GrayScale-gray400: #bbbbbb;
+  --GrayScale-gray500: #999999;
+  --GrayScale-gray600: #777777;
+  --GrayScale-gray700: #555555;
+  --GrayScale-gray800: #333333;
+  --GrayScale-gray900: #1c1c1c;
+
+  --Light-Text-primary: #1c1c1c;
+  --Light-Text-secondary: #555555;
+  --Light-Text-disabled: #bbbbbb;
+  --Light-Text-link: #0057ff;
+  --Light-Text-error: #ff0010;
+  --Light-Text-success: #00bf6a;
+  --Light-Text-info: #ffcb00;
+
+  --Dark-Text-primary: #ffffff;
+  --Dark-Text-secondary: #f4f4f4;
+  --Dark-Text-disabled: #555555;
+  --Dark-Text-link: #1e6aff;
+  --Dark-Text-error: #ff1569;
+  --Dark-Text-success: #00ff47;
+  --Dark-Text-info: #ffc700;
+
+  --Light-bg-default: #fff;
+  --Light-bg-highlight: #f4f4f4;
+  --Light-bg-highlight2: #eee;
+  --Dark-bg-default: #1c1c1c;
+  --Dark-bg-highlight: #262626;
+  --Dark-bg-highlight2: #353535;
+
+  --Light-Line-001: #eee;
+  --Light-Line-002: #e0e0e0;
+  --Light-Line-003: #1c1c1c;
+  --Dark-Line-001: #2a2a2a;
+  --Dark-Line-002: #555;
+  --Dark-Line-003: #999;
+}
+
+.gray050 {
+  color: #fafafa;
+}
+.gray100 {
+  color: #f4f4f4;
+}
+.gray200 {
+  color: #eeeeee;
+}
+.gray300 {
+  color: #e0e0e0;
+}
+.gray400 {
+  color: #bbbbbb;
+}
+.gray500 {
+  color: #999999;
+}
+.gray600 {
+  color: #777777;
+}
+.gray700 {
+  color: #555555;
+}
+.gray800 {
+  color: #333333;
+}
+.gray900 {
+  color: #1c1c1c;
+}
+
+.bk {
+  color: #000000;
+}
+.wh {
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: Pretendard;
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-primary {
+    color: #ffffff;
+  }
+  .text-secondary {
+    color: #f4f4f4;
+  }
+  .text-disabled {
+    color: #555555;
+  }
+  .text-link {
+    color: #1e6aff;
+  }
+  .text-error {
+    color: #ff1569;
+  }
+  .text-success {
+    color: #00ff47;
+  }
+  .text-info {
+    color: #ffc700;
+  }
+  .bg-default {
+    background-color: #1c1c1c;
+  }
+  .bg-highlight {
+    background-color: #262626;
+  }
+  .bg-highlight2 {
+    background-color: #353535;
+  }
+  .line001 {
+    border-color: #2a2a2a;
+  }
+  .line002 {
+    border-color: #555;
+  }
+  .line003 {
+    border-color: #999;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .text-primary {
+    color: #1c1c1c;
+  }
+  .text-secondary {
+    color: #555555;
+  }
+  .text-disabled {
+    color: #bbbbbb;
+  }
+  .text-link {
+    color: #0057ff;
+  }
+  .text-error {
+    color: #ff0010;
+  }
+  .text-success {
+    color: #00bf6a;
+  }
+  .text-info {
+    color: #ffcb00;
+  }
+  .bg-default {
+    background-color: #fff;
+  }
+  .bg-highlight {
+    background-color: #f4f4f4;
+  }
+  .bg-highlight2 {
+    background-color: #eee;
+  }
+  .line001 {
+    border-color: #eee;
+  }
+  .line002 {
+    border-color: #e0e0e0;
+  }
+  .line003 {
+    border-color: #1c1c1c;
+  }
+}

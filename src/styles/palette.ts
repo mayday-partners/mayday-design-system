@@ -1,133 +1,69 @@
-export type RedType = {
-  red1: "#FFEEE9";
-  red2: "#FFDCD2";
-  red3: "#FFBBA8";
-  red4: "#FF9173";
-  red5: "#FF724A";
-  red6: "#2952E8"; // primary
-  red7: "#EE5128";
-  red8: "#D9451B";
-  red9: "#BE3A16";
-  red10: "#AA2D0C";
+export type PaletteType = { [key: string]: string };
+type ColorModeType<T> = {
+  light: T;
+  dark: T;
 };
 
-const red: RedType = {
-  red1: "#FFEEE9",
-  red2: "#FFDCD2",
-  red3: "#FFBBA8",
-  red4: "#FF9173",
-  red5: "#FF724A",
-  red6: "#2952E8",
-  red7: "#EE5128",
-  red8: "#D9451B",
-  red9: "#BE3A16",
-  red10: "#AA2D0C",
+const gray: PaletteType = {
+  gray050: "#FAFAFA",
+  gray100: "#f4f4f4",
+  gray200: "#eeeeee",
+  gray300: "#e0e0e0",
+  gray400: "#bbbbbb",
+  gray500: "#999999",
+  gray600: "#777777",
+  gray700: "#555555",
+  gray800: "#333333",
+  gray900: "#1C1C1C", // primary
 };
 
-export type OrangeType = {
-  orange1: "#FFF7E1";
-  orange2: "#FFEBBA";
-  orange3: "#FCD77F";
-  orange4: "#FCC953";
-  orange5: "#FBBD39";
-  orange6: "#FAB32E";
-  orange7: "#F9A32B"; // primary
-  orange8: "#F89028";
-  orange9: "#F57C22";
-  orange10: "#E16A12";
+const textColor: ColorModeType<PaletteType> = {
+  light: {
+    primary: "#1c1c1c",
+    secondary: "#555555",
+    disabled: "#bbbbbb",
+    link: "#0057ff",
+    error: "#ff0010",
+    success: "#00bf6a",
+    info: "#ffcb00",
+  },
+  dark: {
+    primary: "#ffffff",
+    secondary: "#f4f4f4",
+    disabled: "#555555",
+    link: "#1e6aff",
+    error: "#ff1569",
+    success: "#00ff47",
+    info: "#ffc700",
+  },
 };
 
-const orange: OrangeType = {
-  orange1: "#FFF7E1",
-  orange2: "#FFEBBA",
-  orange3: "#FCD77F",
-  orange4: "#FCC953",
-  orange5: "#FBBD39",
-  orange6: "#FAB32E",
-  orange7: "#F9A32B",
-  orange8: "#F89028",
-  orange9: "#F57C22",
-  orange10: "#E16A12",
+const bgColor: ColorModeType<PaletteType> = {
+  light: {
+    default: "#fff",
+    highlight: "#f4f4f4",
+    highlight2: "#eee",
+  },
+  dark: {
+    default: "#1c1c1c",
+    highlight: "#262626",
+    highlight2: "#353535",
+  },
 };
 
-export type BlueType = {
-  blue1: "#DDF5FF";
-  blue2: "#AEE8FF";
-  blue3: "#78D6FE";
-  blue4: "#4BC4FB";
-  blue5: "#2DB8FB";
-  blue6: "#1FA9FA";
-  blue7: "#1D9DE9"; // primary
-  blue8: "#168DD3";
-  blue9: "#116EB6";
-  blue10: "#125497";
+const lineColor: ColorModeType<PaletteType> = {
+  light: {
+    line001: "#eee",
+    line002: "#e0e0e0",
+    line003: "#1c1c1c",
+  },
+  dark: {
+    line001: "#2a2a2a",
+    line002: "#555",
+    line003: "#999",
+  },
 };
 
-const blue: BlueType = {
-  blue1: "#DDF5FF",
-  blue2: "#AEE8FF",
-  blue3: "#78D6FE",
-  blue4: "#4BC4FB",
-  blue5: "#2DB8FB",
-  blue6: "#1FA9FA",
-  blue7: "#1D9DE9",
-  blue8: "#168DD3",
-  blue9: "#116EB6",
-  blue10: "#125497",
-};
-
-export type GrayType = {
-  gray1: "#FAFAFA";
-  gray2: "#EAEAEA";
-  gray3: "#C8C8C8";
-  gray4: "#A8A8A8";
-  gray5: "#8C8C8C";
-  gray6: "#707070";
-  gray7: "#545454";
-  gray8: "#383838"; // primary
-  gray9: "#1C1C1C";
-  gray10: "#000000";
-};
-
-const gray: GrayType = {
-  gray1: "#FAFAFA",
-  gray2: "#EAEAEA",
-  gray3: "#C8C8C8",
-  gray4: "#A8A8A8",
-  gray5: "#8C8C8C",
-  gray6: "#707070",
-  gray7: "#545454",
-  gray8: "#383838",
-  gray9: "#1C1C1C",
-  gray10: "#000000",
-};
-
-export type CoolGrayType = {
-  coolGray1: "#F7FAFD";
-  coolGray2: "#EBF2F6";
-  coolGray3: "#D4DDE4";
-  coolGray4: "#C0CBD4";
-  coolGray5: "#A4B4C2";
-  coolGray6: "#8497A8";
-  coolGray7: "#647687";
-  coolGray8: "#465B6D";
-  coolGray9: "#314354";
-  coolGray10: "#1F2E3C";
-};
-
-const coolGray: CoolGrayType = {
-  coolGray1: "#F7FAFD",
-  coolGray2: "#EBF2F6",
-  coolGray3: "#D4DDE4",
-  coolGray4: "#C0CBD4",
-  coolGray5: "#A4B4C2",
-  coolGray6: "#8497A8",
-  coolGray7: "#647687",
-  coolGray8: "#465B6D",
-  coolGray9: "#314354",
-  coolGray10: "#1F2E3C",
-};
-
-const palette = { red, orange, blue, gray, coolGray };
+const palette = { gray, textColor, bgColor, lineColor };
 
 export default palette;

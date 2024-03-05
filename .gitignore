@@ -25,3 +25,5 @@ yarn-error.log*
 # npm publish
 .env
 /dist
+
+package-lock.json

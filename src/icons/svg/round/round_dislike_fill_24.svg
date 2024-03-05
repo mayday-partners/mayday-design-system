@@ -1,0 +1,11 @@
+<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Layer_1" clip-path="url(#clip0_138_1991)">
+<path id="Vector" d="M1 13L8 13L8 17C8 17.55 8.45 18 9 18L10.52 18C10.82 18 11.11 17.86 11.3 17.62L13.5 14.87L13.5 -0.0100002L4.65 -0.00999946C4.25 -0.00999942 3.9 0.22 3.74 0.580001L0.0899993 8.79C0.0299989 8.92 -7.8156e-07 9.06 -7.6932e-07 9.2L-5.25411e-07 11.99C-4.77328e-07 12.54 0.449999 12.99 1 12.99L1 13Z" fill="currentColor"/>
+<path id="Vector_2" d="M20 0L15 4.37114e-07L15 1.5L15 9L15 11.5L15 13L20 13L20 0Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_138_1991">
+<rect width="20" height="18" fill="white" transform="translate(20 18) rotate(180)"/>
+</clipPath>
+</defs>
+</svg>
