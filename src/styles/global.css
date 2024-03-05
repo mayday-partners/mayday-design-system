@@ -134,3 +134,9 @@ p {
 .line003.dark {
   border-color: #999;
 }
+
+svg g,
+svg path {
+  width: 40px !important;
+  height: 40px !important;
+}
