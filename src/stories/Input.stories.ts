@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Subtitle1: Story = {
+export const RoundInput: Story = {
   args: {
     inputType: "round",
     value: "test",
@@ -22,5 +22,13 @@ export const Subtitle1: Story = {
     hasValidation: true,
     validationErrorText: "에러 밸리데이션",
     validationOkText: "성공 밸리데이션",
+  },
+};
+export const AngulateInput: Story = {
+  args: {
+    inputType: "angulate",
+    value: "test",
+    setValue: (value: string) => {},
+    placeholder: "Place Holder",
   },
 };

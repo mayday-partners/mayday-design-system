@@ -30,9 +30,9 @@ export default function Input({
     <>
       <input
         {...props}
+        id="input-component"
         className={[
-          "input-component",
-          isError !== undefined && !isError ? "success" : "error",
+          isError !== undefined ? (!isError ? "success" : "error") : "",
           inputType === "round" ? "round" : "angulate",
         ].join(" ")}
         value={value}
