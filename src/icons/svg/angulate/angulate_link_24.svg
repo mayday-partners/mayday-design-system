@@ -1,0 +1,9 @@
+<svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 17">
+<g id="Group">
+<path id="Vector" d="M15 0H12V1.5H15C16.93 1.5 18.5 3.07 18.5 5C18.5 6.93 16.93 8.5 15 8.5H12V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z" fill="currentColor"/>
+<path id="Vector_2" d="M5 8.5C3.07 8.5 1.5 6.93 1.5 5C1.5 3.07 3.07 1.5 5 1.5H8V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H8V8.5H5Z" fill="currentColor"/>
+</g>
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M13 5.75H7V4.25H13V5.75Z" fill="currentColor"/>
+</g>
+</svg>

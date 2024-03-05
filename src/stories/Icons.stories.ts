@@ -26,7 +26,7 @@ export const Heart: Story = {
     },
   },
   args: {
-    icon: "common_call",
+    icon: "common_heart_fill",
     color: "red",
     width: 40,
     height: 40,
