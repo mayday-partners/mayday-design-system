@@ -20,6 +20,6 @@
     "declaration": true,
     "declarationDir": "dist"
   },
-  "include": ["src", "./src/**/*.svg", "./src/global.d.ts"],
+  "include": ["src", "src/**/*.svg", "src/global.d.ts"],
   "exclude": ["node_modules", "dist", "**/*.stories.tsx"]
 }

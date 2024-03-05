@@ -23,18 +23,34 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: async (config) => {
-    if (!config.module) return config;
+    if (!config.module?.rules) return config;
 
-    config.module.rules?.push({
-      test: /\.(ts|tsx)$/,
-      loader: require.resolve("babel-loader"),
-      options: {
-        presets: [
-          ["react-app", { flow: false, typescript: true }],
-          require.resolve("@emotion/babel-preset-css-prop"),
-        ],
+    config.module.rules = [
+      ...config.module.rules.map((rule) => {
+        if (!rule || rule === "...") {
+          return rule;
+        }
+
+        if (rule.test && /svg/.test(String(rule.test))) {
+          return { ...rule, exclude: /\.svg$/i };
+        }
+        return rule;
+      }),
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack", "url-loader"],
       },
-    });
+      {
+        test: /\.(ts|tsx)$/,
+        loader: require.resolve("babel-loader"),
+        options: {
+          presets: [
+            ["react-app", { flow: false, typescript: true }],
+            require.resolve("@emotion/babel-preset-css-prop"),
+          ],
+        },
+      },
+    ];
 
     if (!config.resolve) return config;
 

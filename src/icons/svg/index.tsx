@@ -10,6 +10,8 @@ import { ReactComponent as common_more } from "./common/common_more.svg";
 import { ReactComponent as common_none } from "./common/common_none.svg";
 import { ReactComponent as common_share } from "./common/common_share.svg";
 
+console.log(common_heart, "???");
+
 export {
   common_call,
   common_global,

@@ -1,3 +1,4 @@
+// import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
@@ -8,8 +9,6 @@ import svg from "@svgr/rollup";
 import url from "rollup-plugin-url";
 import image from "@rollup/plugin-image";
 import copy from "rollup-plugin-copy";
-// import peerDepsExternal from "rollup-plugin-peer-deps-external";
-// import external from "rollup-plugin-peer-deps-external";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -41,7 +40,6 @@ export default {
     // uglify(),
     babel(),
     commonjs(),
-    // peerDepsExternal(),
   ],
   external: ["react", "react-dom"],
   module: {
@@ -51,4 +49,5 @@ export default {
       },
     ],
   },
+  // ...
 };
