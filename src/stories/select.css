@@ -1,0 +1,68 @@
+#select-component {
+  /* margin: 32px; */
+  padding: 10px 16px;
+  min-width: 343px;
+  box-sizing: border-box;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid var(--Light-Line-002);
+  display: flex;
+
+  &.round {
+    border-radius: 4px;
+  }
+
+  color: var(--Light-Text-secondary);
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+  &:focus {
+    border: 1px solid var(--Light-Line-003, #1c1c1c);
+  }
+  &:disabled {
+    background-color: var(--GrayScale-gray200);
+  }
+  @media (prefers-color-scheme: dark) {
+    color: var(--Dark-Text-secondary);
+
+    &:disabled {
+      color: var(--Dark-Text-disabled);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    color: var(--Light-Text-secondary);
+
+    &:disabled {
+      color: var(--Light-Text-disabled);
+    }
+  }
+}
+
+div:has(#select-component:disabled) {
+  @media (prefers-color-scheme: dark) {
+    svg {
+      color: var(--Dark-Text-disabled);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    svg {
+      color: var(--Light-Text-disabled);
+    }
+  }
+}
+
+div:has(#select-component:focus) {
+  svg {
+    rotate: 180deg;
+  }
+}
+
+div {
+  transition: all 0.3s;
+}
