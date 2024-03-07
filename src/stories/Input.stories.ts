@@ -32,3 +32,11 @@ export const AngulateInput: Story = {
     placeholder: "Place Holder",
   },
 };
+export const SearchInput: Story = {
+  args: {
+    inputType: "round",
+    value: "test",
+    setValue: (value: string) => {},
+    isSearch: true,
+  },
+};
