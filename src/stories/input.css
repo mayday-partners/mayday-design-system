@@ -1,11 +1,13 @@
-.input-component {
+#input-component {
   padding: 10px 16px;
   min-width: 343px;
   box-sizing: border-box;
   font-family: Pretendard;
   font-size: 16px;
   font-weight: 400;
-  color: #555;
+  line-height: 150%;
+
+  color: var(--Light-Text-secondary);
 
   &::placeholder {
     color: var(--GrayScale-gray400);
