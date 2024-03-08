@@ -13,6 +13,7 @@ type InputPropsType = {
   hasValidation?: boolean;
   validationOkText?: string;
   validationErrorText?: string;
+  onPressEnter?: () => void;
 } & React.ClassAttributes<HTMLInputElement> &
   React.InputHTMLAttributes<HTMLInputElement> & {
     css?: Interpolation<Theme>;
@@ -27,6 +28,7 @@ export default function Input({
   hasValidation,
   validationErrorText,
   validationOkText,
+  onPressEnter,
   ...props
 }: InputPropsType) {
   return (
@@ -47,6 +49,11 @@ export default function Input({
           ].join(" ")}
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !!onPressEnter) {
+              onPressEnter();
+            }
+          }}
         />
         {isSearch && (
           <Icons

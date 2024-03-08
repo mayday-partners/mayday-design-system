@@ -38,5 +38,8 @@ export const SearchInput: Story = {
     value: "test",
     setValue: (value: string) => {},
     isSearch: true,
+    onPressEnter: () => {
+      alert("검색 결과가 없습니다.");
+    },
   },
 };
