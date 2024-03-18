@@ -1,9 +1,8 @@
 import React, { ReactElement } from "react";
+import { Interpolation, Theme } from "@emotion/react";
 
 import "./select.css";
-import { Interpolation, Theme } from "@emotion/react";
 import Icons from "../icons";
-import palette from "../styles/palette";
 
 type OptionType = {
   value: string;
@@ -34,6 +33,7 @@ export default function Select({
         position: "relative",
       }}
     >
+      {/* TODO 웹 접근성과 스타일링 사이의 괴리 */}
       <select
         {...props}
         id="select-component"

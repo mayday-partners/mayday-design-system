@@ -1,14 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import Select from "./Select";
-import { css } from "@emotion/react";
 
 const meta = {
   title: "Example/Select",
   component: Select,
   tags: ["autodocs"],
-  parameters: {
-    layout: "fullscreen",
-  },
+  parameters: {},
 } satisfies Meta<typeof Select>;
 
 export default meta;
@@ -32,6 +30,7 @@ export const Round: Story = {
       },
     ],
     width: "343px",
+    value: "2",
   },
 };
 export const Angulate: Story = {
@@ -53,5 +52,6 @@ export const Angulate: Story = {
     ],
     width: "343px",
     disabled: true,
+    value: "2",
   },
 };
