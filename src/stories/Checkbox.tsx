@@ -51,8 +51,11 @@ export default function Checkbox({
         ${wrapperCss}
       `}
     >
-      {options.map((option) => (
-        <div className="checkbox-row">
+      {options.map((option, index) => (
+        <div
+          className="checkbox-row"
+          key={`checkbox-row-${option.label}-${index}`}
+        >
           <input
             type="checkbox"
             value={option.value}
