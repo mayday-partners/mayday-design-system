@@ -1,13 +1,9 @@
 import React, { ReactElement } from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
-import "./select.css";
+import "../styles/select.css";
 import Icons from "../icons";
-
-type OptionType = {
-  value: string;
-  label: string | number | ReactElement;
-};
+import { OptionType } from "../utils/types";
 
 type SelectPropsType = {
   selectType: "round" | "angulate";

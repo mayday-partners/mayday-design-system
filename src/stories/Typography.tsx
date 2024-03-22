@@ -1,6 +1,6 @@
 import { SerializedStyles } from "@emotion/react";
 
-import "./typography.css";
+import "../styles/typography.css";
 
 type TypographyTypes =
   | "subtitle1"

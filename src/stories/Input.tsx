@@ -1,7 +1,7 @@
 import React from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
-import "./input.css";
+import "../styles/input.css";
 import Icons from "../icons";
 
 type InputPropsType = {

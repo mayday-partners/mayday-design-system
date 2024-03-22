@@ -15,7 +15,7 @@ import { Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import { css } from "@emotion/react";
 
-import "./upload.css";
+import "../styles/upload.css";
 
 /**
  *
