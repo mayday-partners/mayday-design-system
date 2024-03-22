@@ -1,5 +1,5 @@
 import { Interpolation, Theme } from "@emotion/react";
-import "./textarea.css";
+import "../styles/textarea.css";
 
 type TextareaPropsType = {
   value: string;

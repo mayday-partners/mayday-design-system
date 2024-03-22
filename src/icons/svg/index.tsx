@@ -139,6 +139,9 @@ import { ReactComponent as angulate_plus_16 } from "./angulate/angulate_plus_16.
 import { ReactComponent as angulate_search_16 } from "./angulate/angulate_search_16.svg";
 import { ReactComponent as angulate_warning_16 } from "./angulate/angulate_warning_16.svg";
 
+// ANCHOR checkbox
+import { ReactComponent as checked } from "./checkbox_checked.svg";
+
 export {
   common_call,
   common_global,
@@ -271,4 +274,5 @@ export {
   angulate_plus_16,
   angulate_search_16,
   angulate_warning_16,
+  checked,
 };

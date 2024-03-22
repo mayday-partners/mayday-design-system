@@ -26,4 +26,4 @@
 
    EX: `color: ${palette.light.textColor.secondary}`
 
-직접 `#555` 와 같이 직접 텍스트 입력은 지양해주세요.
+   직접 `#555` 와 같이 직접 텍스트 입력은 지양해주세요.

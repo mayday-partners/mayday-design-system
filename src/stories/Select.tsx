@@ -1,14 +1,9 @@
 import React, { ReactElement } from "react";
-
-import "./select.css";
 import { Interpolation, Theme } from "@emotion/react";
-import Icons from "../icons";
-import palette from "../styles/palette";
 
-type OptionType = {
-  value: string;
-  label: string | number | ReactElement;
-};
+import "../styles/select.css";
+import Icons from "../icons";
+import { OptionType } from "../utils/types";
 
 type SelectPropsType = {
   selectType: "round" | "angulate";
@@ -34,6 +29,7 @@ export default function Select({
         position: "relative",
       }}
     >
+      {/* TODO 웹 접근성과 스타일링 사이의 괴리 */}
       <select
         {...props}
         id="select-component"
