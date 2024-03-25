@@ -1,5 +1,6 @@
 .checkbox-wrapper {
   display: flex;
+  gap: 8px;
 }
 .checkbox-row {
   display: flex;

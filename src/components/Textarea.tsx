@@ -4,7 +4,7 @@ import "../styles/textarea.css";
 type TextareaPropsType = {
   value: string;
   setValue: (value: string) => void;
-  textareaType: "round" | "angulate";
+  borderType: "round" | "angulate";
   isError?: boolean;
   isResize?: boolean;
 } & React.ClassAttributes<HTMLTextAreaElement> &
@@ -15,7 +15,7 @@ type TextareaPropsType = {
 export default function Textarea({
   value,
   setValue,
-  textareaType,
+  borderType,
   isError,
   isResize = true,
   ...props
@@ -25,7 +25,7 @@ export default function Textarea({
       {...props}
       id="textarea-component"
       className={[
-        textareaType,
+        borderType,
         !isResize ? "no-resize" : "",
         isError ? "error" : "",
       ].join(" ")}

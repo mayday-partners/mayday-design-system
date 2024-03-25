@@ -1,5 +1,6 @@
 import { Interpolation, SerializedStyles, Theme, css } from "@emotion/react";
 import {
+  ChangeEvent,
   ClassAttributes,
   Dispatch,
   InputHTMLAttributes,
@@ -27,13 +28,15 @@ export default function Radio({
   horizontal,
   wrapperCss,
 }: RadioPropsType) {
-  const onChangeRadio = () => {};
+  const onChangeRadio = (e: ChangeEvent<HTMLInputElement>) => {
+    setItem(e.target.value);
+  };
+
   return (
     <div
       className="radio-wrapper"
       css={css`
         flex-direction: ${horizontal ? "row" : "column"};
-
         ${wrapperCss}
       `}
     >
@@ -44,14 +47,8 @@ export default function Radio({
             id={option.value}
             value={option.value}
             checked={option.value === item}
+            onChange={onChangeRadio}
           />
-          {/* <label
-            htmlFor={option.value}
-            className={`radio-item ${
-              item === option.value ? "radio-checked" : "radio-default"
-            }`}
-          >
-          </label> */}
           <label htmlFor={option.value} className="radio-label">
             {option.label}
           </label>

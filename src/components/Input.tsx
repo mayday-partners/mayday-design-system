@@ -2,10 +2,10 @@ import React from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
 import "../styles/input.css";
-import Icons from "../icons";
+import Icons from "./icons";
 
 type InputPropsType = {
-  inputType: "round" | "angulate";
+  borderType: "round" | "angulate";
   value: string;
   setValue: (value: string) => void;
   isSearch?: boolean;
@@ -20,7 +20,7 @@ type InputPropsType = {
   };
 
 export default function Input({
-  inputType,
+  borderType,
   value,
   setValue,
   isError,
@@ -45,7 +45,7 @@ export default function Input({
           id="input-component"
           className={[
             isError !== undefined ? (!isError ? "success" : "error") : "",
-            inputType === "round" ? "round" : "angulate",
+            borderType,
           ].join(" ")}
           value={value}
           onChange={(e) => setValue(e.target.value)}

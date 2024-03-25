@@ -2,11 +2,11 @@ import React, { ReactElement } from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
 import "../styles/select.css";
-import Icons from "../icons";
+import Icons from "./icons";
 import { OptionType } from "../utils/types";
 
 type SelectPropsType = {
-  selectType: "round" | "angulate";
+  borderType: "round" | "angulate";
   options: Array<OptionType>;
   width?: string;
 } & React.ClassAttributes<HTMLSelectElement> &
@@ -15,7 +15,7 @@ type SelectPropsType = {
   };
 
 export default function Select({
-  selectType,
+  borderType,
   options,
   width,
   ...props
@@ -33,7 +33,7 @@ export default function Select({
       <select
         {...props}
         id="select-component"
-        className={[selectType === "round" ? "round" : "angulate"].join(" ")}
+        className={[borderType].join(" ")}
       >
         {options.map((opt) => (
           <option value={opt.value} key={opt.value}>

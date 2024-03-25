@@ -9,7 +9,7 @@ import {
 
 import "../styles/checkbox.css";
 import { OptionType } from "../utils/types";
-import Icons from "../icons";
+import Icons from "./icons";
 import palette from "../styles/palette";
 import useIsDarkMode from "../utils/useIsDarkMode";
 

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import Checkbox from "./Checkbox";
+import Checkbox from "../components/Checkbox";
 import { css } from "@emotion/react";
 
 const meta: Meta<typeof Checkbox> = {
@@ -29,7 +29,7 @@ export const Checked: Story = {
     setItems: () => {},
     horizontal: true,
     wrapperCss: css`
-      gap: 8px;
+      gap: 16px !important;
     `,
   },
 };
