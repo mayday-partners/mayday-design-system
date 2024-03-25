@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
 import "../styles/select.css";
-import Icons from "../icons";
+import Icons from "./icons";
 import { OptionType } from "../utils/types";
 
 type SelectPropsType = {

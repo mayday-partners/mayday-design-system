@@ -1,6 +1,6 @@
 import Upload from "./components/Upload";
 import Typography from "./components/Typography";
-import Icons from "./icons";
+import Icons from "./components/icons";
 import Radio from "./components/Radio";
 import Checkbox from "./components/Checkbox";
 import Input from "./components/Input";

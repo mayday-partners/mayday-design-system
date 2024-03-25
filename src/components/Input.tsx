@@ -2,7 +2,7 @@ import React from "react";
 import { Interpolation, Theme } from "@emotion/react";
 
 import "../styles/input.css";
-import Icons from "../icons";
+import Icons from "./icons";
 
 type InputPropsType = {
   inputType: "round" | "angulate";
