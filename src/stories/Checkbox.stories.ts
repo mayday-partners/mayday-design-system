@@ -29,7 +29,7 @@ export const Checked: Story = {
     setItems: () => {},
     horizontal: true,
     wrapperCss: css`
-      gap: 8px;
+      gap: 16px !important;
     `,
   },
 };

@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Checked: Story = {
   args: {
+    horizontal: true,
     options: [
       {
         value: "1",
