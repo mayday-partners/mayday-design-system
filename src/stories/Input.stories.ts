@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const RoundInput: Story = {
   args: {
-    inputType: "round",
+    borderType: "round",
     value: "test",
     setValue: (value: string) => {},
     placeholder: "Place Holder",
@@ -26,7 +26,7 @@ export const RoundInput: Story = {
 };
 export const AngulateInput: Story = {
   args: {
-    inputType: "angulate",
+    borderType: "angulate",
     value: "test",
     setValue: (value: string) => {},
     placeholder: "Place Holder",
@@ -34,7 +34,7 @@ export const AngulateInput: Story = {
 };
 export const SearchInput: Story = {
   args: {
-    inputType: "round",
+    borderType: "round",
     value: "test",
     setValue: (value: string) => {},
     isSearch: true,

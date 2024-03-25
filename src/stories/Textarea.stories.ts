@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    textareaType: "round",
+    borderType: "round",
     value: "123123",
     setValue: (value) => {},
     isResize: false,
@@ -29,7 +29,7 @@ export const Default: Story = {
 };
 export const Disabled: Story = {
   args: {
-    textareaType: "angulate",
+    borderType: "angulate",
     value: "",
     setValue: (value) => {},
     disabled: true,

@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Round: Story = {
   args: {
-    selectType: "round",
+    borderType: "round",
     options: [
       {
         value: "1",
@@ -35,7 +35,7 @@ export const Round: Story = {
 };
 export const Angulate: Story = {
   args: {
-    selectType: "angulate",
+    borderType: "angulate",
     options: [
       {
         value: "1",
